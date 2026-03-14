@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Checkout - Come Porketa</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            porketaOrange: '#FF4500',
+            porketaBlack: '#111111',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-typography">
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+    
+    .brand-title {
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+    }
+  </style>
+<style data-purpose="layout-helpers">
+    .checkout-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .sticky-summary {
+      position: sticky;
+      top: 2rem;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-porketaBlack">
+
+<!-- END: MainHeader -->
+<!-- BEGIN: MainContent -->
+<main class="checkout-container px-4 py-8 md:py-12">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- BEGIN: CheckoutForm -->
+<section class="lg:col-span-2 space-y-8" data-purpose="checkout-form-sections">
+<!-- Customer Information -->
+<div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+<h2 class="text-xl font-bold mb-6 flex items-center">
+<span class="bg-porketaOrange text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">1</span>
+            Customer Information
+          </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex flex-col">
+<label class="text-sm font-semibold mb-1" for="full-name">Full Name</label>
+<input class="rounded border-gray-300 focus:ring-porketaOrange focus:border-porketaOrange" id="full-name" name="full-name" placeholder="John Doe" type="text"/>
+</div>
+<div class="flex flex-col">
+<label class="text-sm font-semibold mb-1" for="email">Email Address</label>
+<input class="rounded border-gray-300 focus:ring-porketaOrange focus:border-porketaOrange" id="email" name="email" placeholder="john@example.com" type="email"/>
+</div>
+<div class="flex flex-col md:col-span-2">
+<label class="text-sm font-semibold mb-1" for="phone">Phone Number</label>
+<input class="rounded border-gray-300 focus:ring-porketaOrange focus:border-porketaOrange" id="phone" name="phone" placeholder="+34 600 000 000" type="tel"/>
+</div>
+</div>
+</div>
+<!-- Delivery Details -->
+<div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+<h2 class="text-xl font-bold mb-6 flex items-center">
+<span class="bg-porketaOrange text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">2</span>
+            Delivery Details
+          </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex flex-col md:col-span-2">
+<label class="text-sm font-semibold mb-1" for="address">Street Address</label>
+<input class="rounded border-gray-300 focus:ring-porketaOrange focus:border-porketaOrange" id="address" name="address" placeholder="Carrer de Valencia, 438" type="text"/>
+</div>
+<div class="flex flex-col">
+<label class="text-sm font-semibold mb-1" for="city">City</label>
+<input class="bg-gray-50 rounded border-gray-300 text-gray-500" id="city" name="city" readonly="" type="text" value="Barcelona"/>
+</div>
+<div class="flex flex-col">
+<label class="text-sm font-semibold mb-1" for="postal-code">Postal Code</label>
+<input class="rounded border-gray-300 focus:ring-porketaOrange focus:border-porketaOrange" id="postal-code" name="postal-code" placeholder="08013" type="text"/>
+</div>
+<div class="flex flex-col md:col-span-2">
+<label class="text-sm font-semibold mb-1" for="delivery-notes">Delivery Notes (Optional)</label>
+<textarea class="rounded border-gray-300 focus:ring-porketaOrange focus:border-porketaOrange" id="delivery-notes" name="delivery-notes" placeholder="Gate code, floor, etc." rows="2"></textarea>
+</div>
+</div>
+</div>
+<!-- Payment Method -->
+<div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+<h2 class="text-xl font-bold mb-6 flex items-center">
+<span class="bg-porketaOrange text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">3</span>
+            Payment Method
+          </h2>
+<div class="space-y-4">
+<div class="flex items-center p-3 border rounded border-porketaOrange bg-orange-50">
+<input checked="" class="text-porketaOrange focus:ring-porketaOrange" id="credit-card" name="payment" type="radio"/>
+<label class="ml-3 font-semibold" for="credit-card">Credit / Debit Card</label>
+<div class="ml-auto flex space-x-1">
+<div class="w-8 h-5 bg-gray-200 rounded"></div>
+<div class="w-8 h-5 bg-gray-200 rounded"></div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+<div class="flex flex-col md:col-span-2">
+<label class="text-sm font-semibold mb-1" for="card-number">Card Number</label>
+<input class="rounded border-gray-300 focus:ring-porketaOrange focus:border-porketaOrange" id="card-number" name="card-number" placeholder="0000 0000 0000 0000" type="text"/>
+</div>
+<div class="flex flex-col">
+<label class="text-sm font-semibold mb-1" for="expiry">Fecha de Expiración</label>
+<input class="rounded border-gray-300 focus:ring-porketaOrange focus:border-porketaOrange" id="expiry" name="expiry" placeholder="MM / YY" type="text"/>
+</div>
+<div class="flex flex-col">
+<label class="text-sm font-semibold mb-1" for="cvv">CVV</label>
+<input class="rounded border-gray-300 focus:ring-porketaOrange focus:border-porketaOrange" id="cvv" name="cvv" placeholder="123" type="text"/>
+</div>
+</div>
+<div class="flex items-center p-3 border rounded border-gray-200 opacity-60">
+<input class="text-gray-400" disabled="" id="paypal" name="payment" type="radio"/>
+<label class="ml-3 font-semibold" for="paypal">PayPal</label>
+</div>
+</div>
+</div>
+</section>
+<!-- END: CheckoutForm -->
+<!-- BEGIN: OrderSummary -->
+<aside class="lg:col-span-1">
+<div class="sticky-summary bg-white rounded-lg shadow-lg border-t-4 border-porketaOrange overflow-hidden" data-purpose="order-summary-card">
+<div class="p-6">
+<h2 class="text-xl font-bold mb-6 brand-title">Your Order</h2>
+<!-- Items List -->
+<div class="space-y-4 mb-6" data-purpose="summary-items">
+<!-- Item 1 -->
+<div class="flex items-start">
+<img alt="Porki Burger" class="w-16 h-16 rounded object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq-0HP8XBxYlbjFAQ7atgpYFdGC4mGiWHSEwzA0zmIIbNbp3ELmOrcPvF_pCZVfqXxyKCHq4VedHjc85R9_WHWnybbFFjO61Sj0G8fajAHmYKPd8Q2UksBAmPOaCaxbOkMSAIGcHaWiO0N_A2x927DiStrWYXGxBTdHftRwIbvqy_O6L0I6tNBVIMDSKVWZ7HyggaTfQpUTGzA_CB4YbZF5q95YyWOxk8PrVC17QoBstdABjLgWXJNWt6EtmLR9eZVgyEkJGDUTlk"/>
+<div class="ml-4 flex-1">
+<div class="flex justify-between">
+<h4 class="font-bold text-sm">Porki Burger</h4>
+<span class="font-bold text-sm">€14.50</span>
+</div>
+<p class="text-xs text-gray-500 line-clamp-1">Smoked Pork Belly, Havarti, caramelized onions</p>
+<span class="text-xs font-semibold">Qty: 1</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-start">
+<img alt="Galician-Style Roast Pork" class="w-16 h-16 rounded object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDA-2E2rjB5WHQX2SHSC9u1xENH6R5VBeEV4C9clofx_jesWsrmsWiF_NTJDLkTqOJniqvYFpp5xtnsGMI-7yKarZJZOMuH6FS8gz-9pDDO9Y-RG1YTHv1MdJUwKes6rsN_4N21fQlwDyFBHEYfUj7YYuQg5lV8IvJkLCZblXatI1AO9FHqZjVIZfKkJnNGNPrA5eg5ckbnuqnQaPkXc_I7YrI3s83Rs9FvV9CRgRyVHKEAxFYUYGNLM5a7VjCvtpdycrgI2pWlpM"/>
+<div class="ml-4 flex-1">
+<div class="flex justify-between">
+<h4 class="font-bold text-sm">Galician Roast Pork</h4>
+<span class="font-bold text-sm">€16.00</span>
+</div>
+<p class="text-xs text-gray-500 line-clamp-1">Smoked Pork Belly rolls, paprika, extra virgin olive oil</p>
+<span class="text-xs font-semibold">Qty: 1</span>
+</div>
+</div>
+</div>
+<hr class="my-4 border-gray-100"/>
+<!-- Price Breakdown -->
+<div class="space-y-2 mb-6" data-purpose="price-breakdown">
+<div class="flex justify-between text-sm">
+<span class="text-gray-600">Subtotal</span>
+<span class="font-semibold text-gray-800">€30.50</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-gray-600">Delivery Fee</span>
+<span class="font-semibold text-gray-800">€2.50</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-gray-600">Taxes (IVA 10%)</span>
+<span class="font-semibold text-gray-800">€3.05</span>
+</div>
+<div class="flex justify-between text-lg font-bold pt-4 border-t border-dashed border-gray-200">
+<span>Total</span>
+<span class="text-porketaOrange">€36.05</span>
+</div>
+</div>
+<!-- Place Order Button -->
+<button class="w-full bg-porketaOrange hover:bg-black text-white font-bold py-4 rounded-lg transition-colors duration-300 uppercase tracking-widest" data-purpose="submit-order-btn">
+              Place Order Now
+            </button>
+<p class="text-[10px] text-gray-400 mt-4 text-center italic">
+              By placing your order, you agree to our Terms of Service and Privacy Policy.
+            </p>
+</div>
+<!-- Promotional Footer in card -->
+<div class="bg-black p-4 flex items-center justify-center space-x-2">
+<span class="text-white text-xs font-bold uppercase tracking-tighter">Powered by</span>
+<span class="text-porketaOrange font-black italic">Comeporketa</span>
+</div>
+</div>
+</aside>
+<!-- END: OrderSummary -->
+</div>
+</main>
+<!-- END: MainContent -->
+
+<!-- END: Footer -->
+</body></html><!-- MISSING_IMAGES:
+- High-quality image for Porki Burger
+- High-quality image for Galician-Style Roast Pork
+- Logo image for Come Porketa brand
+-->

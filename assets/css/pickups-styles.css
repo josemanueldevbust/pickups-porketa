@@ -1,0 +1,465 @@
+.order-now-container{
+    --primary-hover: #e4ad16;
+    --primary: #e43b16;
+    --secondary:#777;
+    display: none;
+}
+.order-now-container.show {
+    position: fixed;
+    inset: 0;
+    background: white;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+.order-now-container > #order-now-container {
+    margin: 4rem;
+    
+}
+div#order-now-container .step {
+    display: none;
+}
+
+div#order-now-container .step.active-step {
+    display: flex;
+    flex-direction: column;
+    
+}
+ul.pickup-location {
+    padding: 0;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    max-width: calc(100vw - 5rem);
+}
+
+ul.pickup-location li {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: #eee;
+    border-radius: 9px;
+}
+
+.step.active-step {
+    display: flex;
+    gap: 2rem;
+}
+ul.pickup-location {
+    padding: 0;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    max-width: calc(100vw - 5rem);
+}
+
+ul.pickup-location li {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: #eee;
+    border-radius: 9px;
+}
+
+.step.active-step {
+    display: flex;
+    gap: 2rem;
+}
+
+ul.product-list {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 500px;
+    max-width: calc(100vw - 5rem);
+}
+
+ul.product-list li {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+ul.product-list li .product-image {
+    width: 100%;
+}
+
+ul.product-list li .product-image img {
+    width: 100%;
+    border-radius: 3rem;
+    box-shadow: 5px 8px 10pxvar(--secondary);
+}
+
+ul.product-list li label {
+    min-height: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 600;
+    font-style: italic;
+}
+
+
+.step.active-step {
+    width: 500px;
+    max-width: calc(100vw - 5rem);
+}
+
+button.toggle-cart {
+    position: fixed;
+    z-index: 10;
+    bottom: 3rem;
+    right: 3rem;
+}
+
+div#cart-container.show {
+    position: fixed;
+    z-index: 100;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 400px;
+    background: rgb(180, 180, 180);
+    max-width: calc(100vw - 5rem);
+    opacity:1;
+}
+div#cart-container{
+    width: 0;
+    opacity: 0;
+    transition: 200ms;
+}
+div#cart-container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+}
+button.toggle-cart {
+    z-index: 1000;
+}
+
+ul.product-list {
+    gap: 1rem;
+    overflow: auto;
+    height: 100%;
+    margin-bottom: 10rem;
+}
+
+.step.active-step {
+    height: 100vh;
+}
+
+.order-now-container.show {
+    height: 100vh;
+    overflow: auto;
+}
+
+div#cart-container .product-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: fit-content;
+    max-height: 50vh;
+    overflow: auto;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.product-item span:nth-child(1),.product-item span:nth-child(2) {
+    flex: calc(50% - 1rem);
+    width: fit-content;
+    font-style: italic;
+    font-weight: 500;
+    }
+
+.product-item span button {
+    font-size: .7rem;
+    padding: .25rem;
+    margin-right: .25rem;
+    margin-top: .25rem;
+}
+
+button.loc-btn svg {
+    height: 2rem;
+    width: fit-content;
+}
+
+button.loc-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    color: #333;
+    font-style: italic;
+}
+
+ul.pickup-location li {
+    padding: 0;
+}
+
+ul.order-summary-list {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul.order-summary-list {
+    font-size: .8rem;
+}
+
+.loc-img {
+    width: 25px;
+    height: 25px;
+}
+
+.loc-img svg {
+    width: 100%;
+    height: 100%;
+}
+
+ul.order-summary-list > li:first-child {
+    width: 100%;
+    flex: 100%;
+}
+
+ul.order-summary-list > li:nth-child(2),ul.order-summary-list > li:nth-child(3) {
+    width: 50%;
+    flex: 50%;
+}
+
+ul.order-summary-list li {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+ul.order-summary-list > li:nth-child(2) ul {
+    display: flex;
+    flex-direction: column;
+}
+
+li.prods {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+ul.order-summary-list .product-list {
+    width: 100%;
+}
+
+ul.order-summary-list .product-list li {
+    width: 100%;
+    flex: 100% !important;
+}
+
+li.prods {
+    width: 100% !important;
+}
+
+
+ul.order-summary-list .product-item span {
+    width: auto !important;
+    display: flex;
+    flex: auto;
+}
+
+ul.order-summary-list .product-item {
+    width: 100%;
+    display: flex;
+    font-size: .8rem;
+}
+
+ul.order-summary-list .product-item span:last-child {
+    min-width: 1rem;
+}
+
+ul.order-summary-list .product-item span:first-child {
+    max-width: calc(100% - 3rem);
+}
+ul.order-summary-list li.address {
+    width: 100%;
+    flex: 100%;
+}
+
+ul.order-summary-list li.address ul {
+    width: 100%;
+    padding: 0;
+    font-style: italic;
+}
+
+li.prods {
+    padding-top: 2rem;
+    text-align: start;
+    display: flex;
+    align-items: flex-start !important;
+}
+li.billing {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 2rem;
+}
+
+li.billing ul {
+    display: flex;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+li.billing ul li {
+    width: 100%;
+}
+
+li.billing .separator {
+    margin-top: auto;
+    border-bottom: solid 1pxvar(--secondary);
+    margin-bottom: 1rem;
+}
+
+li.prods {
+    max-height: fit-content;
+}
+
+ul.order-summary-list .product-list {
+    margin-bottom: 2rem;
+}
+
+li.billing ul li:last-child {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+ul.order-summary-list .product-item span:first-child {
+    width: 100%;
+}
+
+ul.order-summary-list .product-item span:last-child {
+    width: fit-content;
+    margin-left: auto;
+    display: block !important;
+    max-width: 1.5rem !important;
+}
+
+ul.order-summary-list .product-item {
+    padding-right: 1rem;
+}
+
+.step.active-step:has(.order-summary-list) button.process {
+    border: none;
+    width: 100%;
+    margin-top: 1rem;
+    color: white;
+    background: var(--primary);
+}
+
+.step.active-step:has(.order-summary-list) button.process:hover {
+    background: var(--primary-hover);
+}
+ul.order-summary-list .product-item {
+    padding-right: 1rem;
+}
+
+.step.active-step:has(.order-summary-list) button.process {
+    border: none;
+    width: 100%;
+    margin-top: 1rem;
+    color: white;
+    background: var(--primary);
+}
+
+.step.active-step:has(.order-summary-list) button.process:hover {
+    background: var(--primary-hover);
+}
+
+li.billing li {
+    display: flex;
+    align-content: space-between;
+}
+
+li.billing li span:last-child {
+    margin-left: auto;
+}
+
+ul.order-summary-list > li:first-child {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+button.toggle-cart {
+    background:var(--secondary);
+    color: white;
+    border: none;
+}
+
+div#order-now-container {
+    /* margin: auto !important; */
+    padding-left: 4rem;
+}
+
+ul.product-list label button {
+    margin-left: 0.5rem;
+    padding: 0;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 700;
+    background: var(--primary);
+    color: white;
+}
+button.next-btn {
+    position: fixed;
+    bottom: 3rem;
+    left: 8rem;
+    background: var(--primary);
+    color: white;
+}
+
+button.close-btn {
+    position: fixed;
+    bottom: 3rem;
+    left: 2rem;
+    background:var(--secondary);
+    color: white;
+    border: none;
+}
+
+.next-btn, .close-btn, .toggle-cart{
+    font-size: .7rem;
+}
+
+
+
+
+div#order-now-container .step.active-step {
+    padding-bottom: 4rem;
+}
+
+div#order-now-container [data-step="1"] .product-list {
+    padding-bottom: 4rem;
+}
+
+ul.product-list label button {
+    padding-bottom: 0.2rem;
+}
+
+.order-now-container.show button {
+    border-radius: 50px;
+}

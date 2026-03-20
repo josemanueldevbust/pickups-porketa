@@ -38,7 +38,13 @@
 <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden py-8">
 
     <script>
-       
+       function closeModal(event){
+        if(window.successOrder){
+            window.dispatchEvent(new Event('close-all'))
+        }
+        event.target.closest('#paypal-popup').classList.add('hidden')
+        
+       }
         
         
         function loadProducts(){
@@ -221,17 +227,31 @@ return cartItemTpl
             }
 
             const confirmOrder = ()=>{
-                if(orderState.paymentMethod == 'paypal-opt'){
-                    const modal = document.querySelector('#paypal-popup')
-                    modal.classList.remove('hidden');
-                    ['full-name','email','phone'].forEach(f=>{
-                        orderState[f] = document.querySelector(`[name=${f}]`).value
-                    })
-                    orderState.cart = {}
-                    Object.keys(currentState).forEach(pId=>{
-                        orderState.cart[pId] = currentState[pId]
-                    })
+                const modal = document.querySelector('#paypal-popup')
+                modal.classList.remove('hidden');
+                let valid = true;
+                ['full-name','email','phone'].forEach(f=>{
+                    orderState[f] = document.querySelector(`[name=${f}]`).value
+                    if(!orderState[f]){
+                        valid = false
+                        document.querySelector(`[name=${f}]`).focus()
+                       
+                    }
+                })
+                if(!valid){
+                    document.querySelector('#paypal-popup').classList.add('hidden')
+                    return  
+                }
+                orderState.cart = {}
+                Object.keys(currentState).forEach(pId=>{
+                    orderState.cart[pId] = currentState[pId]
+                })
 
+                
+
+                if(orderState.paymentMethod == 'paypal-opt'){
+                    
+                    
                 
                     loadPaypal(orderState)
                 }else{
@@ -256,6 +276,39 @@ return cartItemTpl
 
                 }
                
+            }
+
+            window.completeOrderSimulate = (event)=>{
+                orderState.cart = {}
+                    Object.keys(currentState).forEach(pId=>{
+                        orderState.cart[pId] = currentState[pId]
+                    })
+                fetch(window.window.ordersEndpointSimulate, {
+                                method: "POST",
+                                headers: {
+                                    "Content-Type": "application/json",
+                                },
+                                // use the "body" param to optionally pass additional order information
+                                // like product ids and quantities
+                                body: JSON.stringify({
+                                    ...orderState
+                                }),
+                            }).then(r=>{
+                                r.json().then(data=>{
+                                    if(data.success){
+                                        const modal = document.querySelector('#paypal-popup')
+                                        //modal.classList.add('hidden')
+                                        sessionStorage.currentOrder = data
+                                        document.getElementById('paypal-button-container').classList.add('hidden')
+                                        document.getElementById('result-message').innerHTML =  `<h1>Hemos recibido su orden, por favor este atento a su telefono. Le contactaremos cuando este listo su pedido</h1>`
+                                        event.target.classList.add('hidden')
+                                        window.successOrder = true
+                                    }else{
+                                    }
+                                })
+                            });
+
+                
             }
 
             window.confirmOrder = confirmOrder
@@ -284,7 +337,9 @@ return cartItemTpl
     </script>
     <script>
        function loadPaypal(order){
-            
+            if(window.loadedPaypal){
+                return 
+            }
             const paypalButtons = window.paypal.Buttons({
                 style: {
                         shape: "rect",
@@ -385,14 +440,14 @@ return cartItemTpl
                 
             });
             paypalButtons.render("#paypal-button-container");
-
+            window.loadedPaypal = true
 
             // Example function to show a result to the user. Your site's UI library can be used instead.
             function resultMessage(message) {
                 const container = document.querySelector("#result-message");
                 container.innerHTML = message;
             }
-    
+            
         }
     </script>
  
@@ -401,7 +456,7 @@ return cartItemTpl
 <div class="flex-1">
 
 <!-- Food Grid -->
-<div id="food-grid" class="grid grid-cols-3 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+<div id="food-grid" class="grid  md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-6">
 
 </div>
 </div>
@@ -499,8 +554,17 @@ return cartItemTpl
 </div>
 
 <div class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" id="paypal-popup">
-  
-  <div class="w-full max-w-md overflow-hidden bg-white rounded-xl shadow-2xl transform transition-all">
+   
+ 
+  <div class="w-full max-w-md overflow-hidden bg-white rounded-xl shadow-2xl transform transition-all relative">
+     <button 
+      class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 hover:bg-gray-100 p-1.5 rounded-lg transition-all"
+      aria-label="Close modal" onclick="closeModal(event)"
+    >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </button>
     <div class="p-6">
         <h3>Elija una opcion de pago</h3>
     </div>
@@ -509,8 +573,14 @@ return cartItemTpl
         <p id="result-message" class="flex items-center p-3 border rounded "></p>
 
         </div>
+        <div class="p-6">
+        <button class="w-full bg-porketaOrange hover:bg-black text-white font-bold py-4 rounded-lg transition-colors duration-300 uppercase tracking-widest" data-purpose="submit-order-btn" onclick="completeOrderSimulate(event)">
+              Simular Pago Exitoso
+            </button>
     </div>
-
+    </div>
+   
+      
   </div>
 </div>
 
@@ -549,21 +619,7 @@ return cartItemTpl
 <!-- END: OrderSummary -->
 </div>
 </section>
-<!-- Mobile Floating Cart (Visible only on small screens) -->
-<div class="lg:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] z-50">
-<button class="w-full bg-slate-900 dark:bg-primary text-white font-bold py-4 rounded-2xl shadow-2xl flex items-center justify-between px-6">
-<div class="flex items-center gap-3">
-<div class="bg-white/20 p-1.5 rounded-lg">
-<span class="material-symbols-outlined text-sm">shopping_bag</span>
-</div>
-<span>3 Items added</span>
-</div>
-<div class="flex items-center gap-2">
-<span class="text-white/80">$33.39</span>
-<span class="material-symbols-outlined">chevron_right</span>
-</div>
-</button>
-</div>
+
 </div>
 <!-- Initialize the JS-SDK -->
 <script

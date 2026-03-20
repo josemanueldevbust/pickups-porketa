@@ -55,8 +55,9 @@ class OrderNow {
 
         <script>
             window.locationTemplates = <?= json_encode(self::getChooserTemplates()) ?>;
-            window.ordersEndpoint = '<? rest_url('pickups/v1/orders'); ?>';
-            window.ordersCaptureEndpoint = '<? rest_url('pickups/v1/orders'); ?>/[ORDERID]/capture';
+            window.ordersEndpoint = '<?= rest_url('pickups/v1/payment/orders'); ?>';
+            window.ordersCaptureEndpoint = '<?= rest_url('pickups/v1/payment/orders'); ?>/[ORDERID]/capture';
+             window.ordersEndpointSimulate = '<?= rest_url('pickups/v1/payment/orders/simulate'); ?>';
 
          
         </script>

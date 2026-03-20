@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Work+Sans:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-high": "#e1e3e3",
+                        "outline-variant": "#acadad",
+                        "secondary": "#5c5b5b",
+                        "surface-container-low": "#f0f1f1",
+                        "primary-fixed": "#ff766d",
+                        "on-surface-variant": "#5a5c5c",
+                        "on-tertiary-fixed": "#340800",
+                        "surface-dim": "#d2d5d5",
+                        "tertiary-container": "#ff9475",
+                        "secondary-container": "#e5e2e1",
+                        "surface-container-highest": "#dbdddd",
+                        "inverse-surface": "#0c0f0f",
+                        "inverse-primary": "#ff544e",
+                        "outline": "#757777",
+                        "primary": "#b5161e",
+                        "tertiary": "#ab2d00",
+                        "surface-variant": "#dbdddd",
+                        "on-primary-container": "#4f0004",
+                        "surface-tint": "#b5161e",
+                        "primary-fixed-dim": "#ff5a53",
+                        "inverse-on-surface": "#9c9d9d",
+                        "primary-dim": "#a40113",
+                        "error-dim": "#9f0519",
+                        "error": "#b31b25",
+                        "on-primary": "#ffefed",
+                        "on-error-container": "#570008",
+                        "tertiary-fixed": "#ff9475",
+                        "tertiary-dim": "#962700",
+                        "background": "#f6f6f6",
+                        "on-secondary-container": "#525151",
+                        "error-container": "#fb5151",
+                        "on-secondary-fixed-variant": "#5c5b5b",
+                        "on-primary-fixed-variant": "#600007",
+                        "primary-container": "#ff766d",
+                        "on-surface": "#2d2f2f",
+                        "on-tertiary": "#ffefeb",
+                        "on-error": "#ffefee",
+                        "secondary-fixed": "#e5e2e1",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#2d2f2f",
+                        "surface": "#f6f6f6",
+                        "secondary-dim": "#504f4f",
+                        "on-secondary-fixed": "#403f3f",
+                        "secondary-fixed-dim": "#d6d4d3",
+                        "on-secondary": "#f5f2f1",
+                        "tertiary-fixed-dim": "#ff7d57",
+                        "surface-bright": "#f6f6f6",
+                        "on-tertiary-container": "#601500",
+                        "surface-container": "#e7e8e8",
+                        "on-tertiary-fixed-variant": "#6f1a00",
+                        "on-primary-fixed": "#000000"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Work Sans"],
+                        "label": ["Work Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+    <!-- TopAppBar -->
+    <header class="fixed top-0 w-full z-50 bg-[#f6f6f6] dark:bg-stone-900 border-none">
+        <nav class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+            <div
+                class="text-3xl font-black text-[#2d2f2f] dark:text-[#f6f6f6] uppercase tracking-tighter font-headline">
+                COME</div>
+            <div class="hidden md:flex items-center space-gap-8 gap-8 font-headline font-bold tracking-tight">
+                <a class="text-[#b5161e] dark:text-[#ff766d] border-b-2 border-[#b5161e] pb-1 transition-opacity hover:opacity-80"
+                    href="#especialidades">Especialidades</a>
+                <a class="text-[#2d2f2f] dark:text-[#dbdddd] hover:text-[#b5161e] transition-colors"
+                    href="#hamburguesas">Hamburguesas</a>
+                <a class="text-[#2d2f2f] dark:text-[#dbdddd] hover:text-[#b5161e] transition-colors"
+                    href="#acompanamientos">Acompañamientos</a>
+                <a class="text-[#2d2f2f] dark:text-[#dbdddd] hover:text-[#b5161e] transition-colors"
+                    href="#bebidas">Bebidas</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-[#b5161e] dark:text-[#ff766d]"
+                    data-icon="shopping_cart">shopping_cart</span>
+            </div>
+        </nav>
+    </header>
+    <main class="pt-24">
+        <!-- Hero Editorial Header -->
+        <section class="relative px-8 py-16 max-w-7xl mx-auto overflow-hidden">
+            <div class="editorial-grid gap-8 items-end">
+                <div class="col-span-12 lg:col-span-7">
+                    <span
+                        class="font-label text-primary font-bold tracking-[0.2em] uppercase text-sm block mb-4">Edition
+                        No. 01 — 2024</span>
+                    <h1
+                        class="font-headline text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.85] uppercase mb-8">
+                        The <span class="text-primary italic">Smoke</span><br />house<br />Edition
+                    </h1>
+                    <p
+                        class="font-body text-xl text-on-surface-variant max-w-md leading-relaxed border-l-4 border-primary pl-6">
+                        Ahumamos con leña de quebracho la mejor panceta catalana. Un proceso de 12 horas que define
+                        nuestra identidad artesanal.
+                    </p>
+                </div>
+                <div class="col-span-12 lg:col-span-5 relative mt-12 lg:mt-0">
+                    <div class="aspect-[4/5] bg-surface-container-highest overflow-hidden relative group">
+                        <img alt="Specialty Smoked Meat"
+                            class="w-full h-full object-cover grayscale-0 hover:grayscale transition-all duration-700"
+                            data-alt="Close up of artisanal smoked ribs with deep red glaze"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxyS5pEyhwe-mgkr9PKeHN3cSHFVplH1jKBSNLcnv2LUF-NZudtX5uPu6RHGn4i-UBrIsq7PrwYnC7szSX5YBUfskWTlzRemXFX0_qDUndTg3JiaW6W9Uxixc0RuWtSynS8vxZh83fOAHbTjh4JzIpjaLHo394xYh_YPV0wC5oPtytG1DbJ5v3QMaK5kgh-YobaSwI5eOz6CHwQWfpHrOXadu6BZh_QkD38wD8PkmiaiGeH1JVkSHSzdCJ4Uw16kjAEQ3AH0131Z8" />
+                        <div class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm p-6">
+                            <h3 class="font-headline font-bold text-2xl text-primary uppercase">Nuestra Especialidad
+                            </h3>
+                            <p class="font-body text-sm text-on-surface-variant uppercase tracking-widest mt-1">
+                                Costillar Ahumado 12hs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Especialidades Section -->
+        <section class="py-24 bg-surface-container-low" id="especialidades">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="flex justify-between items-baseline mb-16 border-b border-outline-variant/20 pb-4">
+                    <h2 class="font-headline text-4xl font-bold text-primary uppercase tracking-tight">Especialidades
+                    </h2>
+                    <span class="font-label text-on-surface-variant text-sm tracking-widest">ARTISANAL CURATION</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    <!-- Item 1 -->
+                    <div class="group">
+                        <div class="aspect-square bg-surface-container-highest mb-6 overflow-hidden">
+                            <img alt="La Gallegue Specialty"
+                                class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-500"
+                                data-alt="Gourmet meat dish beautifully plated on a dark stone surface"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLxoTTbKVvnoHlPVXoI45X7aeEm_5floQjx6KJN1W8YI3HkamWjpKW0iqzykn_X8E_-hFJpliw4ZtlyCdv-VnfqYl4nCghJCl-8Z8J9Cawoebz-7ZqAj8RsRbqRBfIniWms1LaKmM8Mv4JA_MlrJp-OH0y6ckF2tvyAiu3hY2E8qM9qrrLdCTE5qjazLonq3CcCnpnO4GS7KGMaMvDaH_k5TEgIDgv30GwpJ8ef8qghyqCZA3PIj03d3gOEScSICDbaPvMrrqVg6k" />
+                        </div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-headline font-bold text-xl uppercase tracking-tighter">La Gallegue</h3>
+                            <span class="font-headline font-bold text-primary">$18.50</span>
+                        </div>
+                        <p class="font-body text-on-surface-variant text-sm leading-relaxed">
+                            Pulpo ahumado, base de crema de patata trufada y aceite de pimentón de la Vera. El toque del
+                            humo redefine la tradición.
+                        </p>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="group">
+                        <div class="aspect-square bg-surface-container-highest mb-6 overflow-hidden">
+                            <img alt="Smoked Brisket"
+                                class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-500"
+                                data-alt="Slices of smoked beef brisket showing the pink smoke ring"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-qd2bjWn5fDNePm_hF5k-SupwrnXdiQvFHpltnmtSZKC2hClAaYne5ZYCN-1nS3kdRHU26UV5eEH2XdJpz-aXsiM1-QEhpcLhae14UsPmOBafsk8COJtMPXVXoBmWCi4FfxAF2k6xQhrwGaGSBuTykfWzCZJPKpZin5lZufWOuQqkX6kXDZVh1GsJPMv7M0XcTk4c3ywEJZvA9RA-B6gYeq01_zyYrusC8po11IrAy2bftyD-8Lm6Mj2_DJehKGiWcNd3CaweeVo" />
+                        </div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-headline font-bold text-xl uppercase tracking-tighter">Brisket Quebracho
+                            </h3>
+                            <span class="font-headline font-bold text-primary">$22.00</span>
+                        </div>
+                        <p class="font-body text-on-surface-variant text-sm leading-relaxed">
+                            Tapa de asado marinada 24hs y ahumada lentamente. Servido con encurtidos artesanales de la
+                            casa.
+                        </p>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="group">
+                        <div class="aspect-square bg-surface-container-highest mb-6 overflow-hidden">
+                            <img alt="Artisanal Salmon"
+                                class="w-full h-full object-crop scale-100 group-hover:scale-105 transition-transform duration-500"
+                                data-alt="Piece of smoked salmon with fresh herbs and citrus"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCv2GNGCgcBjBhTIgr0QeotX7eNut30RumnmYOgksqbe1CjuLL7j0S1hWahmsA8Zo7ClYcbckHpsqeezklq3IFle9XHkeAqzOC01ddTT_3PMm4ynIOQwjPF56fFO9HChpuP9BAj0bnlIvGiesP8ey03vnbZKSsxZtvEQG9W6FtkO54tJlP164GvNIDoTROl7zHPhElDceis3w0vKn3OtEAk8ccJTN11fKOEqQUuaNvrye-U2Zf3Pr1vDwyDSKUXF2yrSbFnYZ6qgA" />
+                        </div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-headline font-bold text-xl uppercase tracking-tighter">Salmón de Cabaña</h3>
+                            <span class="font-headline font-bold text-primary">$19.50</span>
+                        </div>
+                        <p class="font-body text-on-surface-variant text-sm leading-relaxed">
+                            Curado en sal marina y azúcar mascabo, ahumado en frío con madera de cerezo para un perfil
+                            suave y elegante.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Burgers & Sandwiches Section -->
+        <section class="py-24 bg-surface" id="hamburguesas">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="flex flex-col md:flex-row gap-16">
+                    <div class="md:w-1/3">
+                        <h2
+                            class="font-headline text-6xl font-black text-on-surface uppercase leading-none tracking-tighter sticky top-32">
+                            Burgers <br />&amp; Sand<br />wiches
+                        </h2>
+                        <div class="mt-8 pt-8 border-t border-outline-variant">
+                            <p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Carne
+                                madurada 45 días — Pan brioche de masa madre.</p>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 space-y-16">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
+                            <!-- Burger 1 -->
+                            <div class="border-b border-outline-variant/30 pb-8">
+                                <h4 class="font-headline font-bold text-2xl uppercase tracking-tight mb-2">La Humareda
+                                </h4>
+                                <p class="font-body text-sm text-on-surface-variant mb-4">Doble smash, cheddar madurado,
+                                    bacon ahumado 12hs y cebolla crispy.</p>
+                                <span class="font-headline font-bold text-primary text-lg">$14.00</span>
+                            </div>
+                            <!-- Burger 2 -->
+                            <div class="border-b border-outline-variant/30 pb-8">
+                                <h4 class="font-headline font-bold text-2xl uppercase tracking-tight mb-2">Editorial
+                                    Blue</h4>
+                                <p class="font-body text-sm text-on-surface-variant mb-4">Gorgonzola, peras al malbec
+                                    ahumadas y nueces tostadas.</p>
+                                <span class="font-headline font-bold text-primary text-lg">$16.50</span>
+                            </div>
+                            <!-- Burger 3 -->
+                            <div class="border-b border-outline-variant/30 pb-8">
+                                <h4 class="font-headline font-bold text-2xl uppercase tracking-tight mb-2">Pulled Pork
+                                </h4>
+                                <p class="font-body text-sm text-on-surface-variant mb-4">Hombro de cerdo desmechado,
+                                    coleslaw cítrico y BBQ de la casa.</p>
+                                <span class="font-headline font-bold text-primary text-lg">$13.50</span>
+                            </div>
+                            <!-- Burger 4 -->
+                            <div class="border-b border-outline-variant/30 pb-8">
+                                <h4 class="font-headline font-bold text-2xl uppercase tracking-tight mb-2">The Vegan
+                                    Smoke</h4>
+                                <p class="font-body text-sm text-on-surface-variant mb-4">Hongo Portobello gigante
+                                    ahumado, mayonesa de ajo negro.</p>
+                                <span class="font-headline font-bold text-primary text-lg">$15.00</span>
+                            </div>
+                        </div>
+                        <!-- Featured Large Card -->
+                        <div class="bg-surface-container-highest p-12 relative">
+                            <div
+                                class="absolute -top-4 -right-4 bg-primary text-white p-4 font-headline font-black text-xl uppercase">
+                                Recomendado</div>
+                            <h3 class="font-headline text-4xl font-black uppercase mb-4 tracking-tighter">Pastrami
+                                Artesanal</h3>
+                            <p class="font-body text-on-surface-variant mb-6 max-w-md">Nuestra pieza estrella. 15 días
+                                de salmuera y un ahumado intenso que lo deshace en boca. Servido en pan de centeno.</p>
+                            <div class="flex items-baseline gap-4">
+                                <span class="font-headline text-3xl font-bold text-primary">$17.00</span>
+                                <span
+                                    class="text-xs font-label uppercase text-on-surface-variant tracking-widest">Limited
+                                    stock daily</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Acompañamientos & Bebidas Section -->
+        <section class="py-24 bg-surface-container-high" id="acompanamientos">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+                    <!-- Column 1: Acompañamientos -->
+                    <div>
+                        <div class="mb-12">
+                            <h2
+                                class="font-headline text-3xl font-bold text-primary uppercase border-b-2 border-primary inline-block pb-1">
+                                Acompañamientos</h2>
+                        </div>
+                        <ul class="space-y-6">
+                            <li class="flex justify-between items-baseline group">
+                                <span
+                                    class="font-body font-bold uppercase tracking-tight group-hover:text-primary transition-colors">Patatas
+                                    Triple Cocción</span>
+                                <span class="flex-grow border-b border-dotted border-outline-variant mx-4"></span>
+                                <span class="font-headline font-bold">$6.00</span>
+                            </li>
+                            <li class="flex justify-between items-baseline group">
+                                <span
+                                    class="font-body font-bold uppercase tracking-tight group-hover:text-primary transition-colors">Boniato
+                                    al Rescoldo</span>
+                                <span class="flex-grow border-b border-dotted border-outline-variant mx-4"></span>
+                                <span class="font-headline font-bold">$7.50</span>
+                            </li>
+                            <li class="flex justify-between items-baseline group">
+                                <span
+                                    class="font-body font-bold uppercase tracking-tight group-hover:text-primary transition-colors">Mazorca
+                                    con Manteca Ahumada</span>
+                                <span class="flex-grow border-b border-dotted border-outline-variant mx-4"></span>
+                                <span class="font-headline font-bold">$5.50</span>
+                            </li>
+                            <li class="flex justify-between items-baseline group">
+                                <span
+                                    class="font-body font-bold uppercase tracking-tight group-hover:text-primary transition-colors">Ensalada
+                                    de Tomates Quemados</span>
+                                <span class="flex-grow border-b border-dotted border-outline-variant mx-4"></span>
+                                <span class="font-headline font-bold">$8.00</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Column 2: Bebidas -->
+                    <div id="bebidas">
+                        <div class="mb-12">
+                            <h2
+                                class="font-headline text-3xl font-bold text-tertiary uppercase border-b-2 border-tertiary inline-block pb-1">
+                                Bebidas</h2>
+                        </div>
+                        <ul class="space-y-6">
+                            <li class="flex justify-between items-baseline group">
+                                <span
+                                    class="font-body font-bold uppercase tracking-tight group-hover:text-tertiary transition-colors">Craft
+                                    Beer Flight (4 types)</span>
+                                <span class="flex-grow border-b border-dotted border-outline-variant mx-4"></span>
+                                <span class="font-headline font-bold">$12.00</span>
+                            </li>
+                            <li class="flex justify-between items-baseline group">
+                                <span
+                                    class="font-body font-bold uppercase tracking-tight group-hover:text-tertiary transition-colors">Old
+                                    Fashioned Ahumado</span>
+                                <span class="flex-grow border-b border-dotted border-outline-variant mx-4"></span>
+                                <span class="font-headline font-bold">$10.50</span>
+                            </li>
+                            <li class="flex justify-between items-baseline group">
+                                <span
+                                    class="font-body font-bold uppercase tracking-tight group-hover:text-tertiary transition-colors">Limonada
+                                    de Jengibre y Menta</span>
+                                <span class="flex-grow border-b border-dotted border-outline-variant mx-4"></span>
+                                <span class="font-headline font-bold">$4.50</span>
+                            </li>
+                            <li class="flex justify-between items-baseline group">
+                                <span
+                                    class="font-body font-bold uppercase tracking-tight group-hover:text-tertiary transition-colors">Malbec
+                                    de la Casa</span>
+                                <span class="flex-grow border-b border-dotted border-outline-variant mx-4"></span>
+                                <span class="font-headline font-bold">$7.00</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-[#f6f6f6] dark:bg-stone-900 w-full py-24 mt-24">
+        <div class="flex flex-col items-center justify-center gap-8 w-full px-8 max-w-7xl mx-auto">
+            <div class="text-5xl font-black text-on-surface opacity-10 uppercase font-headline tracking-tighter">COME
+            </div>
+            <div class="flex flex-wrap justify-center gap-12 font-['Work_Sans'] text-xs uppercase tracking-widest">
+                <a class="text-[#5a5c5c] dark:text-stone-500 hover:text-[#2d2f2f] hover:underline decoration-[#b5161e] transition-all"
+                    href="#">Privacidad</a>
+                <a class="text-[#5a5c5c] dark:text-stone-500 hover:text-[#2d2f2f] hover:underline decoration-[#b5161e] transition-all"
+                    href="#">Contacto</a>
+                <a class="text-[#5a5c5c] dark:text-stone-500 hover:text-[#2d2f2f] hover:underline decoration-[#b5161e] transition-all"
+                    href="#">Ubicación</a>
+            </div>
+            <p class="font-['Work_Sans'] text-xs uppercase tracking-widest text-on-surface-variant opacity-60">
+                © 2024 COME. El Ahumado Editorial.
+            </p>
+        </div>
+    </footer>
+    <!-- Mobile Navigation (as specified in rule) -->
+    <div
+        class="md:hidden fixed bottom-0 left-0 right-0 bg-[#f6f6f6] dark:bg-stone-900 flex justify-around py-4 z-50 shadow-lg">
+        <a class="flex flex-col items-center gap-1 text-[#b5161e]" href="#especialidades">
+            <span class="material-symbols-outlined" data-icon="star">star</span>
+            <span class="text-[10px] uppercase font-bold">Especialidades</span>
+        </a>
+        <a class="flex flex-col items-center gap-1 text-[#5a5c5c]" href="#hamburguesas">
+            <span class="material-symbols-outlined" data-icon="restaurant">restaurant</span>
+            <span class="text-[10px] uppercase font-bold">Burgers</span>
+        </a>
+        <a class="flex flex-col items-center gap-1 text-[#5a5c5c]" href="#acompanamientos">
+            <span class="material-symbols-outlined" data-icon="set_meal">set_meal</span>
+            <span class="text-[10px] uppercase font-bold">Sides</span>
+        </a>
+        <a class="flex flex-col items-center gap-1 text-[#5a5c5c]" href="#bebidas">
+            <span class="material-symbols-outlined" data-icon="local_bar">local_bar</span>
+            <span class="text-[10px] uppercase font-bold">Drinks</span>
+        </a>
+    </div>
+</body>
+
+</html>

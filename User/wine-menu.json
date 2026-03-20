@@ -1,0 +1,399 @@
+{
+    "wine_menu": {
+        "es": {
+            "title": "CARTA DE VINOS 2026",
+            "sections": [
+                {
+                    "name": "Vinos",
+                    "items": [
+                        {
+                            "name": "Verdera",
+                            "type": "Tinto",
+                            "grapes": [
+                                "Garnacha",
+                                "Cariñena"
+                            ],
+                            "description": "Fresco y afrutado",
+                            "region": "Empordà",
+                            "price": {
+                                "glass": 3,
+                                "bottle": 13
+                            }
+                        },
+                        {
+                            "name": "Lomas del Marqués",
+                            "type": "Tinto",
+                            "grapes": [
+                                "Tempranillo"
+                            ],
+                            "description": "Complejo, frutos tostados",
+                            "region": "Rioja",
+                            "price": {
+                                "glass": 4,
+                                "bottle": 19
+                            }
+                        },
+                        {
+                            "name": "Marqués de Riscal",
+                            "type": "Tinto Reserva",
+                            "grapes": [
+                                "Tempranillo",
+                                "Graciano"
+                            ],
+                            "description": "Intenso y frutos maduros",
+                            "region": "Rioja",
+                            "price": {
+                                "bottle": 24
+                            }
+                        },
+                        {
+                            "name": "Vall Major",
+                            "type": "Blanco",
+                            "grapes": [
+                                "Garnacha blanca"
+                            ],
+                            "description": "Afrutado y fresco",
+                            "region": "D.O. Terra Alta",
+                            "price": {
+                                "glass": 3,
+                                "bottle": 13
+                            }
+                        },
+                        {
+                            "name": "Castell d'Or",
+                            "type": "Cava Brut",
+                            "grapes": [],
+                            "description": "Intenso y cítrico",
+                            "region": "D.O. Catalunya",
+                            "price": {
+                                "glass": 4,
+                                "bottle": 14
+                            }
+                        }
+                    ]
+                }
+            ],
+            "notes": [
+                "Son pocos, pero bien elegidos",
+                "Nos encanta recomendar",
+                "Si dudas, pregúntanos"
+            ]
+        },
+        "en": {
+            "title": "WINE MENU 2026",
+            "sections": [
+                {
+                    "name": "Wines",
+                    "items": [
+                        {
+                            "name": "Verdera",
+                            "type": "Red",
+                            "grapes": [
+                                "Grenache",
+                                "Carignan"
+                            ],
+                            "description": "Fresh and fruity",
+                            "region": "Empordà",
+                            "price": {
+                                "glass": 3,
+                                "bottle": 13
+                            }
+                        },
+                        {
+                            "name": "Lomas del Marqués",
+                            "type": "Red",
+                            "grapes": [
+                                "Tempranillo"
+                            ],
+                            "description": "Complex, toasted notes",
+                            "region": "Rioja",
+                            "price": {
+                                "glass": 4,
+                                "bottle": 19
+                            }
+                        },
+                        {
+                            "name": "Marqués de Riscal",
+                            "type": "Red Reserva",
+                            "grapes": [
+                                "Tempranillo",
+                                "Graciano"
+                            ],
+                            "description": "Intense with ripe fruit notes",
+                            "region": "Rioja",
+                            "price": {
+                                "bottle": 24
+                            }
+                        },
+                        {
+                            "name": "Vall Major",
+                            "type": "White",
+                            "grapes": [
+                                "White Grenache"
+                            ],
+                            "description": "Fruity and fresh",
+                            "region": "D.O. Terra Alta",
+                            "price": {
+                                "glass": 3,
+                                "bottle": 13
+                            }
+                        },
+                        {
+                            "name": "Castell d'Or",
+                            "type": "Cava Brut",
+                            "grapes": [],
+                            "description": "Intense and citrusy",
+                            "region": "D.O. Catalunya",
+                            "price": {
+                                "glass": 4,
+                                "bottle": 14
+                            }
+                        }
+                    ]
+                }
+            ],
+            "notes": [
+                "Few, but well selected",
+                "We love to recommend",
+                "If in doubt, ask us"
+            ]
+        },
+        "it": {
+            "title": "CARTA DEI VINI 2026",
+            "sections": [
+                {
+                    "name": "Vini",
+                    "items": [
+                        {
+                            "name": "Verdera",
+                            "type": "Rosso",
+                            "grapes": [
+                                "Garnacha",
+                                "Cariñena"
+                            ],
+                            "description": "Fresco e fruttato",
+                            "region": "Empordà",
+                            "price": {
+                                "glass": 3,
+                                "bottle": 13
+                            }
+                        },
+                        {
+                            "name": "Lomas del Marqués",
+                            "type": "Rosso",
+                            "grapes": [
+                                "Tempranillo"
+                            ],
+                            "description": "Complesso, note tostate",
+                            "region": "Rioja",
+                            "price": {
+                                "glass": 4,
+                                "bottle": 19
+                            }
+                        },
+                        {
+                            "name": "Marqués de Riscal",
+                            "type": "Rosso Riserva",
+                            "grapes": [
+                                "Tempranillo",
+                                "Graciano"
+                            ],
+                            "description": "Intenso con frutti maturi",
+                            "region": "Rioja",
+                            "price": {
+                                "bottle": 24
+                            }
+                        },
+                        {
+                            "name": "Vall Major",
+                            "type": "Bianco",
+                            "grapes": [
+                                "Garnacha Bianca"
+                            ],
+                            "description": "Fruttato e fresco",
+                            "region": "D.O. Terra Alta",
+                            "price": {
+                                "glass": 3,
+                                "bottle": 13
+                            }
+                        },
+                        {
+                            "name": "Castell d'Or",
+                            "type": "Cava Brut",
+                            "grapes": [],
+                            "description": "Intenso e agrumato",
+                            "region": "D.O. Catalunya",
+                            "price": {
+                                "glass": 4,
+                                "bottle": 14
+                            }
+                        }
+                    ]
+                }
+            ],
+            "notes": [
+                "Pochi ma ben selezionati",
+                "Ci piace consigliare",
+                "Se hai dubbi, chiedi"
+            ]
+        },
+        "cat": {
+            "title": "CARTA DE VINS 2026",
+            "sections": [
+                {
+                    "name": "Vins",
+                    "items": [
+                        {
+                            "name": "Verdera",
+                            "type": "Negre",
+                            "grapes": [
+                                "Garnatxa",
+                                "Carinyena"
+                            ],
+                            "description": "Fresc i afruitat",
+                            "region": "Empordà",
+                            "price": {
+                                "glass": 3,
+                                "bottle": 13
+                            }
+                        },
+                        {
+                            "name": "Lomas del Marqués",
+                            "type": "Negre",
+                            "grapes": [
+                                "Tempranillo"
+                            ],
+                            "description": "Complex, notes torrades",
+                            "region": "Rioja",
+                            "price": {
+                                "glass": 4,
+                                "bottle": 19
+                            }
+                        },
+                        {
+                            "name": "Marqués de Riscal",
+                            "type": "Negre Reserva",
+                            "grapes": [
+                                "Tempranillo",
+                                "Graciano"
+                            ],
+                            "description": "Intens amb fruits madurs",
+                            "region": "Rioja",
+                            "price": {
+                                "bottle": 24
+                            }
+                        },
+                        {
+                            "name": "Vall Major",
+                            "type": "Blanc",
+                            "grapes": [
+                                "Garnatxa blanca"
+                            ],
+                            "description": "Afruït i fresc",
+                            "region": "D.O. Terra Alta",
+                            "price": {
+                                "glass": 3,
+                                "bottle": 13
+                            }
+                        },
+                        {
+                            "name": "Castell d'Or",
+                            "type": "Cava Brut",
+                            "grapes": [],
+                            "description": "Intens i cítric",
+                            "region": "D.O. Catalunya",
+                            "price": {
+                                "glass": 4,
+                                "bottle": 14
+                            }
+                        }
+                    ]
+                }
+            ],
+            "notes": [
+                "Pocs però ben escollits",
+                "Ens encanta recomanar",
+                "Si tens dubtes, pregunta"
+            ]
+        },
+        "fr": {
+            "title": "CARTE DES VINS 2026",
+            "sections": [
+                {
+                    "name": "Vins",
+                    "items": [
+                        {
+                            "name": "Verdera",
+                            "type": "Rouge",
+                            "grapes": [
+                                "Grenache",
+                                "Carignan"
+                            ],
+                            "description": "Frais et fruité",
+                            "region": "Empordà",
+                            "price": {
+                                "glass": 3,
+                                "bottle": 13
+                            }
+                        },
+                        {
+                            "name": "Lomas del Marqués",
+                            "type": "Rouge",
+                            "grapes": [
+                                "Tempranillo"
+                            ],
+                            "description": "Complexe, notes grillées",
+                            "region": "Rioja",
+                            "price": {
+                                "glass": 4,
+                                "bottle": 19
+                            }
+                        },
+                        {
+                            "name": "Marqués de Riscal",
+                            "type": "Rouge Réserve",
+                            "grapes": [
+                                "Tempranillo",
+                                "Graciano"
+                            ],
+                            "description": "Intense avec fruits mûrs",
+                            "region": "Rioja",
+                            "price": {
+                                "bottle": 24
+                            }
+                        },
+                        {
+                            "name": "Vall Major",
+                            "type": "Blanc",
+                            "grapes": [
+                                "Grenache blanc"
+                            ],
+                            "description": "Fruité et frais",
+                            "region": "D.O. Terra Alta",
+                            "price": {
+                                "glass": 3,
+                                "bottle": 13
+                            }
+                        },
+                        {
+                            "name": "Castell d'Or",
+                            "type": "Cava Brut",
+                            "grapes": [],
+                            "description": "Intense et citronné",
+                            "region": "D.O. Catalunya",
+                            "price": {
+                                "glass": 4,
+                                "bottle": 14
+                            }
+                        }
+                    ]
+                }
+            ],
+            "notes": [
+                "Peu nombreux mais bien choisis",
+                "Nous aimons recommander",
+                "En cas de doute, demandez-nous"
+            ]
+        }
+    }
+}

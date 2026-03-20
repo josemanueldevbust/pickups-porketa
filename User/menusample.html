@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Come Porketa - Carta</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+
+        function backToSite(event) {
+            window.dispatchEvent(new Event('close-all'))
+
+        }
+    </script>
+    <style>
+        /* Suavizar el scroll al hacer clic en los enlaces */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Clase para el estado activo de la navegación */
+        .nav-link-active {
+            opacity: 100 !important;
+            color: #ec5b13 !important;
+        }
+
+        .nav-link-active div {
+            background-color: #ec5b13 !important;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 transition-colors duration-300">
+
+    <a href="#" id="back-to-side" onclick="backToSite(event)"
+        class="fixed top-8 z-50 right-8 z-[60] bg-primary text-white w-12 h-12 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-300  translate-y-4">
+        <span class="material-symbols-outlined">arrow_back</span>
+    </a>
+    <div class="relative flex min-h-screen flex-col overflow-x-hidden">
+
+
+
+        <main class="flex-1 max-h-[100vh] overflow-auto w-full mx-auto px-6 pb-12">
+
+
+            <div
+                class="sticky top-0 z-40 py-2 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-slate-200 dark:border-slate-800 mb-12">
+                <div id="category-nav" class="flex items-center gap-10 overflow-x-auto no-scrollbar">
+                    <a class="nav-item group flex flex-col items-center gap-2 min-w-fit opacity-50 transition-all"
+                        href="#burgers">
+                        <span class="font-bold text-lg">Hamburguesas</span>
+                        <div class="h-1 w-12 bg-transparent rounded-full transition-colors"></div>
+                    </a>
+                    <a class="nav-item group flex flex-col items-center gap-2 min-w-fit opacity-50 transition-all"
+                        href="#sandwiches">
+                        <span class="font-bold text-lg">Bocadillos</span>
+                        <div class="h-1 w-12 bg-transparent rounded-full transition-colors"></div>
+                    </a>
+                    <a class="nav-item group flex flex-col items-center gap-2 min-w-fit opacity-50 transition-all"
+                        href="#sides">
+                        <span class="font-bold text-lg">Guarniciones</span>
+                        <div class="h-1 w-12 bg-transparent rounded-full transition-colors"></div>
+                    </a>
+                    <a class="nav-item group flex flex-col items-center gap-2 min-w-fit opacity-50 transition-all"
+                        href="#drinks">
+                        <span class="font-bold text-lg">Bebidas</span>
+                        <div class="h-1 w-12 bg-transparent rounded-full transition-colors"></div>
+                    </a>
+                </div>
+            </div>
+
+            <section class="mb-20" id="burgers">
+                <div class="flex items-baseline justify-between mb-8">
+                    <h3 class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">Hamburguesas de
+                        Autor</h3>
+                    <div class="h-px flex-1 mx-8 bg-slate-200 dark:bg-slate-800"></div>
+                    <span class="text-primary font-semibold">4 Variedades</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div class="flex gap-6 group">
+                        <div class="w-40 h-40 shrink-0 rounded-2xl overflow-hidden bg-slate-200 dark:bg-slate-800">
+                            <img alt="The Classic Porketa"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Hamburguesa de porketa italiana clásica con salsa verde"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd23AHJ1xXxU2vw3r3dGkbOqDEcj75SMICbEn91D7_14ONBLGhUfZKSQ20Uq4Q2PAnO22jQVaCkerlpuvE5z12bJ48pzCwHswsov435m56BfrGeovPL68QtVrrBaGS8ZQIJ4cKUFfuedJCY9iAQnFII-g421eMRhL05tst-0xr_Ezy6L22wWrYF8AWbzZT26pml0Y0z9fYMH7OUXZxQsqRxnVGb3I-8iwT8Ke0bomVHSyKq2fcylx-HiXtYHo87RTvF45Uk1nQyo8" />
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="text-xl font-bold text-slate-900 dark:text-white">La Porketa Clásica</h4>
+                                <span class="text-primary font-bold text-lg">14,50€</span>
+                            </div>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Paleta de cerdo asada
+                                a fuego lento, salsa verde, chicharrón casero y rúcula fresca en pan brioche tostado con
+                                mantequilla.</p>
+                            <div class="mt-3 flex gap-2">
+                                <span
+                                    class="px-2 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[10px] font-bold uppercase rounded">Popular</span>
+                                <span
+                                    class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-bold uppercase rounded">Opción
+                                    sin Gluten</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 group">
+                        <div class="w-40 h-40 shrink-0 rounded-2xl overflow-hidden bg-slate-200 dark:bg-slate-800">
+                            <img alt="Spicy BBQ Pork"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Hamburguesa de cerdo desmenuzado BBQ picante con jalapeños"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbamEK7smhq-TUiQpCw6G2iCfrinGqmGIVO0aJCsscKN8pfCyA03Y0Ky6Cl2HSdKO5Kk-LI_Y9p-IgmVzckh-k3HnN09u6Q15EgKjtZf7gxRJEzjh12XGZjjh3cWGdoDSw0ExVEo-71lZ--vEwmEfahJc_dC8dQ7QSfa8B3x4NJ5Iyo7m8KUckIOaVl5VgOEbB4WXJIm3iFKWfyPAW0qlZTUKxoT3VOKtCf8IyYRM75Dss0yZhV9EYZAFJEpK7yIhnbkpF802IfDQ" />
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="text-xl font-bold text-slate-900 dark:text-white">Barbacoa a la Naranja</h4>
+                                <span class="text-primary font-bold text-lg">15,50€</span>
+                            </div>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Cerdo ahumado, potente
+                                salsa BBQ con infusión de naranja, jalapeños encurtidos, cebolla frita crujiente y
+                                ensalada de col cremosa.</p>
+                            <div class="mt-3 flex gap-2">
+                                <span
+                                    class="px-2 py-0.5 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400 text-[10px] font-bold uppercase rounded">Picante</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 group">
+                        <div class="w-40 h-40 shrink-0 rounded-2xl overflow-hidden bg-slate-200 dark:bg-slate-800">
+                            <img alt="Truffle Pork"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Hamburguesa de cerdo con setas trufadas y queso fundido"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEat0cYMGwURqvuKOJvXydizxBxmrlgxrSrfmwhjUwUKpL8jkambBC7SkMcRjv93FEIH_hNURWYgu6NRbaC4clRTNGi4NEuVtMNVVwuf6UXzz6QzdD90803MbOGFshEWueyubU44TnTsEL30TI_gxniFubR0prxqVdadZw5NfaPY_rs-ZmVbXQHwZH864_nvgEiw3fToMMoUh7tFRStFryHXmwB5SqGGsTYV-HlUfgTN4NlCfykn-bnfeP3Cj9BiQQv0nNBkrGAtc" />
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="text-xl font-bold text-slate-900 dark:text-white">Umami de Trufa</h4>
+                                <span class="text-primary font-bold text-lg">17,00€</span>
+                            </div>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Carne de cerdo con
+                                esencia de trufa, champiñones salteados al balsámico, queso suizo curado y alioli de ajo
+                                confitado.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 group">
+                        <div class="w-40 h-40 shrink-0 rounded-2xl overflow-hidden bg-slate-200 dark:bg-slate-800">
+                            <img alt="Morning Glory"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Hamburguesa de desayuno con cerdo, huevo frito y bacon"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiEomV3wIA9rgoaiLjBSBfgI2BTTdD1WpDb0MynxNCY741hQbkCrI1GYsm42hyYvY9KQIXXdzRL2fe-ZoyqAs2XTXRyd00ieaonek1mXwcyr9m6JAX31Vgf8VnBMqS7L9R2ECWUV5CW_Don4vIZdtmvCeTo9tP7fjzCob0HAJLktp-Uju_kmveEs2X8SjTD1his-XMQte-GQNbI9_p-fiR5uOnZ3tQnaHRgFGYlXKOaQ9xNbHpoEHmU7EbNbrKEp88F7K_291jttk" />
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="text-xl font-bold text-slate-900 dark:text-white">The Morning Glory</h4>
+                                <span class="text-primary font-bold text-lg">16,00€</span>
+                            </div>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Panceta crujiente,
+                                huevo de corral, glaseado de arce y cheddar ahumado en panecillo de muffin tostado.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="mb-20" id="sandwiches">
+                <div class="flex items-baseline justify-between mb-10">
+                    <h3 class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">Bocadillos
+                        Artesanales</h3>
+                    <div class="h-px flex-1 mx-8 bg-slate-200 dark:bg-slate-800"></div>
+                </div>
+                <div class="space-y-12">
+                    <div
+                        class="flex flex-col md:flex-row gap-8 items-center bg-white dark:bg-slate-900/50 p-8 rounded-3xl border border-slate-100 dark:border-slate-800">
+                        <img alt="Ciabatta Roast" class="w-full md:w-64 h-48 object-cover rounded-2xl"
+                            data-alt="Bocadillo de chapata con cerdo asado y verduras"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV73yPVbnl_uLVfv08AW7XAGl7p7m_kmREIkSQ0VyPR_cM59vfPLIXAfPhG2XS50_QH940II1lLMf3JXVugs_HGV4rWU18VDq5oUIPyiW7AY73XmplwAomJYCfn-4JEVRiDZbAI43vt8gPCZxTM0pFyKL5ml9cJ3iB_aIaDm1BfGJrcU36719-9yly_3whEC4SwD49HOFtq-ZCoUr0iHUDj0bumoqMojW7CAo1BcpgdwBxnxhlUnnP02X6pjyoDRgarujrBm4LikA" />
+                        <div class="flex-1 text-center md:text-left">
+                            <div class="flex flex-col md:flex-row justify-between items-center mb-4">
+                                <h4 class="text-2xl font-bold text-slate-900 dark:text-white">El Héroe Romano</h4>
+                                <span class="text-2xl font-black text-primary">13,50€</span>
+                            </div>
+                            <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-4">Bocadillo
+                                tradicional en chapata relleno de finas lonchas de porketa, grelos salteados con ajo y
+                                guindilla, y un chorrito de aceite de oliva virgen extra premium.</p>
+                            <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                                <span class="flex items-center gap-1 text-xs font-bold text-slate-500 uppercase"><span
+                                        class="material-symbols-outlined text-sm">eco</span> Origen Local</span>
+                                <span class="flex items-center gap-1 text-xs font-bold text-slate-500 uppercase"><span
+                                        class="material-symbols-outlined text-sm">history</span> Receta Familiar</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="flex flex-col md:flex-row-reverse gap-8 items-center bg-white dark:bg-slate-900/50 p-8 rounded-3xl border border-slate-100 dark:border-slate-800">
+                        <img alt="Cuban Porketa" class="w-full md:w-64 h-48 object-cover rounded-2xl"
+                            data-alt="Bocadillo estilo cubano con cerdo asado y pepinillos"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaKCK0rkTO0e3CfbGN5NGuIL1oEN3pu0hCTdO8vsYgf5se8RgDDGBcBbrXqelcHWWhkzCEKkz75gpoIx0RPmnSrPql_LVsWmhMo4R60kWA3MCwfL5rkXz6iuwY2U2gdYaCMvMqFk0pbLtMo9YtrH5EbgVgrrjgkWaupsDwzJeHWd3RKaGcekz7rdMh-8Em1r6ByS94KQ_3aPaD3A1v1KUxfeFSUjHxHlZcOaLTLZUsuANggjrZL7LparN0mq-jK7x8J9Yz__5pqpo" />
+                        <div class="flex-1 text-center md:text-left">
+                            <div class="flex flex-col md:flex-row justify-between items-center mb-4">
+                                <h4 class="text-2xl font-bold text-slate-900 dark:text-white">Wrap Mediterráneo</h4>
+                                <span class="text-2xl font-black text-primary">12,00€</span>
+                            </div>
+                            <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-4">Pan de pita
+                                caliente relleno de cerdo desmenuzado, tzatziki de pepino y yogur, cebolla roja
+                                encurtida, aceitunas Kalamata y perejil fresco.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <section id="sides">
+                    <div class="flex items-baseline justify-between mb-8">
+                        <h3 class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">Guarniciones
+                        </h3>
+                    </div>
+                    <div class="space-y-6">
+                        <div
+                            class="flex justify-between items-start pb-4 border-b border-slate-200 dark:border-slate-800">
+                            <div>
+                                <h5 class="font-bold text-slate-900 dark:text-white">Patatas Trufadas al Parmesano</h5>
+                                <p class="text-sm text-slate-500">Patatas caseras, aceite de trufa, parmesano curado y
+                                    perejil fresco.</p>
+                            </div>
+                            <span class="font-bold text-primary">6,50€</span>
+                        </div>
+                        <div
+                            class="flex justify-between items-start pb-4 border-b border-slate-200 dark:border-slate-800">
+                            <div>
+                                <h5 class="font-bold text-slate-900 dark:text-white">Ensalada de Col y Cítricos</h5>
+                                <p class="text-sm text-slate-500">Col rallada, zanahoria, aderezo de miel y lima con
+                                    semillas tostadas.</p>
+                            </div>
+                            <span class="font-bold text-primary">4,00€</span>
+                        </div>
+                        <div
+                            class="flex justify-between items-start pb-4 border-b border-slate-200 dark:border-slate-800">
+                            <div>
+                                <h5 class="font-bold text-slate-900 dark:text-white">Corteza de Cerdo Crujiente</h5>
+                                <p class="text-sm text-slate-500">Piel de cerdo asada extra crujiente sazonada con
+                                    pimentón ahumado.</p>
+                            </div>
+                            <span class="font-bold text-primary">5,50€</span>
+                        </div>
+                    </div>
+                </section>
+                <section id="drinks">
+                    <div class="flex items-baseline justify-between mb-8">
+                        <h3 class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">Bebidas Frías
+                        </h3>
+                    </div>
+                    <div class="space-y-6">
+                        <div
+                            class="flex justify-between items-start pb-4 border-b border-slate-200 dark:border-slate-800">
+                            <div>
+                                <h5 class="font-bold text-slate-900 dark:text-white">Limonada de Naranja Casera</h5>
+                                <p class="text-sm text-slate-500">Cítricos recién exprimidos con un toque de sirope de
+                                    romero.</p>
+                            </div>
+                            <span class="font-bold text-primary">4,50€</span>
+                        </div>
+                        <div
+                            class="flex justify-between items-start pb-4 border-b border-slate-200 dark:border-slate-800">
+                            <div>
+                                <h5 class="font-bold text-slate-900 dark:text-white">Cerveza de Raíz Artesanal</h5>
+                                <p class="text-sm text-slate-500">Root beer artesanal servida en jarra helada.</p>
+                            </div>
+                            <span class="font-bold text-primary">5,00€</span>
+                        </div>
+                        <div
+                            class="flex justify-between items-start pb-4 border-b border-slate-200 dark:border-slate-800">
+                            <div>
+                                <h5 class="font-bold text-slate-900 dark:text-white">Agua Mineral Italiana</h5>
+                                <p class="text-sm text-slate-500">San Pellegrino 500ml servida con rodajas de limón
+                                    fresco.</p>
+                            </div>
+                            <span class="font-bold text-primary">3,50€</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+
+    </div>
+
+    <script>
+
+
+        // Script para resaltar el menú según el scroll (ScrollSpy)
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-item');
+
+        const options = {
+            root: null,
+            rootMargin: '-150px 0px -70% 0px', // Ajuste para detectar la sección activa cerca del top
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+
+                    navLinks.forEach(link => {
+                        link.classList.remove('nav-link-active');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('nav-link-active');
+                        }
+                    });
+                }
+            });
+        }, options);
+
+        sections.forEach(section => observer.observe(section));
+    </script>
+
+</body>
+
+</html>

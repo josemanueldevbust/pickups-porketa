@@ -1,0 +1,300 @@
+{
+    "menus": {
+        "specialty": {
+            "description": "LES PORKETES: 150gr de cansalada marinada en 8 espècies fumada o fregida.",
+            "types": [
+                {
+                    "name": "A LA GALLEGA",
+                    "price": "13.49€",
+                    "description": "Oli d'oliva, pebre vermell de la Vera amb el punt just de sal"
+                },
+                {
+                    "name": "TRADICIONAL",
+                    "price": "13.49€",
+                    "description": "Picada de pebrots, ceba vermella, pinya, coriandre fresc i una vibrant vinagreta cítrica de llimona."
+                },
+                {
+                    "name": "ASIÁTICA",
+                    "price": "13.9€ / 13.99€",
+                    "description": "Salsa teriyaki artesanal, llavors de sèsam i la frescor del cibulet"
+                },
+                {
+                    "name": "ARGENTINA",
+                    "price": "13.99€",
+                    "description": "Salsa ximixurri sobre una cobertura de formatge provolone fos"
+                },
+                {
+                    "name": "ITALIANA",
+                    "price": "13.99€",
+                    "description": "Tomàquets cherry deshidratats sobre una salsa pesto d'alfàbrega"
+                },
+                {
+                    "name": "AMERICANA",
+                    "price": "13.49€",
+                    "description": "Reducció de salsa BBQ i el toc torrat"
+                },
+                {
+                    "name": "DE TEMPORADA",
+                    "price": "14€",
+                    "description": "Pregunta per mi"
+                }
+            ]
+        },
+        "salads": [
+            {
+                "name": "AMANIDA AMB PORKETA",
+                "price": "12.90€",
+                "description": "Enciams seleccionats acompanyats de daus de cansalada fumada, xampinyons, tomàquets cherry, pinya i una vinagreta a base de llima, mel i mostassa."
+            },
+            {
+                "name": "CÈSAR AMB POLLASTRE",
+                "price": "12.90€",
+                "description": "Mix d'enciams frescos, trossos de pollastre fumat i arrebossat, crostons de pa, formatge parmesà i la nostra versió de la vinagreta Cèsar"
+            },
+            {
+                "name": "AMANIDA VEGETARIANA",
+                "price": "12.90€",
+                "description": "Varietat de fulles verdes, olives negres, tomàquets cherry, api, ceba morada, formatge camembert i una vinagreta mediterrània"
+            }
+        ],
+        "to_share": [
+            {
+                "name": "CROQUETES",
+                "price": "7.90€",
+                "description": "Esferes cruixents de massa de iuca amb trossos de cansalada fumada"
+            },
+            {
+                "name": "NUGGETS",
+                "price": "7.50€",
+                "description": "Trossos de cansalada o pollastre arrebossats"
+            },
+            {
+                "name": "PATATES FREGIDES A LA PORKETA",
+                "price": "8.99€",
+                "description": "Daus de cansalada fumada, servits amb la nostra maionesa de llima."
+            },
+            {
+                "name": "CEVICHE DE TORREZNO",
+                "price": "7.99€",
+                "description": "Daus de cansalada fregida amb una picada de pebrots, ceba vermella, pinya, coriandre, marinats en una vinagreta cítrica de llimona"
+            },
+            {
+                "name": "TEQUEÑOS",
+                "price": "7.50€",
+                "description": "Cruixents barretes de massa de blat fregides al moment i farcides de formatge fos."
+            },
+            {
+                "name": "Duo de Mini Burgers",
+                "price": "8.99€",
+                "description": "Parella de mini hamburgueses de cansalada o pollastre arrebossats amb formatge cheddar i salsa de tomàquet"
+            }
+        ],
+        "sandwiches": [
+            {
+                "name": "BURRITO",
+                "price": "12.90€",
+                "description": "Tortilla de blat farcida de pebrots, ceba morada, pinya, enciam i coriandre fresc, cruixents de iuca servida sobre una maionesa d'alvocat."
+            },
+            {
+                "name": "QUESADILLA",
+                "price": "8.50€",
+                "description": "Tortilla de blat amb doble formatge fos i una maionesa d'alvocat."
+            },
+            {
+                "name": "QUESADILLA FARCIDA",
+                "price": "10.50€",
+                "description": "Cansalada fumada amb formatge de cabra, ceba caramel·litzada al vinagre balsàmic, enciams tendres, cruixents de iuca i una maionesa agredolça"
+            },
+            {
+                "name": "ENTREPÀ DE VEDELLA",
+                "price": "13.99€",
+                "description": "Pa hawaià farcit de talls de vedella fumada amb formatge cheddar, enciam, cogombre, ceba morada i una maionesa de llima"
+            },
+            {
+                "name": "ENTREPÀ DE PULLED PORK",
+                "price": "13.90€",
+                "description": "Porc fumat a foc lent i esfilagarsat, servit amb salsa BBQ, formatge cheddar i equilibrat per la dolçor del nostre pa hawaià i l'acidesa de la col i del nap confitat"
+            }
+        ],
+        "burgers": [
+            {
+                "name": "HAMBURGUESA CRUIXENT DE PORKETA",
+                "price": "12.90€",
+                "description": "Cansalada fumada i arrebossada, amb formatge cheddar i xampinyons, juntament amb un mix d'enciam i una maionesa de llima."
+            },
+            {
+                "name": "HAMBURGUESA DE PORKETA",
+                "price": "13.90€",
+                "description": "Cansalada fumada, pollastre cruixent, vedella fumada o proteïna vegetariana"
+            },
+            {
+                "name": "HAMBURGUESA CRUIXENT DE POLLASTRE",
+                "price": "13€",
+                "description": "Pollastre fumat i arrebossat, amb formatge cheddar, enciams tendres, cogombres confitats, juntament amb una maionesa d'alvocat"
+            },
+            {
+                "name": "HAMBURGUESA VEGETARIANA",
+                "price": "13.99€",
+                "description": "Pa hawaià farcit de tofu fumat, bacó vegetal, formatge cheddar, xampinyons, enciam fresc i cibulet, juntament amb una maionesa fumada."
+            }
+        ],
+        "desserts": [
+            {
+                "name": "BROOKIE",
+                "price": "5€",
+                "description": "Fusió de Brownie i una galeta de xips de xocolata"
+            },
+            {
+                "name": "PASTÍS TRES LLETS",
+                "price": "3.99€",
+                "description": "Pa de pessic humit de vainilla, farcit de capes de llet condensada, nata i llet evaporada, amb un toc de canyella"
+            },
+            {
+                "name": "TIRAMISU",
+                "price": "3.49€",
+                "description": "Bescuits banyats en cafè i brandi, coberts per una crema mascarpone i una capa de cacau en pols."
+            },
+            {
+                "name": "ROTLLO DE CANYELLA",
+                "price": "4.5€",
+                "description": "Rotllo de massa dolça de canyella amb topping de Nutella"
+            },
+            {
+                "name": "GALETA DE XIPS DE XOCOLATA",
+                "price": "2.5€"
+            }
+        ],
+        "drinks": {
+            "soft_drinks": [
+                {
+                    "name": "Coca-cola",
+                    "price": "2.5€"
+                },
+                {
+                    "name": "Coca cola zero",
+                    "price": "2.5€"
+                },
+                {
+                    "name": "Fanta taronja",
+                    "price": "2.5€"
+                },
+                {
+                    "name": "Sprite",
+                    "price": "2.5€"
+                },
+                {
+                    "name": "Aquarius de llimona",
+                    "price": "2.5€"
+                },
+                {
+                    "name": "Fuze tea de llimona",
+                    "price": "2.5€"
+                },
+                {
+                    "name": "Aigua",
+                    "price": "2.5€"
+                },
+                {
+                    "name": "Aigua amb gas",
+                    "price": "2.5€"
+                }
+            ],
+            "coffee_and_tea": [
+                {
+                    "name": "Expresso",
+                    "price": "1.5€"
+                },
+                {
+                    "name": "Americà",
+                    "price": "1.5€"
+                },
+                {
+                    "name": "Tallat",
+                    "price": "2.5€"
+                },
+                {
+                    "name": "Cafè amb llet",
+                    "price": "2.5€"
+                },
+                {
+                    "name": "Cigaló",
+                    "price": "2.5€"
+                },
+                {
+                    "name": "Te de gingebre",
+                    "price": "2€"
+                },
+                {
+                    "name": "Te de fruits vermells",
+                    "price": "2€"
+                },
+                {
+                    "name": "Te de menta",
+                    "price": "2€"
+                }
+            ],
+            "beers": [
+                {
+                    "name": "Estrella de Galicia (LAGER)",
+                    "price": "3€"
+                },
+                {
+                    "name": "1906 LAGER EXTRA",
+                    "price": "3€"
+                },
+                {
+                    "name": "Estrella de Galicia (SENSE ALCOHOL)",
+                    "price": "3€"
+                },
+                {
+                    "name": "Estrella de Galicia (SENSE GLUTEN)",
+                    "price": "3€"
+                },
+                {
+                    "name": "1906 (SENSE ALCOHOL)",
+                    "price": "3€"
+                },
+                {
+                    "name": "B-Lemon (CLARITA)",
+                    "price": "3€"
+                },
+                {
+                    "name": "Corona",
+                    "price": "3€"
+                }
+            ]
+        },
+        "wine_list": [
+            {
+                "name": "VERDERA",
+                "type": "Negre Garnatxa i Carinyena",
+                "description": "Fresc i afruitat",
+                "price": "copa 3€ / ampolla 13€"
+            },
+            {
+                "name": "LOMAS DEL MARQUES",
+                "type": "Negre Ull de Llebre",
+                "description": "Complex, fruits torrats",
+                "price": "copa 4€ / ampolla 19€"
+            },
+            {
+                "name": "MARQUES DE RISCAL",
+                "type": "Negre Reserva Tempranillo i Graciano",
+                "description": "Intens i fruits madurs",
+                "price": "ampolla 24 €"
+            },
+            {
+                "name": "VALL MAJOR",
+                "type": "Blanc Garnatxa Blanca",
+                "description": "Afruitat i fresc",
+                "price": "copa 3€ / ampolla 13€"
+            },
+            {
+                "name": "CASTELL D'OR",
+                "type": "Cava Brut",
+                "description": "Intens i cítric",
+                "price": "copa 4€ / ampolla 14€"
+            }
+        ]
+    }
+}

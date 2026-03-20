@@ -202,6 +202,11 @@ button.loc-btn {
     border: none;
     color: #333;
     font-style: italic;
+    white-space: nowrap;
+
+}
+button.loc-btn svg {
+    width: 1.5rem;
 }
 
 ul.pickup-location li {
@@ -408,7 +413,7 @@ button.toggle-cart {
 
 div#order-now-container {
     /* margin: auto !important; */
-    padding-left: 4rem;
+    /* padding-left: 4rem; */
 }
 
 ul.product-list label button {
@@ -462,4 +467,8 @@ ul.product-list label button {
 
 .order-now-container.show button {
     border-radius: 50px;
+}
+
+iframe#order-iframe {
+    width: 100%;
 }

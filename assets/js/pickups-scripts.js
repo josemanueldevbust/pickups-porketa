@@ -238,6 +238,7 @@ function openOrderNow(event){
     state = {};
     orderSummary = {};
     document.querySelector('.order-now-container').classList.add('show');
+    document.querySelector('#order-now-container').style.display = '';
     //showStep();
 }
 
@@ -252,7 +253,13 @@ function openProductChooser(location){
     setTimeout(()=>{
             ifr.contentWindow.loadProducts()
             ifr.contentWindow.ordersEndpoint = window.ordersEndpoint;
+            ifr.contentWindow.ordersEndpointSimulate = window.ordersEndpointSimulate;
             ifr.contentWindow.ordersCaptureEndpoint = window.ordersCatureEndpoint;
+            ifr.contentWindow.addEventListener('close-all', ()=>{
+                ifr.contentDocument.write('')
+                ifr.style.setProperty('display','none');
+                document.querySelector('.order-now-container').classList.remove('show');
+            })
     },1500)  
     
 }

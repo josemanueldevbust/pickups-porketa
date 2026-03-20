@@ -7,8 +7,7 @@
  * Author: Jose De Armas
  */
 
-
-//require __DIR__ . "/vendor/autoload.php";
+require __DIR__ . "/vendor/autoload.php";
 
 use PaypalServerSdkLib\PaypalServerSdkClientBuilder;
 use PaypalServerSdkLib\Authentication\ClientCredentialsAuthCredentialsBuilder;
@@ -40,10 +39,22 @@ use PaypalServerSdkLib\Models\Builders\PaymentSourceBuilder;
 use PaypalServerSdkLib\Models\CallbackEvents;
 use Pickups\Helpers\Data;
 use Pickups\Model\Product;
-
+use Pickups\Model\Order;
+use Pickups\User\Menu;
 
 $PAYPAL_CLIENT_ID = getenv("PAYPAL_CLIENT_ID");
 $PAYPAL_CLIENT_SECRET = getenv("PAYPAL_CLIENT_SECRET");
+
+
+$client = PaypalServerSdkClientBuilder::init()
+    ->clientCredentialsAuthCredentials(
+        ClientCredentialsAuthCredentialsBuilder::init(
+            $PAYPAL_CLIENT_ID,
+            $PAYPAL_CLIENT_SECRET
+        )
+    )
+    ->environment(Environment::SANDBOX)
+    ->build();
 spl_autoload_register(function ($class) {
     // Define your plugin's base namespace
     $prefix = 'Pickups\\';
@@ -76,11 +87,13 @@ function pick_up_button_shortcode() {
     return 'Hello from the Custom Plugin!';
 }
 
-
+function formatPrice($price){
+    return number_format($price, 2, ',', '.') . "€";
+}
 
 \Pickups\Helpers\Config::configure('Product', 'product', 'Product');
-\Pickups\Helpers\Config::configure('Location', 'location', 'Location');
-\Pickups\Helpers\Config::configure('Order', 'order', 'Order', ['edit','add']);
+//\Pickups\Helpers\Config::configure('Location', 'location', 'Location');
+//\Pickups\Helpers\Config::configure('Order', 'order', 'Order', ['edit','add']);
 
 
 add_shortcode( 'pick_upbutton', 'pick_up_button_shortcode' );
@@ -96,18 +109,26 @@ function render_pickup() {
     Pickups\User\OrderNow::render();
 }
 
+function render_menu(){
+    $html = Pickups\User\Menu::getMenuHtml();
+    Pickups\User\Menu::render();
+}
 add_shortcode( 'render_pickup', 'render_pickup' );
+add_shortcode( 'render_menu', 'render_menu' );
 add_action('rest_api_init', function () {
     register_rest_route('pickups/v1', '/payment/orders', array(
         'methods'  => 'POST',
         'callback' => 'process_orders',
         'permission_callback' => '__return_true'
     ));
-});
-add_action('rest_api_init', function () {
-    register_rest_route('pickups/v1', '`/payment/orders/(?P<order_id>[a-zA-Z0-9_-]+)/capture`', array(
+    register_rest_route('pickups/v1', '/payment/orders/(?P<order_id>[a-zA-Z0-9_-]+)/capture', array(
         'methods'  => 'POST',
         'callback' => 'capture_orders',
+        'permission_callback' => '__return_true'
+    ));
+    register_rest_route('pickups/v1', '/payment/orders/simulate', array(
+        'methods'  => 'POST',
+        'callback' => 'simulate_order',
         'permission_callback' => '__return_true'
     ));
 });
@@ -133,12 +154,20 @@ function createOrder($cart)
    
     $total = 0;
 
-    foreach($cart as $item){
-        $prod = array_find($products, function($prod) use ($item){
-            return $prod->getID() == $item["id"];
+    $cartItems = [];
+
+    foreach($cart as $id=>$quantity){
+        $prod = array_find($products, function($prod) use ($id){
+            return $prod->getID() == $id;
         });
-        $total += $prod->getPrice() * $item["quantity"];
+        $total += $prod->getPrice() * $quantity;
+        $cartItems[] = [
+            'id' => $id,
+            'quantity' => $quantity
+        ];
     }
+
+
 
     $orderBody = [
         "body" => OrderRequestBuilder::init("CAPTURE", [
@@ -167,7 +196,7 @@ function createOrder($cart)
                         ->sku("sku" . $prod->getID())
                         ->category(ItemCategory::PHYSICAL_GOODS)
                         ->build();
-                        },$cart))
+                        },$cartItems))
 
                 ->build(),
         ])
@@ -191,6 +220,7 @@ function captureOrder($orderID)
 
     return handleResponse($apiResponse);
 }
+
 function capture_orders($request){
     global $wp;
     $current_path = $wp->request;
@@ -201,12 +231,14 @@ function capture_orders($request){
     $orderID = prev($urlSegments);
     header("Content-Type: application/json");
     try {
-        $captureResponse = captureOrder($orderID);
-        echo json_encode($captureResponse["jsonResponse"]);
+        
     } catch (Exception $e) {
         echo json_encode(["error" => $e->getMessage()]);
         http_response_code(500);
     }
+}
+function simulate_order($request){
+    return Order::process_order($request);
 }
 function process_orders($request) {
     $data = $request->get_json_params(); // Specific for JSON bodies

@@ -1,0 +1,1494 @@
+{
+    "menus": {
+        "spanish": {
+            "specialty": {
+                "description": "LAS PORKETAS: 150gr de panceta marinada en 8 especias ahumada o frita.",
+                "types": [
+                    {
+                        "name": "A LA GALLEGA",
+                        "price": "13.49€",
+                        "description": "Aceite de oliva, pimentón de la Vera con el punto justo de sal"
+                    },
+                    {
+                        "name": "TRADICIONAL",
+                        "price": "13.49€",
+                        "description": "Picadillo de pimientos, cebolla roja, piña, cilantro fresco y una vibrante vinagreta citrica de limón."
+                    },
+                    {
+                        "name": "ASIÁTICA",
+                        "price": "13.9€ \/ 13.99€",
+                        "description": "Salsa teriyaki artesanal, semillas de sésamo y el frescor del cebollino"
+                    },
+                    {
+                        "name": "ARGENTINA",
+                        "price": "13.99€",
+                        "description": "Salsa chimichurri sobre uria cobertura de queso provolone fundido"
+                    },
+                    {
+                        "name": "ITALIANA",
+                        "price": "13.99€",
+                        "description": "Tomates cherry deshidratados sobre una salsa pesto de albahaca"
+                    },
+                    {
+                        "name": "AMERICANA",
+                        "price": "13.49€",
+                        "description": "Reducción de salsa BBQ y el toque tostado"
+                    },
+                    {
+                        "name": "DE TEMPORADA",
+                        "price": "14€",
+                        "description": "Pregunta por mi"
+                    }
+                ]
+            },
+            "salads": [
+                {
+                    "name": "ENSALADA CON PORKETA",
+                    "price": "12.90€",
+                    "description": "Lechugas seleccionadas acompañada de dados de panceta ahumada, champiñones, tomates charry. piña y una Vinagreta a base de lima miel y mostaza."
+                },
+                {
+                    "name": "CESAR CON POLLO",
+                    "price": "12.90€",
+                    "description": "Mix de lechugas frescas, trozos de pollo ahumado y rebozado, crutones de pan, queso parmesano y nuestra versión de la vinagreta Cesar"
+                },
+                {
+                    "name": "ENSALADA VEGETARIANA",
+                    "price": "12.90€",
+                    "description": "Variedad de bojas verdes, aceitunas negras, tomates cherry, apio, cebolla morada, queso camembert y una vinagreta mediterránea"
+                }
+            ],
+            "to_share": [
+                {
+                    "name": "CROQUETAS",
+                    "price": "7.90€",
+                    "description": "Esferas crujientes de masa de yuca con trozos de panceta ahumada"
+                },
+                {
+                    "name": "NUGGETS",
+                    "price": "7.50€",
+                    "description": "Trozos de Panceta o Pollo rebozados"
+                },
+                {
+                    "name": "PATATAS FRITAS A LA PORKETA",
+                    "price": "8.99€",
+                    "description": "Dados de panceta ahumada, servidos con nuestra mayonesa de lima."
+                },
+                {
+                    "name": "CEVICHE DE TORREZNO",
+                    "price": "7.99€",
+                    "description": "Dados de panceta frita con un picadillo de pimientos, cebolla roja, piña, cilantro, maririado en una vinagreta citrica de limón"
+                },
+                {
+                    "name": "TEQUEÑOS",
+                    "price": "7.50€",
+                    "description": "Crujientes barritas de masa de trigo fritas al momento y rellenas de queso fundido."
+                },
+                {
+                    "name": "Dúo de Mini Burgers",
+                    "price": "8.99€",
+                    "description": "Pareja de mini hamburguesas de Panceta o Pollo rebozados con queso cheddar y salsa de tornate"
+                }
+            ],
+            "sandwiches": [
+                {
+                    "name": "BURRITO",
+                    "price": "12.90€",
+                    "description": "Tortilla de trigo rellena de pimientos, cebolla morada, piña, lechuga y cilantro fresco, crujientes de yuca servida sobre una mayonesa de aguacate."
+                },
+                {
+                    "name": "QUESADILLA",
+                    "price": "8.50€",
+                    "description": "Tortilla de trigo con doble queso fundidos y una mayonesa aguacate."
+                },
+                {
+                    "name": "QUESADILLA RELLENA",
+                    "price": "10.50€",
+                    "description": "Panceta ahumada con queso de cabra, cebola caramelizada al aceto balsámico, lechugas tiernas, crujientes de yuca y una mayonesa agridulce"
+                },
+                {
+                    "name": "SANDWICH DE TERNERA",
+                    "price": "13.99€",
+                    "description": "Pan hawarano relleno de cortes de ternera ahumada con queso cheddar, lechuga, pepino, cebolla morada y una mayonesa de lima"
+                },
+                {
+                    "name": "SANDWICH DE PULLED PORK",
+                    "price": "13.90€",
+                    "description": "Cerdo ahumado a fuego lento y deshilachado, servido.con salsa BBQ, queso cheddar y equilibrado por el dulzor de nuestro pan hawalano y la acidez del habo encurtido y el repolla"
+                }
+            ],
+            "burgers": [
+                {
+                    "name": "HAMBURGUESA CRUJIENTE DE PORKETA",
+                    "price": "12.90€",
+                    "description": "Panceta ahumada y rebozada, con queso cheddar y champiñones, junto a un mix de lechuga y una mayonesa de ima."
+                },
+                {
+                    "name": "HAMBURGUESA DE PORKETA",
+                    "price": "13.90€",
+                    "description": "Panceta ahurnada, pollo crujiente, ternera ahumada o proteina vegetariana"
+                },
+                {
+                    "name": "HAMBURGUESA CRUJIENTE DE POLLO",
+                    "price": "13€",
+                    "description": "Pollo ahumado y rebozado, con queso cheddar, lechugas tiernas, pepinos encurtidos, junto a una mayonesa de aguacata"
+                },
+                {
+                    "name": "HAMBURGUESA VEGETARIANA",
+                    "price": "13.99€",
+                    "description": "Pan hawaiano relleno de tofu ahumado, bacon vegetal, queso cheddar, champiñones, lechuga fresca y cebollino, junto a una mayonesa ahumada."
+                }
+            ],
+            "desserts": [
+                {
+                    "name": "BROOKIE",
+                    "price": "5€",
+                    "description": "Fusión de Brownie y una galleta de chispas de chocolate"
+                },
+                {
+                    "name": "TORTAS TRES LECHES",
+                    "price": "3.99€",
+                    "description": "Bizcocho humedo de vainilla, relleno de capas de leche condensada nata y leche evaporada, con un toque de canela"
+                },
+                {
+                    "name": "TIRAMISU",
+                    "price": "3.49€",
+                    "description": "Bizcochos bañados en cafe y brandy, cubiertos por uria crema mascarpone y uria capa de cacao eri polvo."
+                },
+                {
+                    "name": "ROLLO DE CANELA",
+                    "price": "4.5€",
+                    "description": "Rollo de masa dulce de canela con topping de Nutella"
+                },
+                {
+                    "name": "GALLETA DE CHISPA DE CHOCOLATE",
+                    "price": "2.5€"
+                }
+            ],
+            "drinks": {
+                "soft_drinks": [
+                    {
+                        "name": "Coca-cola",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Coca cola zero",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Fanta naranja",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Sprite",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Aquarius de limon",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Fuze tea de limon",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Agua",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Agua con gas",
+                        "price": "2.5€"
+                    }
+                ],
+                "coffee_and_tea": [
+                    {
+                        "name": "Expresso",
+                        "price": "1.5€"
+                    },
+                    {
+                        "name": "Americano",
+                        "price": "1.5€"
+                    },
+                    {
+                        "name": "Cortado",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Cafe con leche",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Carajillo",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Te de jengibre",
+                        "price": "2€"
+                    },
+                    {
+                        "name": "Te de frutos rojos",
+                        "price": "2€"
+                    },
+                    {
+                        "name": "Te de menta",
+                        "price": "2€"
+                    }
+                ],
+                "beers": [
+                    {
+                        "name": "Estrella de Galicia (LAGER)",
+                        "price": "3€"
+                    },
+                    {
+                        "name": "1906 LAGER EXTRA",
+                        "price": "3€"
+                    },
+                    {
+                        "name": "Estrella de Galicia (SIN ALCOHOL)",
+                        "price": "3€"
+                    },
+                    {
+                        "name": "Estrella de Galicia (SIN GLUTEN)",
+                        "price": "3€"
+                    },
+                    {
+                        "name": "1906 (SIN ACOHOL)",
+                        "price": "3€"
+                    },
+                    {
+                        "name": "B-Lemon (CLARITA)",
+                        "price": "3€"
+                    },
+                    {
+                        "name": "Corona",
+                        "price": "3€"
+                    }
+                ]
+            },
+            "wine_list": [
+                {
+                    "name": "VERDERA",
+                    "type": "Tinto Garnacha y Carineña",
+                    "description": "Fresco y afrutado",
+                    "price": "copa 3€ \/ botella 13€"
+                },
+                {
+                    "name": "LOMAS DEL MARQUES",
+                    "type": "Tinto Tempranillo",
+                    "description": "Complejo, frutos tostados",
+                    "price": "copa 4€ \/ botella 19€"
+                },
+                {
+                    "name": "MARQUES DE RISCAL",
+                    "type": "Tinto Reserva Tempranillo y Graciano",
+                    "description": "Intenso y frutos maduros",
+                    "price": "botella 24 €"
+                },
+                {
+                    "name": "VALL MAJOR",
+                    "type": "Blanco Garnacha Blanca",
+                    "description": "Afrutado y fresco",
+                    "price": "copa 3€ \/ botella 13€"
+                },
+                {
+                    "name": "CASTELL D'OR",
+                    "type": "Cava Brut",
+                    "description": "Intenso y cítrico",
+                    "price": "copa 4€ \/ botella 14€"
+                }
+            ]
+        },
+        "italian": {
+            "specialty": {
+                "description": "LAS PORKETAS: 150 g di pancetta di maiale marinata in 8 spezie, affumicata o fritta.",
+                "types": [
+                    {
+                        "name": "A LA GALLEGA",
+                        "price": "13.49€",
+                        "description": "Olio d'oliva, paprika La Vera con la giusta quantità di sale"
+                    },
+                    {
+                        "name": "TRADICIONAL",
+                        "price": "13.49€",
+                        "description": "Peperoni a cubetti, cipolla rossa, ananas, coriandolo fresco e una vivace vinaigrette al limone e agli agrumi."
+                    },
+                    {
+                        "name": "ASIÁTICA",
+                        "price": "13.9€ \/ 13.99€",
+                        "description": "Salsa teriyaki fatta in casa, semi di sesamo e la freschezza dell'erba cipollina"
+                    },
+                    {
+                        "name": "ARGENTINA",
+                        "price": "13.99€",
+                        "description": "Salsa chimichurri su una copertura di provolone fuso."
+                    },
+                    {
+                        "name": "ITALIANA",
+                        "price": "13.99€",
+                        "description": "Pomodorini secchi su salsa al pesto di basilico"
+                    },
+                    {
+                        "name": "AMERICANA",
+                        "price": "13.49€",
+                        "description": "riduzione di salsa BBQ e il tocco tostato dei semi di sesamo"
+                    },
+                    {
+                        "name": "DE TEMPORADA",
+                        "price": "14€",
+                        "description": "chiedi informazioni"
+                    }
+                ]
+            },
+            "salads": [
+                {
+                    "name": "ENSALADA CON PORKETA",
+                    "price": "12.90€",
+                    "description": "Lattughe selezionate accompagnate da pancetta affumicata a dadini, funghi, pomodorini, ananas e una vinaigrette a base di lime, miele e senape"
+                },
+                {
+                    "name": "CESAR CON POLLO",
+                    "price": "12.90€",
+                    "description": "Mix di lattuga fresca, pezzi di pollo affumicato e impanato, crostini di pane, parmigiano e la nostra versione della vinaigrette Cesare"
+                },
+                {
+                    "name": "ENSALADA VEGETARIANA",
+                    "price": "12.90€",
+                    "description": "Varietà di foglie verdi, olive nere, pomodorini, sedano, cipolla rossa, formaggio camembert e vinaigrette mediterranea"
+                }
+            ],
+            "to_share": [
+                {
+                    "name": "CROQUETAS",
+                    "price": "7.90€",
+                    "description": "sfere croccanti di pasta di manioca con pezzetti di pancetta affumicata"
+                },
+                {
+                    "name": "NUGGETS",
+                    "price": "7.50€",
+                    "description": "pezzi di pancetta o pollo impanati, serviti con una delle nostre salse."
+                },
+                {
+                    "name": "PATATAS FRITAS A LA PORKETA",
+                    "price": "8.99€",
+                    "description": "pancetta affumicata a dadini, servita con il nostro Maionese al lime"
+                },
+                {
+                    "name": "CEVICHE DE TORREZNO",
+                    "price": "7.99€",
+                    "description": "pancetta di maiale fritta a dadini con una salsa di peperoni, cipolla rossa ananas e coriandolo, marinata in una vinaigrette al limone e agli agrumi"
+                },
+                {
+                    "name": "TEQUEÑOS",
+                    "price": "7.50€",
+                    "description": "Barrette croccanti di pasta di grano, fritte al momento e ripiene di formaggio fuso"
+                },
+                {
+                    "name": "Dúo de Mini Burgers",
+                    "price": "8.99€",
+                    "description": "Coppia di mini hamburger con pancetta o pollo Impanato con formaggio cheddar e salsa di pomodoro"
+                }
+            ],
+            "sandwiches": [
+                {
+                    "name": "BURRITO",
+                    "price": "12.90€",
+                    "description": "Tortilla di grano ripiena di peperoni, cipolla rossa, ananas, lattuga e coriandolo fresco, guarnita con yucca croccante e servita su maionese all'avocado."
+                },
+                {
+                    "name": "QUESADILLA",
+                    "price": "8.50€",
+                    "description": "Tortilla di grano con formaggio fuso due volte e maionese all'avocado."
+                },
+                {
+                    "name": "QUESADILLA RELLENA",
+                    "price": "10.50€",
+                    "description": "Pancetta di maiale affumicata con formaggio di capra, cipolle caramellate all'aceto balsamico, lattuga tenera, croccanti chips di yucca e maionese agrodolce"
+                },
+                {
+                    "name": "SANDWICH DE TERNERA",
+                    "price": "13.99€",
+                    "description": "Pane hawaiano ripieno di tagli di manzo affumicati con formaggio cheddar, lattuga, cipolla rossa e maionese al lime"
+                },
+                {
+                    "name": "SANDWICH DE PULLED PORK",
+                    "price": "13.90€",
+                    "description": "Maiale sfilacciato e affumicato lentamente, servito con salsa barbecue, formaggio cheddar e bilanciato dalla dolcezza del nostro pane hawaiano e dal sapore aspro della rapa e del cavolo sottaceto"
+                }
+            ],
+            "burgers": [
+                {
+                    "name": "HAMBURGUESA CRUJIENTE DE PORKETA",
+                    "price": "12.90€",
+                    "description": "Pancetta di maiale affumicata e impanata con formaggio cheddar e funghi, servita con insalata mista e maionese al lime."
+                },
+                {
+                    "name": "HAMBURGUESA DE PORKETA",
+                    "price": "13.90€",
+                    "description": "Pancetta affumicata, pollo croccante, manzo affumicato o proteine vegetariane"
+                },
+                {
+                    "name": "HAMBURGUESA CRUJIENTE DE POLLO",
+                    "price": "13€",
+                    "description": "Pollo affumicato e impanato, con formaggio cheddar, lattuga tenera, cetrioli sottaceto e maionese all'avocado"
+                },
+                {
+                    "name": "HAMBURGUESA VEGETARIANA",
+                    "price": "13.99€",
+                    "description": "pane hawaiano ripieno di tofu affumicato, pancetta vegetale, formaggio cheddar, funghi, lattuga fresca ed erba cipollina, tutto condito con maionese affumicata."
+                }
+            ],
+            "desserts": [
+                {
+                    "name": "BROOKIE",
+                    "price": "5€",
+                    "description": "una fusione tra un brownie e un biscotto con gocce di cioccolato"
+                },
+                {
+                    "name": "TORTAS TRES LECHES",
+                    "price": "3.99€",
+                    "description": "soffice pan di Spagna alla vaniglia, farcito con strati di latte condensato, panna montata e latte evaporato, con un tocco di cannella"
+                },
+                {
+                    "name": "TIRAMISU",
+                    "price": "3.49€",
+                    "description": "Pan di Spagna imbevuto di caffe e brandy, ricoperto di mascarpone e uno strato di cacao in polvere."
+                },
+                {
+                    "name": "ROLLO DE CANELA",
+                    "price": "4.5€",
+                    "description": "Rotolo di pasta dolce alla cannella con copertura alla Nutella"
+                },
+                {
+                    "name": "BISCOTTO CON GOCCE DE CIOCCOLATO",
+                    "price": "2.5€"
+                }
+            ],
+            "drinks": {
+                "soft_drinks": [
+                    {
+                        "name": "Coca-cola",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Coca cola zero",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Fanta aranciata",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Sprite",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Aquarius limone",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Fuze tea limone",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Acqua",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Acqua frizzante",
+                        "price": "2.5€"
+                    }
+                ],
+                "coffee_and_tea": [
+                    {
+                        "name": "Expresso",
+                        "price": "1.5€"
+                    },
+                    {
+                        "name": "Americano",
+                        "price": "1.5€"
+                    },
+                    {
+                        "name": "Cortado",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Caffe con latte",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Carajillo",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Te allo zenzero",
+                        "price": "2€"
+                    },
+                    {
+                        "name": "Te ai frutti ross",
+                        "price": "2€"
+                    },
+                    {
+                        "name": "Te alla menta",
+                        "price": "2€"
+                    }
+                ],
+                "beers": [
+                    {
+                        "name": "Estrella de Galicia (LAGER)",
+                        "price": "3€"
+                    },
+                    {
+                        "name": "1906 LAGER EXTRA",
+                        "price": "3€"
+                    },
+                    {
+                        "name": "Estrella de Galicia (ANALCOLICA)",
+                        "price": "3€"
+                    },
+                    {
+                        "name": "Estrella de Galicia (SENZA GLUTINE)",
+                        "price": "3€"
+                    },
+                    {
+                        "name": "1906 (ANALCOLICA)",
+                        "price": "3€"
+                    },
+                    {
+                        "name": "B-Lemon (CLARITA)",
+                        "price": "3€"
+                    },
+                    {
+                        "name": "Corona",
+                        "price": "3€"
+                    }
+                ]
+            },
+            "wine_list": [
+                {
+                    "name": "VERDERA",
+                    "type": "Rosso Garnacha e Carineña",
+                    "description": "Fresco e fruttato",
+                    "price": "calice 3€ \/ bottiglia 13€"
+                },
+                {
+                    "name": "LOMAS DEL MARQUES",
+                    "type": "Rosso Tempranillo",
+                    "description": "Complesso, frutti tostati",
+                    "price": "calice 4€ \/ bottiglia 19€"
+                },
+                {
+                    "name": "MARQUES DE RISCAL",
+                    "type": "Rosso Riserva Tempranillo e Graciano",
+                    "description": "Intenso e frutti maturi",
+                    "price": "bottiglia 24 €"
+                },
+                {
+                    "name": "VALL MAJOR",
+                    "type": "Bianco Garnacha Blanca",
+                    "description": "Fruttato e fresco",
+                    "price": "calice 3€ \/ bottiglia 13€"
+                },
+                {
+                    "name": "CASTELL D'OR",
+                    "type": "Cava Brut",
+                    "description": "Intenso e agrumato",
+                    "price": "calice 4€ \/ bottiglia 14€"
+                }
+            ]
+        },
+        "english": {
+            "specialty": {
+                "description": "PORKETAS: 150g of pork belly marinated in 8 spices, smoked or fried.",
+                "types": [
+                    {
+                        "name": "A LA GALLEGA",
+                        "price": "13.49€",
+                        "description": "Olive oil base, La Vera paprika with just the right amount of salt."
+                    },
+                    {
+                        "name": "TRADICIONAL",
+                        "price": "13.49€",
+                        "description": "Diced peppers, red onion, pineapple, fresh cilantro and a vibrant citrus lemon vinaigrette"
+                    },
+                    {
+                        "name": "ASIÁTICA",
+                        "price": "13.9€ \/ 13.99€",
+                        "description": "Homemade teriyaki sauce, sesame seeds, and the freshness of chives"
+                    },
+                    {
+                        "name": "ARGENTINA",
+                        "price": "13.99€",
+                        "description": "Chimichurri sauce on a topping of melted provolone cheese"
+                    },
+                    {
+                        "name": "ITALIANA",
+                        "price": "13.99€",
+                        "description": "Sundried-cherry tomatoes on a basil pesto sauce"
+                    },
+                    {
+                        "name": "AMERICANA",
+                        "price": "13.49€",
+                        "description": "BBQ sauce reduction and the toasted touch of sesame seeds"
+                    },
+                    {
+                        "name": "DE TEMPORADA",
+                        "price": "13.99€",
+                        "description": "Ask about me."
+                    }
+                ]
+            },
+            "salads": [
+                {
+                    "name": "ENSALADA CON PORKETA",
+                    "price": "12.90€",
+                    "description": "Selected lettuces accompanied by diced smoked bacon, mushrooms, cherry tomatoes, pineapple and a vinaigrette made with lime, honey and mustard."
+                },
+                {
+                    "name": "CESAR CON POLLO",
+                    "price": "12.90€",
+                    "description": "Mix of fresh lettuces, pieces of smoked and breaded chicken, bread croutons, parmesan cheese and our version of Caesar vinaigrette"
+                },
+                {
+                    "name": "ENSALADA VEGETARIANA",
+                    "price": "12.90€",
+                    "description": "Variety of green leaves, black olives, cherry tomatoes, celery, red onion, camembert cheese and a Mediterranean vinaigrette"
+                }
+            ],
+            "to_share": [
+                {
+                    "name": "CROQUETAS",
+                    "price": "7.90€",
+                    "description": "Crispy spheres of cassava dough with pieces of smoked bacon"
+                },
+                {
+                    "name": "NUGGETS",
+                    "price": "7.50€",
+                    "description": "Breaded pieces of bacon or chicken served with one of our sauces"
+                },
+                {
+                    "name": "PATATAS FRITAS A LA PORKETA",
+                    "price": "8.99€",
+                    "description": "Diced smoked bacon, served with our Lime mayonnaise"
+                },
+                {
+                    "name": "CEVICHE DE TORREZNO",
+                    "price": "7.99€",
+                    "description": "Diced fried pork belly with a relish of peppers, red onion, pineapple, and cilantro marinated in a citrus lemon vinaigrette"
+                },
+                {
+                    "name": "TEQUEÑOS",
+                    "price": "7.50€",
+                    "description": "Crispy wheat dough sticks, freshly fried and filled with melted cheese."
+                },
+                {
+                    "name": "Dúo de Mini Burgers",
+                    "price": "8.99€",
+                    "description": "Pair of mini burgers with bacon or chicken Breaded with cheddar cheese and tomato sauce"
+                }
+            ],
+            "sandwiches": [
+                {
+                    "name": "BURRITO",
+                    "price": "12.90€",
+                    "description": "Wheat tortilla filled with bell peppers, red onion, pineapple, lettuce, and fresh cilantro, topped with crispy yucca and served on avocado mayonnaise"
+                },
+                {
+                    "name": "QUESADILLA",
+                    "price": "8.50€",
+                    "description": "Wheat tortilla with double melted cheese and avocado mayonnaise"
+                },
+                {
+                    "name": "QUESADILLA RELLENA",
+                    "price": "10.50€",
+                    "description": "Smoked pork belly with goat cheese, balsamic caramelized onions, tender lettuce, crispy yucca chips, and a sweet and sour mayonnaise."
+                },
+                {
+                    "name": "SANDWICH DE TERNERA",
+                    "price": "13.99€",
+                    "description": "Hawaiian bread filled with smoked beef cuts with cheddar cheese, lettuce, red onion and a lime mayonnaise"
+                },
+                {
+                    "name": "SANDWICH DE PULLED PORK",
+                    "price": "13.90€",
+                    "description": "Slow-smoked and pulled pork, served with BBQ sauce, cheddar cheese and balanced by the sweetness of our Hawaiian bread and the tang of pickled turnip and cabbage"
+                }
+            ],
+            "burgers": [
+                {
+                    "name": "HAMBURGUESA CRUJIENTE DE PORKETA",
+                    "price": "12.90€",
+                    "description": "Smoked and breaded pork belly with cheddar cheese and mushrooms, served with mixed greens and lime mayonnaise"
+                },
+                {
+                    "name": "HAMBURGUESA DE PORKETA",
+                    "price": "13.90€",
+                    "description": "Smoked pork belly, crispy chicken, smoked beef, or vegetarian protein"
+                },
+                {
+                    "name": "HAMBURGUESA CRUJIENTE DE POLLO",
+                    "price": "13€",
+                    "description": "Smoked and breaded chicken, with cheddar cheese, tender lettuces, pickled cucumbers, along with an avocado mayonnaise"
+                },
+                {
+                    "name": "HAMBURGUESA VEGETARIANA",
+                    "price": "13.99€",
+                    "description": "Hawaiian bread filled with smoked tofu, vegetable bacon, cheddar cheese, mushrooms, fresh lettuce and chives, along with a smoked mayonnaise"
+                }
+            ],
+            "desserts": [
+                {
+                    "name": "BROOKIE",
+                    "price": "5€",
+                    "description": "A fusion of brownie and a chocolate chip cookie"
+                },
+                {
+                    "name": "TORTAS TRES LECHES",
+                    "price": "3.99€",
+                    "description": "Moist vanilla sponge cake, filled with layers of condensed milk, whipping cream and evaporated milk, with a touch of cinnamon"
+                },
+                {
+                    "name": "TIRAMISU",
+                    "price": "3.49€",
+                    "description": "Sponge cakes soaked in coffee and sherry brandy, covered with mascarpone cheese and a layer of cocoa powder."
+                },
+                {
+                    "name": "ROLLO DE CANELA",
+                    "price": "4.5€",
+                    "description": "Sweet cinnamon dough roll with Nutella topping."
+                },
+                {
+                    "name": "CHOCOLATE CHIP COOKIE",
+                    "price": "2.5€"
+                }
+            ],
+            "drinks": {
+                "soft_drinks": [
+                    {
+                        "name": "Coca-cola",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Coca cola zero",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Orange fanta",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Sprite",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Lemon Aquarius",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Lemon Fuze tea",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Watter",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Sparkling watter",
+                        "price": "2.5€"
+                    }
+                ],
+                "coffee_and_tea": [
+                    {
+                        "name": "Expresso",
+                        "price": "1.5€"
+                    },
+                    {
+                        "name": "Americano",
+                        "price": "1.5€"
+                    },
+                    {
+                        "name": "Cortado",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Coffee with milk",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Carajillo",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Ginger tea",
+                        "price": "2€"
+                    },
+                    {
+                        "name": "Red fruit tea",
+                        "price": "2€"
+                    },
+                    {
+                        "name": "Mint tea",
+                        "price": "2€"
+                    }
+                ],
+                "beers": [
+                    {
+                        "name": "Estrella de Galicia (LAGER)",
+                        "price": "3€"
+                    },
+                    {
+                        "name": "1906 LAGER EXTRA",
+                        "price": "3€"
+                    },
+                    {
+                        "name": "Estrella de Galicia NON-ALCOHOLIC",
+                        "price": "3€"
+                    },
+                    {
+                        "name": "Estrella de Galicia GLUTEN FREE",
+                        "price": "3€"
+                    },
+                    {
+                        "name": "1906 NON-ACOHOLIC",
+                        "price": "3€"
+                    },
+                    {
+                        "name": "B-Lemon (CLARITA)",
+                        "price": "3€"
+                    },
+                    {
+                        "name": "Corona",
+                        "price": "3€"
+                    }
+                ]
+            },
+            "wine_list": [
+                {
+                    "name": "VERDERA",
+                    "type": "Red Garnacha and Carineña",
+                    "description": "Fresh and fruity",
+                    "price": "glass 3€ \/ bottle 13€"
+                },
+                {
+                    "name": "LOMAS DEL MARQUES",
+                    "type": "Red Tempranillo",
+                    "description": "Complex, toasted fruits",
+                    "price": "glass 4€ \/ bottle 19€"
+                },
+                {
+                    "name": "MARQUES DE RISCAL",
+                    "type": "Red Reserve Tempranillo and Graciano",
+                    "description": "Intense and ripe fruits",
+                    "price": "bottle 24 €"
+                },
+                {
+                    "name": "VALL MAJOR",
+                    "type": "White Garnacha Blanca",
+                    "description": "Fruity and fresh",
+                    "price": "glass 3€ \/ bottle 13€"
+                },
+                {
+                    "name": "CASTELL D'OR",
+                    "type": "Cava Brut",
+                    "description": "Intense and citrusy",
+                    "price": "glass 4€ \/ bottle 14€"
+                }
+            ]
+        },
+        "catalan": {
+            "specialty": {
+                "description": "LES PORKETES: 150gr de cansalada marinada en 8 espècies fumada o fregida.",
+                "types": [
+                    {
+                        "name": "A LA GALLEGA",
+                        "price": "13.49€",
+                        "description": "Oli d'oliva, pebre vermell de la Vera amb el punt just de sal"
+                    },
+                    {
+                        "name": "TRADICIONAL",
+                        "price": "13.49€",
+                        "description": "Picada de pebrots, ceba vermella, pinya, coriandre fresc i una vibrant vinagreta cítrica de llimona."
+                    },
+                    {
+                        "name": "ASIÁTICA",
+                        "price": "13.9€ \/ 13.99€",
+                        "description": "Salsa teriyaki artesanal, llavors de sèsam i la frescor del cibulet"
+                    },
+                    {
+                        "name": "ARGENTINA",
+                        "price": "13.99€",
+                        "description": "Salsa ximixurri sobre una cobertura de formatge provolone fos"
+                    },
+                    {
+                        "name": "ITALIANA",
+                        "price": "13.99€",
+                        "description": "Tomàquets cherry deshidratats sobre una salsa pesto d'alfàbrega"
+                    },
+                    {
+                        "name": "AMERICANA",
+                        "price": "13.49€",
+                        "description": "Reducció de salsa BBQ i el toc torrat"
+                    },
+                    {
+                        "name": "DE TEMPORADA",
+                        "price": "14€",
+                        "description": "Pregunta per mi"
+                    }
+                ]
+            },
+            "salads": [
+                {
+                    "name": "AMANIDA AMB PORKETA",
+                    "price": "12.90€",
+                    "description": "Enciams seleccionats acompanyats de daus de cansalada fumada, xampinyons, tomàquets cherry, pinya i una vinagreta a base de llima, mel i mostassa."
+                },
+                {
+                    "name": "CÈSAR AMB POLLASTRE",
+                    "price": "12.90€",
+                    "description": "Mix d'enciams frescos, trossos de pollastre fumat i arrebossat, crostons de pa, formatge parmesà i la nostra versió de la vinagreta Cèsar"
+                },
+                {
+                    "name": "AMANIDA VEGETARIANA",
+                    "price": "12.90€",
+                    "description": "Varietat de fulles verdes, olives negres, tomàquets cherry, api, ceba morada, formatge camembert i una vinagreta mediterrània"
+                }
+            ],
+            "to_share": [
+                {
+                    "name": "CROQUETES",
+                    "price": "7.90€",
+                    "description": "Esferes cruixents de massa de iuca amb trossos de cansalada fumada"
+                },
+                {
+                    "name": "NUGGETS",
+                    "price": "7.50€",
+                    "description": "Trossos de cansalada o pollastre arrebossats"
+                },
+                {
+                    "name": "PATATES FREGIDES A LA PORKETA",
+                    "price": "8.99€",
+                    "description": "Daus de cansalada fumada, servits amb la nostra maionesa de llima."
+                },
+                {
+                    "name": "CEVICHE DE TORREZNO",
+                    "price": "7.99€",
+                    "description": "Daus de cansalada fregida amb una picada de pebrots, ceba vermella, pinya, coriandre, marinats en una vinagreta cítrica de llimona"
+                },
+                {
+                    "name": "TEQUEÑOS",
+                    "price": "7.50€",
+                    "description": "Cruixents barretes de massa de blat fregides al moment i farcides de formatge fos."
+                },
+                {
+                    "name": "Duo de Mini Burgers",
+                    "price": "8.99€",
+                    "description": "Parella de mini hamburgueses de cansalada o pollastre arrebossats amb formatge cheddar i salsa de tomàquet"
+                }
+            ],
+            "sandwiches": [
+                {
+                    "name": "BURRITO",
+                    "price": "12.90€",
+                    "description": "Tortilla de blat farcida de pebrots, ceba morada, pinya, enciam i coriandre fresc, cruixents de iuca servida sobre una maionesa d'alvocat."
+                },
+                {
+                    "name": "QUESADILLA",
+                    "price": "8.50€",
+                    "description": "Tortilla de blat amb doble formatge fos i una maionesa d'alvocat."
+                },
+                {
+                    "name": "QUESADILLA FARCIDA",
+                    "price": "10.50€",
+                    "description": "Cansalada fumada amb formatge de cabra, ceba caramel·litzada al vinagre balsàmic, enciams tendres, cruixents de iuca i una maionesa agredolça"
+                },
+                {
+                    "name": "ENTREPÀ DE VEDELLA",
+                    "price": "13.99€",
+                    "description": "Pa hawaià farcit de talls de vedella fumada amb formatge cheddar, enciam, cogombre, ceba morada i una maionesa de llima"
+                },
+                {
+                    "name": "ENTREPÀ DE PULLED PORK",
+                    "price": "13.90€",
+                    "description": "Porc fumat a foc lent i esfilagarsat, servit amb salsa BBQ, formatge cheddar i equilibrat per la dolçor del nostre pa hawaià i l'acidesa de la col i del nap confitat"
+                }
+            ],
+            "burgers": [
+                {
+                    "name": "HAMBURGUESA CRUIXENT DE PORKETA",
+                    "price": "12.90€",
+                    "description": "Cansalada fumada i arrebossada, amb formatge cheddar i xampinyons, juntament amb un mix d'enciam i una maionesa de llima."
+                },
+                {
+                    "name": "HAMBURGUESA DE PORKETA",
+                    "price": "13.90€",
+                    "description": "Cansalada fumada, pollastre cruixent, vedella fumada o proteïna vegetariana"
+                },
+                {
+                    "name": "HAMBURGUESA CRUIXENT DE POLLASTRE",
+                    "price": "13€",
+                    "description": "Pollastre fumat i arrebossat, amb formatge cheddar, enciams tendres, cogombres confitats, juntament amb una maionesa d'alvocat"
+                },
+                {
+                    "name": "HAMBURGUESA VEGETARIANA",
+                    "price": "13.99€",
+                    "description": "Pa hawaià farcit de tofu fumat, bacó vegetal, formatge cheddar, xampinyons, enciam fresc i cibulet, juntament amb una maionesa fumada."
+                }
+            ],
+            "desserts": [
+                {
+                    "name": "BROOKIE",
+                    "price": "5€",
+                    "description": "Fusió de Brownie i una galeta de xips de xocolata"
+                },
+                {
+                    "name": "PASTÍS TRES LLETS",
+                    "price": "3.99€",
+                    "description": "Pa de pessic humit de vainilla, farcit de capes de llet condensada, nata i llet evaporada, amb un toc de canyella"
+                },
+                {
+                    "name": "TIRAMISU",
+                    "price": "3.49€",
+                    "description": "Bescuits banyats en cafè i brandi, coberts per una crema mascarpone i una capa de cacau en pols."
+                },
+                {
+                    "name": "ROTLLO DE CANYELLA",
+                    "price": "4.5€",
+                    "description": "Rotllo de massa dolça de canyella amb topping de Nutella"
+                },
+                {
+                    "name": "GALETA DE XIPS DE XOCOLATA",
+                    "price": "2.5€"
+                }
+            ],
+            "drinks": {
+                "soft_drinks": [
+                    {
+                        "name": "Coca-cola",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Coca cola zero",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Fanta taronja",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Sprite",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Aquarius de llimona",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Fuze tea de llimona",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Aigua",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Aigua amb gas",
+                        "price": "2.5€"
+                    }
+                ],
+                "coffee_and_tea": [
+                    {
+                        "name": "Expresso",
+                        "price": "1.5€"
+                    },
+                    {
+                        "name": "Americà",
+                        "price": "1.5€"
+                    },
+                    {
+                        "name": "Tallat",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Cafè amb llet",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Cigaló",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Te de gingebre",
+                        "price": "2€"
+                    },
+                    {
+                        "name": "Te de fruits vermells",
+                        "price": "2€"
+                    },
+                    {
+                        "name": "Te de menta",
+                        "price": "2€"
+                    }
+                ],
+                "beers": [
+                    {
+                        "name": "Estrella de Galicia (LAGER)",
+                        "price": "3€"
+                    },
+                    {
+                        "name": "1906 LAGER EXTRA",
+                        "price": "3€"
+                    },
+                    {
+                        "name": "Estrella de Galicia (SENSE ALCOHOL)",
+                        "price": "3€"
+                    },
+                    {
+                        "name": "Estrella de Galicia (SENSE GLUTEN)",
+                        "price": "3€"
+                    },
+                    {
+                        "name": "1906 (SENSE ALCOHOL)",
+                        "price": "3€"
+                    },
+                    {
+                        "name": "B-Lemon (CLARITA)",
+                        "price": "3€"
+                    },
+                    {
+                        "name": "Corona",
+                        "price": "3€"
+                    }
+                ]
+            },
+            "wine_list": [
+                {
+                    "name": "VERDERA",
+                    "type": "Negre Garnatxa i Carinyena",
+                    "description": "Fresc i afruitat",
+                    "price": "copa 3€ \/ ampolla 13€"
+                },
+                {
+                    "name": "LOMAS DEL MARQUES",
+                    "type": "Negre Ull de Llebre",
+                    "description": "Complex, fruits torrats",
+                    "price": "copa 4€ \/ ampolla 19€"
+                },
+                {
+                    "name": "MARQUES DE RISCAL",
+                    "type": "Negre Reserva Tempranillo i Graciano",
+                    "description": "Intens i fruits madurs",
+                    "price": "ampolla 24 €"
+                },
+                {
+                    "name": "VALL MAJOR",
+                    "type": "Blanc Garnatxa Blanca",
+                    "description": "Afruitat i fresc",
+                    "price": "copa 3€ \/ ampolla 13€"
+                },
+                {
+                    "name": "CASTELL D'OR",
+                    "type": "Cava Brut",
+                    "description": "Intens i cítric",
+                    "price": "copa 4€ \/ ampolla 14€"
+                }
+            ]
+        },
+        "french": {
+            "specialty": {
+                "description": "LES PORKETES: 150gr de poitrine de porc marinée aux 8 épices, fumée ou frite.",
+                "types": [
+                    {
+                        "name": "A LA GALLEGA",
+                        "price": "13.49€",
+                        "description": "Huile d'olive, paprika de la Vera avec une touche de sel"
+                    },
+                    {
+                        "name": "TRADICIONAL",
+                        "price": "13.49€",
+                        "description": "Hachis de poivrons, oignon rouge, ananas, coriandre fraîche et une vinaigrette aux agrumes et citron."
+                    },
+                    {
+                        "name": "ASIÁTICA",
+                        "price": "13.9€ \/ 13.99€",
+                        "description": "Sauce teriyaki artisanale, graines de sésame et la fraîcheur de la ciboulette"
+                    },
+                    {
+                        "name": "ARGENTINA",
+                        "price": "13.99€",
+                        "description": "Sauce chimichurri sur une couverture de fromage provolone fondu"
+                    },
+                    {
+                        "name": "ITALIANA",
+                        "price": "13.99€",
+                        "description": "Tomates cerises séchées sur une sauce pesto au basilic"
+                    },
+                    {
+                        "name": "AMERICANA",
+                        "price": "13.49€",
+                        "description": "Réduction de sauce BBQ et une touche grillée"
+                    },
+                    {
+                        "name": "DE TEMPORADA",
+                        "price": "14€",
+                        "description": "Demandez-moi"
+                    }
+                ]
+            },
+            "salads": [
+                {
+                    "name": "SALADE AVEC PORKETA",
+                    "price": "12.90€",
+                    "description": "Laitues sélectionnées accompagnées de dés de poitrine de porc fumée, champignons, tomates cerises, ananas et une vinaigrette à base de citron vert, miel et moutarde."
+                },
+                {
+                    "name": "CÉSAR AU POULET",
+                    "price": "12.90€",
+                    "description": "Mélange de jeunes pousses, morceaux de poulet fumé et pané, croûtons de pain, fromage parmesan et notre version de la vinaigrette César"
+                },
+                {
+                    "name": "SALADE VÉGÉTARIENNE",
+                    "price": "12.90€",
+                    "description": "Variété de feuilles vertes, olives noires, tomates cerises, céleri, oignon rouge, fromage camembert et une vinaigrette méditerranéenne"
+                }
+            ],
+            "to_share": [
+                {
+                    "name": "CROQUETTES",
+                    "price": "7.90€",
+                    "description": "Sphères croustillantes de pâte de manioc avec des morceaux de poitrine de porc fumée"
+                },
+                {
+                    "name": "NUGGETS",
+                    "price": "7.50€",
+                    "description": "Morceaux de poitrine de porc ou de poulet panés"
+                },
+                {
+                    "name": "FRITES À LA PORKETA",
+                    "price": "8.99€",
+                    "description": "Dés de poitrine de porc fumée, servis avec notre mayonnaise au citron vert."
+                },
+                {
+                    "name": "CEVICHE DE TORREZNO",
+                    "price": "7.99€",
+                    "description": "Dés de poitrine de porc frite avec un hachis de poivrons, oignon rouge, ananas, coriandre, marinés dans une vinaigrette aux agrumes et citron"
+                },
+                {
+                    "name": "TEQUEÑOS",
+                    "price": "7.50€",
+                    "description": "Bâtonnets croustillants de pâte de blé frits à la minute et fourrés de fromage fondu."
+                },
+                {
+                    "name": "Duo de Mini Burgers",
+                    "price": "8.99€",
+                    "description": "Paire de mini hamburgers de poitrine de porc ou poulet pané avec fromage cheddar et sauce tomate"
+                }
+            ],
+            "sandwiches": [
+                {
+                    "name": "BURRITO",
+                    "price": "12.90€",
+                    "description": "Galette de blé farcie de poivrons, oignon rouge, ananas, laitue et coriandre fraîche, chips de manioc servie sur une mayonnaise à l'avocat."
+                },
+                {
+                    "name": "QUESADILLA",
+                    "price": "8.50€",
+                    "description": "Galette de blé avec double fromage fondu et une mayonnaise à l'avocat."
+                },
+                {
+                    "name": "QUESADILLA FOURRÉE",
+                    "price": "10.50€",
+                    "description": "Poitrine de porc fumée avec fromage de chèvre, oignon caramélisé au vinaigre balsamique, jeunes pousses, chips de manioc et une mayonnaise aigre-douce"
+                },
+                {
+                    "name": "SANDWICH DE BOEUF",
+                    "price": "13.99€",
+                    "description": "Pain hawaïen farci de tranches de boeuf fumé avec fromage cheddar, laitue, concombre, oignon rouge et une mayonnaise au citron vert"
+                },
+                {
+                    "name": "SANDWICH DE PULLED PORK",
+                    "price": "13.90€",
+                    "description": "Porc fumé à feu doux et effiloché, servi avec sauce BBQ, fromage cheddar et équilibré par la douceur de notre pain hawaïen et l'acidité du cornichon de chou et navet"
+                }
+            ],
+            "burgers": [
+                {
+                    "name": "HAMBURGER CROUSTILLANT DE PORKETA",
+                    "price": "12.90€",
+                    "description": "Poitrine de porc fumée et panée, avec fromage cheddar et champignons, accompagnés d'un mélange de laitues et d'une mayonnaise au citron vert."
+                },
+                {
+                    "name": "HAMBURGER DE PORKETA",
+                    "price": "13.90€",
+                    "description": "Poitrine de porc fumée, poulet croustillant, boeuf fumé ou protéine végétarienne"
+                },
+                {
+                    "name": "HAMBURGER CROUSTILLANT DE POULET",
+                    "price": "13€",
+                    "description": "Poulet fumé et pané, avec fromage cheddar, jeunes pousses, concombres confits, accompagnés d'une mayonnaise à l'avocat"
+                },
+                {
+                    "name": "HAMBURGER VÉGÉTARIEN",
+                    "price": "13.99€",
+                    "description": "Pain hawaïen farci de tofu fumé, bacon végétal, fromage cheddar, champignons, laitue fraîche et ciboulette, accompagnés d'une mayonnaise fumée."
+                }
+            ],
+            "desserts": [
+                {
+                    "name": "BROOKIE",
+                    "price": "5€",
+                    "description": "Fusion de Brownie et un cookie aux pépites de chocolat"
+                },
+                {
+                    "name": "GÂTEAU TRES LECHES",
+                    "price": "3.99€",
+                    "description": "Génoise humide à la vanille, fourrée de couches de lait concentré, crème et lait concentré non sucré, avec une touche de cannelle"
+                },
+                {
+                    "name": "TIRAMISU",
+                    "price": "3.49€",
+                    "description": "Biscuits trempés dans du café et du brandy, recouverts d'une crème au mascarpone et d'une couche de cacao en poudre."
+                },
+                {
+                    "name": "ROULÉ À LA CANNELLE",
+                    "price": "4.5€",
+                    "description": "Roulé de pâte sucrée à la cannelle avec topping Nutella"
+                },
+                {
+                    "name": "COOKIE AUX PÉPITES DE CHOCOLAT",
+                    "price": "2.5€"
+                }
+            ],
+            "drinks": {
+                "soft_drinks": [
+                    {
+                        "name": "Coca-cola",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Coca cola zero",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Fanta orange",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Sprite",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Aquarius au citron",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Fuze tea au citron",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Eau",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Eau pétillante",
+                        "price": "2.5€"
+                    }
+                ],
+                "coffee_and_tea": [
+                    {
+                        "name": "Expresso",
+                        "price": "1.5€"
+                    },
+                    {
+                        "name": "Américain",
+                        "price": "1.5€"
+                    },
+                    {
+                        "name": "Cortado",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Café au lait",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Carajillo",
+                        "price": "2.5€"
+                    },
+                    {
+                        "name": "Thé au gingembre",
+                        "price": "2€"
+                    },
+                    {
+                        "name": "Thé aux fruits rouges",
+                        "price": "2€"
+                    },
+                    {
+                        "name": "Thé à la menthe",
+                        "price": "2€"
+                    }
+                ],
+                "beers": [
+                    {
+                        "name": "Estrella de Galicia (LAGER)",
+                        "price": "3€"
+                    },
+                    {
+                        "name": "1906 LAGER EXTRA",
+                        "price": "3€"
+                    },
+                    {
+                        "name": "Estrella de Galicia (SANS ALCOOL)",
+                        "price": "3€"
+                    },
+                    {
+                        "name": "Estrella de Galicia (SANS GLUTEN)",
+                        "price": "3€"
+                    },
+                    {
+                        "name": "1906 (SANS ALCOOL)",
+                        "price": "3€"
+                    },
+                    {
+                        "name": "B-Lemon (PANACHÉ)",
+                        "price": "3€"
+                    },
+                    {
+                        "name": "Corona",
+                        "price": "3€"
+                    }
+                ]
+            },
+            "wine_list": [
+                {
+                    "name": "VERDERA",
+                    "type": "Vin rouge Garnatxa et Carinyena",
+                    "description": "Frais et fruité",
+                    "price": "verre 3€ \/ bouteille 13€"
+                },
+                {
+                    "name": "LOMAS DEL MARQUES",
+                    "type": "Vin rouge Tempranillo",
+                    "description": "Complexe, fruits torréfiés",
+                    "price": "verre 4€ \/ bouteille 19€"
+                },
+                {
+                    "name": "MARQUES DE RISCAL",
+                    "type": "Vin rouge Reserva Tempranillo et Graciano",
+                    "description": "Intense et fruits mûrs",
+                    "price": "bouteille 24 €"
+                },
+                {
+                    "name": "VALL MAJOR",
+                    "type": "Vin blanc Garnatxa Blanca",
+                    "description": "Fruité et frais",
+                    "price": "verre 3€ \/ bouteille 13€"
+                },
+                {
+                    "name": "CASTELL D'OR",
+                    "type": "Cava Brut",
+                    "description": "Intense et citronné",
+                    "price": "verre 4€ \/ bouteille 14€"
+                }
+            ]
+        }
+    }
+}

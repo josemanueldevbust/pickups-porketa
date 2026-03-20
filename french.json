@@ -1,0 +1,87 @@
+{
+    "menus": {
+        "specialty": {
+            "description": "LES PORKETES: 150gr de poitrine de porc marinée aux 8 épices, fumée ou frite.",
+            "types": [
+                {"name": "A LA GALLEGA", "price": "13.49€", "description": "Huile d'olive, paprika de la Vera avec une touche de sel"},
+                {"name": "TRADICIONAL", "price": "13.49€", "description": "Hachis de poivrons, oignon rouge, ananas, coriandre fraîche et une vinaigrette aux agrumes et citron."},
+                {"name": "ASIÁTICA", "price": "13.9€ / 13.99€", "description": "Sauce teriyaki artisanale, graines de sésame et la fraîcheur de la ciboulette"},
+                {"name": "ARGENTINA", "price": "13.99€", "description": "Sauce chimichurri sur une couverture de fromage provolone fondu"},
+                {"name": "ITALIANA", "price": "13.99€", "description": "Tomates cerises séchées sur une sauce pesto au basilic"},
+                {"name": "AMERICANA", "price": "13.49€", "description": "Réduction de sauce BBQ et une touche grillée"},
+                {"name": "DE TEMPORADA", "price": "14€", "description": "Demandez-moi"}
+            ]
+        },
+        "salads": [
+            {"name": "SALADE AVEC PORKETA", "price": "12.90€", "description": "Laitues sélectionnées accompagnées de dés de poitrine de porc fumée, champignons, tomates cerises, ananas et une vinaigrette à base de citron vert, miel et moutarde."},
+            {"name": "CÉSAR AU POULET", "price": "12.90€", "description": "Mélange de jeunes pousses, morceaux de poulet fumé et pané, croûtons de pain, fromage parmesan et notre version de la vinaigrette César"},
+            {"name": "SALADE VÉGÉTARIENNE", "price": "12.90€", "description": "Variété de feuilles vertes, olives noires, tomates cerises, céleri, oignon rouge, fromage camembert et une vinaigrette méditerranéenne"}
+        ],
+        "to_share": [
+            {"name": "CROQUETTES", "price": "7.90€", "description": "Sphères croustillantes de pâte de manioc avec des morceaux de poitrine de porc fumée"},
+            {"name": "NUGGETS", "price": "7.50€", "description": "Morceaux de poitrine de porc ou de poulet panés"},
+            {"name": "FRITES À LA PORKETA", "price": "8.99€", "description": "Dés de poitrine de porc fumée, servis avec notre mayonnaise au citron vert."},
+            {"name": "CEVICHE DE TORREZNO", "price": "7.99€", "description": "Dés de poitrine de porc frite avec un hachis de poivrons, oignon rouge, ananas, coriandre, marinés dans une vinaigrette aux agrumes et citron"},
+            {"name": "TEQUEÑOS", "price": "7.50€", "description": "Bâtonnets croustillants de pâte de blé frits à la minute et fourrés de fromage fondu."},
+            {"name": "Duo de Mini Burgers", "price": "8.99€", "description": "Paire de mini hamburgers de poitrine de porc ou poulet pané avec fromage cheddar et sauce tomate"}
+        ],
+        "sandwiches": [
+            {"name": "BURRITO", "price": "12.90€", "description": "Galette de blé farcie de poivrons, oignon rouge, ananas, laitue et coriandre fraîche, chips de manioc servie sur une mayonnaise à l'avocat."},
+            {"name": "QUESADILLA", "price": "8.50€", "description": "Galette de blé avec double fromage fondu et une mayonnaise à l'avocat."},
+            {"name": "QUESADILLA FOURRÉE", "price": "10.50€", "description": "Poitrine de porc fumée avec fromage de chèvre, oignon caramélisé au vinaigre balsamique, jeunes pousses, chips de manioc et une mayonnaise aigre-douce"},
+            {"name": "SANDWICH DE BOEUF", "price": "13.99€", "description": "Pain hawaïen farci de tranches de boeuf fumé avec fromage cheddar, laitue, concombre, oignon rouge et une mayonnaise au citron vert"},
+            {"name": "SANDWICH DE PULLED PORK", "price": "13.90€", "description": "Porc fumé à feu doux et effiloché, servi avec sauce BBQ, fromage cheddar et équilibré par la douceur de notre pain hawaïen et l'acidité du cornichon de chou et navet"}
+        ],
+        "burgers": [
+            {"name": "HAMBURGER CROUSTILLANT DE PORKETA", "price": "12.90€", "description": "Poitrine de porc fumée et panée, avec fromage cheddar et champignons, accompagnés d'un mélange de laitues et d'une mayonnaise au citron vert."},
+            {"name": "HAMBURGER DE PORKETA", "price": "13.90€", "description": "Poitrine de porc fumée, poulet croustillant, boeuf fumé ou protéine végétarienne"},
+            {"name": "HAMBURGER CROUSTILLANT DE POULET", "price": "13€", "description": "Poulet fumé et pané, avec fromage cheddar, jeunes pousses, concombres confits, accompagnés d'une mayonnaise à l'avocat"},
+            {"name": "HAMBURGER VÉGÉTARIEN", "price": "13.99€", "description": "Pain hawaïen farci de tofu fumé, bacon végétal, fromage cheddar, champignons, laitue fraîche et ciboulette, accompagnés d'une mayonnaise fumée."}
+        ],
+        "desserts": [
+            {"name": "BROOKIE", "price": "5€", "description": "Fusion de Brownie et un cookie aux pépites de chocolat"},
+            {"name": "GÂTEAU TRES LECHES", "price": "3.99€", "description": "Génoise humide à la vanille, fourrée de couches de lait concentré, crème et lait concentré non sucré, avec une touche de cannelle"},
+            {"name": "TIRAMISU", "price": "3.49€", "description": "Biscuits trempés dans du café et du brandy, recouverts d'une crème au mascarpone et d'une couche de cacao en poudre."},
+            {"name": "ROULÉ À LA CANNELLE", "price": "4.5€", "description": "Roulé de pâte sucrée à la cannelle avec topping Nutella"},
+            {"name": "COOKIE AUX PÉPITES DE CHOCOLAT", "price": "2.5€"}
+        ],
+        "drinks": {
+            "soft_drinks": [
+                {"name": "Coca-cola", "price": "2.5€"},
+                {"name": "Coca cola zero", "price": "2.5€"},
+                {"name": "Fanta orange", "price": "2.5€"},
+                {"name": "Sprite", "price": "2.5€"},
+                {"name": "Aquarius au citron", "price": "2.5€"},
+                {"name": "Fuze tea au citron", "price": "2.5€"},
+                {"name": "Eau", "price": "2.5€"},
+                {"name": "Eau pétillante", "price": "2.5€"}
+            ],
+            "coffee_and_tea": [
+                {"name": "Expresso", "price": "1.5€"},
+                {"name": "Américain", "price": "1.5€"},
+                {"name": "Cortado", "price": "2.5€"},
+                {"name": "Café au lait", "price": "2.5€"},
+                {"name": "Carajillo", "price": "2.5€"},
+                {"name": "Thé au gingembre", "price": "2€"},
+                {"name": "Thé aux fruits rouges", "price": "2€"},
+                {"name": "Thé à la menthe", "price": "2€"}
+            ],
+            "beers": [
+                {"name": "Estrella de Galicia (LAGER)", "price": "3€"},
+                {"name": "1906 LAGER EXTRA", "price": "3€"},
+                {"name": "Estrella de Galicia (SANS ALCOOL)", "price": "3€"},
+                {"name": "Estrella de Galicia (SANS GLUTEN)", "price": "3€"},
+                {"name": "1906 (SANS ALCOOL)", "price": "3€"},
+                {"name": "B-Lemon (PANACHÉ)", "price": "3€"},
+                {"name": "Corona", "price": "3€"}
+            ]
+        },
+        "wine_list": [
+            {"name": "VERDERA", "type": "Vin rouge Garnatxa et Carinyena", "description": "Frais et fruité", "price": "verre 3€ / bouteille 13€"},
+            {"name": "LOMAS DEL MARQUES", "type": "Vin rouge Tempranillo", "description": "Complexe, fruits torréfiés", "price": "verre 4€ / bouteille 19€"},
+            {"name": "MARQUES DE RISCAL", "type": "Vin rouge Reserva Tempranillo et Graciano", "description": "Intense et fruits mûrs", "price": "bouteille 24 €"},
+            {"name": "VALL MAJOR", "type": "Vin blanc Garnatxa Blanca", "description": "Fruité et frais", "price": "verre 3€ / bouteille 13€"},
+            {"name": "CASTELL D'OR", "type": "Cava Brut", "description": "Intense et citronné", "price": "verre 4€ / bouteille 14€"}
+        ]
+    }
+}

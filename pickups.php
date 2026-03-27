@@ -109,12 +109,32 @@ function render_pickup() {
     Pickups\User\OrderNow::render();
 }
 
-function render_menu(){
-    $html = Pickups\User\Menu::getMenuHtml();
-    Pickups\User\Menu::render();
+function render_menu($atts){
+    $atts = shortcode_atts(['lang' => 'spanish'], $atts);
+    Pickups\User\Menu::render(null, $atts['lang']);
+}
+
+function render_iframeurl($atts){
+    $atts = shortcode_atts([
+        'url' => '',
+        'top' => '80px',
+        'text' => 'Open',
+        'style' => '',
+        'reload' => false,
+        'blur' => false
+    ], $atts);
+
+    $atts['reload'] = filter_var($atts['reload'], FILTER_VALIDATE_BOOLEAN);
+    $atts['blur'] = filter_var($atts['blur'], FILTER_VALIDATE_BOOLEAN);
+
+    // Buffer the output
+    ob_start();
+    \Pickups\User\Iframe::render($atts['url'], $atts['top'], $atts['text'], $atts['style'], $atts['reload'], $atts['blur']);
+    return ob_get_clean();
 }
 add_shortcode( 'render_pickup', 'render_pickup' );
 add_shortcode( 'render_menu', 'render_menu' );
+add_shortcode( 'render_iframeurl', 'render_iframeurl' );
 add_action('rest_api_init', function () {
     register_rest_route('pickups/v1', '/payment/orders', array(
         'methods'  => 'POST',

@@ -11,7 +11,7 @@ class Menu {
     // Class implementation goes here
 
     
-    public static function render($html=null) {
+    public static function render($html=null, $defaultLang = 'spanish') {
 
         if (empty($html)) {
             ob_start();
@@ -44,15 +44,17 @@ class Menu {
             }
             document.addEventListener('DOMContentLoaded', function() {
                 const ifr =  document.querySelector('#order-iframe');
-                ifr.contentDocument.write(menuHtml)
-                console.log(window.menuHtml)
+                ifr.contentDocument.open();
+                ifr.contentDocument.write(menuHtml);
+                ifr.contentDocument.close();
+                
                 ifr.contentWindow.addEventListener('close-all', function(event) {
                     closeMenu(event);
                 })
             })
         </script>
        
-        <button style="    color: black;  background: white;    padding: .25rem;    margin: 1rem;    min-width: 7rem;    border-radius: 31px;" onclick="openMenu(event)">Menu</button>
+        <button style="    color: black;  background: white;    padding: .25rem;    margin: 1rem;    min-width: 7rem;    border-radius: 31px; min-height: 2.5rem !important" onclick="openMenu(event)">Menu</button>
         <div class="order-now-container">
 
             <iframe id="order-iframe" style="display: none">
@@ -122,6 +124,7 @@ class Menu {
         /* Suavizar el scroll al hacer clic en los enlaces */
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 100px;
         }
 
         .no-scrollbar::-webkit-scrollbar {
@@ -135,12 +138,15 @@ class Menu {
 
         /* Clase para el estado activo de la navegación */
         .nav-link-active {
-            opacity: 100 !important;
+            opacity: 1 !important;
             color: #ec5b13 !important;
+            font-weight: 800;
         }
 
-        .nav-link-active div {
-            background-color: #ec5b13 !important;
+        .nav-link.active-nav-link {
+            color: #ec5b13 !important;
+            border-bottom: 2px solid #ec5b13;
+            opacity: 1;
         }
     </style>
 </head>
@@ -155,18 +161,23 @@ class Menu {
 <main class="max-w-6xl mx-auto px-6 py-10">
 
 <!-- NAV DINÁMICO -->
-<div class="sticky top-0 bg-white z-50 mb-10 overflow-x-auto flex gap-6">
-<?php foreach($menuData['sections'] as $section): 
-    $id = strtolower(str_replace(' ', '-', $section['name']));
-?>
-<a href="#<?= $id ?>" class="nav-item opacity-50">
-    <span class="font-bold"><?= $section['name'] ?></span>
-</a>
-<?php endforeach; ?>
+<div class="sticky top-0 bg-white z-50 mb-10 flex justify-between items-center px-6 py-4 border-b">
+    <div class="flex gap-6 overflow-x-auto no-scrollbar md:flex-wrap">
+        <?php foreach($menuData['sections'] as $section): 
+            $id = strtolower(str_replace(' ', '-', $section['name']));
+        ?>
+        <a href="#<?= $id ?>" class="nav-item opacity-50 whitespace-nowrap">
+            <span class="font-bold"><?= $section['name'] ?></span>
+        </a>
+        <?php endforeach; ?>
 
-<?php if(!empty($wineData)): ?>
-<a href="#vinos" class="nav-item opacity-50 font-bold">🍷 Vinos</a>
-<?php endif; ?>
+        <?php if(!empty($wineData)): ?>
+        <a href="#vinos" class="nav-item opacity-50 font-bold whitespace-nowrap">🍷 Vinos</a>
+        <?php endif; ?>
+    </div>
+    <button id="mobile-menu-btn" class="md:hidden p-2 text-primary flex items-center">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+    </button>
 </div>
 
 <!-- SECCIONES MENU -->
@@ -282,28 +293,96 @@ if(is_string($item)){
 
     </div>
 
-<script>
-// ScrollSpy simple
-const sections = document.querySelectorAll('section');
-const links = document.querySelectorAll('.nav-item');
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm transition-opacity duration-300 opacity-0 pointer-events-none md:hidden">
+        <div id="drawer-content" class="fixed right-0 top-0 h-full w-72 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col p-8 z-[101]">
+            <div class="flex justify-between items-center mb-10">
+                <span class="text-2xl font-extrabold text-primary uppercase">Menú</span>
+                <button id="close-drawer-btn" class="text-gray-500">
+                    <span class="material-symbols-outlined text-4xl">close</span>
+                </button>
+            </div>
+            <div class="flex flex-col gap-6 font-display font-bold text-lg tracking-tight overflow-y-auto no-scrollbar">
+                <?php foreach($menuData['sections'] as $section): 
+                    $id = strtolower(str_replace(' ', '-', $section['name']));
+                ?>
+                <a class="nav-link text-slate-700 border-l-4 border-transparent pl-4" href="#<?= $id ?>"><?= $section['name'] ?></a>
+                <?php endforeach; ?>
+                <?php if(!empty($wineData)): ?>
+                <a class="nav-link text-slate-700 border-l-4 border-transparent pl-4" href="#vinos">🍷 Vinos</a>
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
 
-window.addEventListener('scroll', () => {
-    let current = "";
+<script>
+// ScrollSpy and Drawer Logic
+function initMenu() {
+    const sections = document.querySelectorAll('section');
+    const links = document.querySelectorAll('.nav-item, .nav-link');
+
+    if (!sections.length || !links.length) {
+        setTimeout(initMenu, 100);
+        return;
+    }
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '-10% 0px -80% 0px',
+        threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                links.forEach(link => {
+                    link.classList.remove('nav-link-active', 'active-nav-link');
+                    if (link.getAttribute('href') === '#' + id) {
+                        link.classList.add('nav-link-active', 'active-nav-link');
+                    }
+                });
+            }
+        });
+    }, observerOptions);
 
     sections.forEach(section => {
-        const top = section.offsetTop;
-        if(scrollY >= top - 150){
-            current = section.getAttribute('id');
-        }
+        observer.observe(section);
     });
 
-    links.forEach(link => {
-        link.classList.remove('nav-link-active');
-        if(link.getAttribute('href') === '#' + current){
-            link.classList.add('nav-link-active');
+    // Mobile Drawer Toggle logic
+    const mobileDrawer = document.getElementById('mobile-drawer');
+    const drawerContent = document.getElementById('drawer-content');
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const closeDrawerBtn = document.getElementById('close-drawer-btn');
+
+    function toggleDrawer(open) {
+        if (!mobileDrawer || !drawerContent) return;
+        if (open) {
+            mobileDrawer.classList.remove('opacity-0', 'pointer-events-none');
+            drawerContent.classList.remove('translate-x-full');
+        } else {
+            mobileDrawer.classList.add('opacity-0', 'pointer-events-none');
+            drawerContent.classList.add('translate-x-full');
         }
+    }
+
+    if (mobileMenuBtn) mobileMenuBtn.onclick = () => toggleDrawer(true);
+    if (closeDrawerBtn) closeDrawerBtn.onclick = () => toggleDrawer(false);
+    if (mobileDrawer) mobileDrawer.onclick = (e) => { 
+        if (e.target === mobileDrawer) toggleDrawer(false); 
+    };
+
+    document.querySelectorAll('#mobile-drawer .nav-link').forEach(link => {
+        link.onclick = () => toggleDrawer(false);
     });
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMenu);
+} else {
+    initMenu();
+}
 </script>
 
 </body>

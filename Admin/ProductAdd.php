@@ -25,6 +25,7 @@ class ProductAdd {
             $product->setCategory($data['product_category']);
             $product->setSubcategory($data['product_subcategory'] ?? '');
             $product->setPrice($data['product_price']);
+            $product->setProduct_order($data['product_order'] ?? 0);
             
             $product->setName_es($data['name_es'] ?? '');
             $product->setDesc_es($data['desc_es'] ?? '');
@@ -48,6 +49,9 @@ class ProductAdd {
 
             $product->setImage($url ?? '');
             $product->setLocation($data['product_location'] ?? '');
+            
+            $allergens = isset($_POST['product_allergens']) ? implode(',', (array)$_POST['product_allergens']) : '';
+            $product->setAllergens($allergens);
 
             try {
                 Data::save_item($product);
@@ -58,6 +62,13 @@ class ProductAdd {
         }
 
         $locations = Data::fetch_items(\Pickups\Model\Location::class);
+        $allergensPath = dirname(__DIR__) . '/allergens.json';
+        $allergensLegend = [];
+        if (file_exists($allergensPath)) {
+            $allergensData = json_decode(file_get_contents($allergensPath), true);
+            $allergensLegend = $allergensData['allergens'] ?? [];
+        }
+
         $categories = [
             'specialty' => 'Especialidades',
             'salads' => 'Ensaladas',
@@ -111,6 +122,11 @@ class ProductAdd {
                         <th><label for="product_price">Price</label></th>
                         <td><input type="text" id="product_price" name="product_price" placeholder="e.g. 13.99€" required></td>
                     </tr>
+
+                    <tr>
+                        <th><label for="product_order">Product Order</label></th>
+                        <td><input type="number" id="product_order" name="product_order" value="0"></td>
+                    </tr>
                     
                     <!-- ES -->
                     <tr><td colspan="2"><hr><h3 style="margin:0">Spanish</h3></td></tr>
@@ -160,6 +176,20 @@ class ProductAdd {
                                     </option>
                                 <?php endforeach; ?>
                             </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th><label>Allergens</label></th>
+                        <td>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px;">
+                                <?php foreach($allergensLegend as $code => $name): ?>
+                                    <label style="display: flex; align-items: center; gap: 5px;">
+                                        <input type="checkbox" name="product_allergens[]" value="<?php echo esc_attr($code); ?>">
+                                        <?php echo esc_html($name); ?> (<?php echo esc_html($code); ?>)
+                                    </label>
+                                <?php endforeach; ?>
+                            </div>
                         </td>
                     </tr>
 

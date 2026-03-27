@@ -31,6 +31,8 @@ class Product extends Model {
     
     private $image;
     private $location;
+    private $allergens;
+    private $product_order;
 
     // Getters and Setters
     public function getID() { return $this->ID; }
@@ -99,4 +101,10 @@ class Product extends Model {
 
     public function getLocation() { return $this->location; }
     public function setLocation($location) { $this->location = $location; }
+
+    public function getAllergens() { return $this->allergens; }
+    public function setAllergens($allergens) { $this->allergens = $allergens; }
+
+    public function getProduct_order() { return $this->product_order; }
+    public function setProduct_order($product_order) { $this->product_order = $product_order; }
 }

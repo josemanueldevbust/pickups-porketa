@@ -7,37 +7,44 @@
                     {
                         "name": "A LA GALLEGA",
                         "price": "13.49€",
-                        "description": "Aceite de oliva, pimentón de la Vera con el punto justo de sal"
+                        "description": "Aceite de oliva, pimentón de la Vera con el punto justo de sal",
+                        "allergens": "E"
                     },
                     {
                         "name": "TRADICIONAL",
                         "price": "13.49€",
-                        "description": "Picadillo de pimientos, cebolla roja, piña, cilantro fresco y una vibrante vinagreta citrica de limón."
+                        "description": "Picadillo de pimientos, cebolla roja, piña, cilantro fresco y una vibrante vinagreta citrica de limón.",
+                        "allergens": "E"
                     },
                     {
                         "name": "ASIÁTICA",
-                        "price": "13.9€ \/ 13.99€",
-                        "description": "Salsa teriyaki artesanal, semillas de sésamo y el frescor del cebollino"
+                        "price": "13.9€ / 13.99€",
+                        "description": "Salsa teriyaki artesanal, semillas de sésamo y el frescor del cebollino",
+                        "allergens": "O,E,T"
                     },
                     {
                         "name": "ARGENTINA",
                         "price": "13.99€",
-                        "description": "Salsa chimichurri sobre uria cobertura de queso provolone fundido"
+                        "description": "Salsa chimichurri sobre uria cobertura de queso provolone fundido",
+                        "allergens": "M,E"
                     },
                     {
                         "name": "ITALIANA",
                         "price": "13.99€",
-                        "description": "Tomates cherry deshidratados sobre una salsa pesto de albahaca"
+                        "description": "Tomates cherry deshidratados sobre una salsa pesto de albahaca",
+                        "allergens": "M,E,R"
                     },
                     {
                         "name": "AMERICANA",
                         "price": "13.49€",
-                        "description": "Reducción de salsa BBQ y el toque tostado"
+                        "description": "Reducción de salsa BBQ y el toque tostado",
+                        "allergens": "E,T"
                     },
                     {
                         "name": "DE TEMPORADA",
                         "price": "14€",
-                        "description": "Pregunta por mi"
+                        "description": "Pregunta por mi",
+                        "allergens": ""
                     }
                 ]
             },
@@ -45,223 +52,269 @@
                 {
                     "name": "ENSALADA CON PORKETA",
                     "price": "12.90€",
-                    "description": "Lechugas seleccionadas acompañada de dados de panceta ahumada, champiñones, tomates charry. piña y una Vinagreta a base de lima miel y mostaza."
+                    "description": "Lechugas seleccionadas acompañada de dados de panceta ahumada, champiñones, tomates charry. piña y una Vinagreta a base de lima miel y mostaza.",
+                    "allergens": "E"
                 },
                 {
                     "name": "CESAR CON POLLO",
                     "price": "12.90€",
-                    "description": "Mix de lechugas frescas, trozos de pollo ahumado y rebozado, crutones de pan, queso parmesano y nuestra versión de la vinagreta Cesar"
+                    "description": "Mix de lechugas frescas, trozos de pollo ahumado y rebozado, crutones de pan, queso parmesano y nuestra versión de la vinagreta Cesar",
+                    "allergens": "C,O,M"
                 },
                 {
                     "name": "ENSALADA VEGETARIANA",
                     "price": "12.90€",
-                    "description": "Variedad de bojas verdes, aceitunas negras, tomates cherry, apio, cebolla morada, queso camembert y una vinagreta mediterránea"
+                    "description": "Variedad de bojas verdes, aceitunas negras, tomates cherry, apio, cebolla morada, queso camembert y una vinagreta mediterránea",
+                    "allergens": "E"
                 }
             ],
             "to_share": [
                 {
                     "name": "CROQUETAS",
                     "price": "7.90€",
-                    "description": "Esferas crujientes de masa de yuca con trozos de panceta ahumada"
+                    "description": "Esferas crujientes de masa de yuca con trozos de panceta ahumada",
+                    "allergens": "E,P,K"
                 },
                 {
                     "name": "NUGGETS",
                     "price": "7.50€",
-                    "description": "Trozos de Panceta o Pollo rebozados"
+                    "description": "Trozos de Panceta o Pollo rebozados",
+                    "allergens": "O,P"
                 },
                 {
                     "name": "PATATAS FRITAS A LA PORKETA",
                     "price": "8.99€",
-                    "description": "Dados de panceta ahumada, servidos con nuestra mayonesa de lima."
+                    "description": "Dados de panceta ahumada, servidos con nuestra mayonesa de lima.",
+                    "allergens": "E,P"
                 },
                 {
                     "name": "CEVICHE DE TORREZNO",
                     "price": "7.99€",
-                    "description": "Dados de panceta frita con un picadillo de pimientos, cebolla roja, piña, cilantro, maririado en una vinagreta citrica de limón"
+                    "description": "Dados de panceta frita con un picadillo de pimientos, cebolla roja, piña, cilantro, maririado en una vinagreta citrica de limón",
+                    "allergens": ""
                 },
                 {
                     "name": "TEQUEÑOS",
                     "price": "7.50€",
-                    "description": "Crujientes barritas de masa de trigo fritas al momento y rellenas de queso fundido."
+                    "description": "Crujientes barritas de masa de trigo fritas al momento y rellenas de queso fundido.",
+                    "allergens": "C,M,P"
                 },
                 {
                     "name": "Dúo de Mini Burgers",
                     "price": "8.99€",
-                    "description": "Pareja de mini hamburguesas de Panceta o Pollo rebozados con queso cheddar y salsa de tornate"
+                    "description": "Pareja de mini hamburguesas de Panceta o Pollo rebozados con queso cheddar y salsa de tornate",
+                    "allergens": "O,P"
                 }
             ],
             "sandwiches": [
                 {
                     "name": "BURRITO",
                     "price": "12.90€",
-                    "description": "Tortilla de trigo rellena de pimientos, cebolla morada, piña, lechuga y cilantro fresco, crujientes de yuca servida sobre una mayonesa de aguacate."
+                    "description": "Tortilla de trigo rellena de pimientos, cebolla morada, piña, lechuga y cilantro fresco, crujientes de yuca servida sobre una mayonesa de aguacate.",
+                    "allergens": "C,M,E,P"
                 },
                 {
                     "name": "QUESADILLA",
                     "price": "8.50€",
-                    "description": "Tortilla de trigo con doble queso fundidos y una mayonesa aguacate."
+                    "description": "Tortilla de trigo con doble queso fundidos y una mayonesa aguacate.",
+                    "allergens": "C,M"
                 },
                 {
                     "name": "QUESADILLA RELLENA",
                     "price": "10.50€",
-                    "description": "Panceta ahumada con queso de cabra, cebola caramelizada al aceto balsámico, lechugas tiernas, crujientes de yuca y una mayonesa agridulce"
+                    "description": "Panceta ahumada con queso de cabra, cebola caramelizada al aceto balsámico, lechugas tiernas, crujientes de yuca y una mayonesa agridulce",
+                    "allergens": "C,M,E,P"
                 },
                 {
                     "name": "SANDWICH DE TERNERA",
                     "price": "13.99€",
-                    "description": "Pan hawarano relleno de cortes de ternera ahumada con queso cheddar, lechuga, pepino, cebolla morada y una mayonesa de lima"
+                    "description": "Pan hawarano relleno de cortes de ternera ahumada con queso cheddar, lechuga, pepino, cebolla morada y una mayonesa de lima",
+                    "allergens": "C,M,E,P"
                 },
                 {
                     "name": "SANDWICH DE PULLED PORK",
                     "price": "13.90€",
-                    "description": "Cerdo ahumado a fuego lento y deshilachado, servido.con salsa BBQ, queso cheddar y equilibrado por el dulzor de nuestro pan hawalano y la acidez del habo encurtido y el repolla"
+                    "description": "Cerdo ahumado a fuego lento y deshilachado, servido.con salsa BBQ, queso cheddar y equilibrado por el dulzor de nuestro pan hawalano y la acidez del habo encurtido y el repolla",
+                    "allergens": "C,M,P"
                 }
             ],
             "burgers": [
                 {
                     "name": "HAMBURGUESA CRUJIENTE DE PORKETA",
                     "price": "12.90€",
-                    "description": "Panceta ahumada y rebozada, con queso cheddar y champiñones, junto a un mix de lechuga y una mayonesa de ima."
+                    "description": "Panceta ahumada y rebozada, con queso cheddar y champiñones, junto a un mix de lechuga y una mayonesa de ima.",
+                    "allergens": "O,M,P"
                 },
                 {
                     "name": "HAMBURGUESA DE PORKETA",
                     "price": "13.90€",
-                    "description": "Panceta ahurnada, pollo crujiente, ternera ahumada o proteina vegetariana"
+                    "description": "Panceta ahurnada, pollo crujiente, ternera ahumada o proteina vegetariana",
+                    "allergens": "O,M,P"
                 },
                 {
                     "name": "HAMBURGUESA CRUJIENTE DE POLLO",
                     "price": "13€",
-                    "description": "Pollo ahumado y rebozado, con queso cheddar, lechugas tiernas, pepinos encurtidos, junto a una mayonesa de aguacata"
+                    "description": "Pollo ahumado y rebozado, con queso cheddar, lechugas tiernas, pepinos encurtidos, junto a una mayonesa de aguacata",
+                    "allergens": "O,M,E,P"
                 },
                 {
                     "name": "HAMBURGUESA VEGETARIANA",
                     "price": "13.99€",
-                    "description": "Pan hawaiano relleno de tofu ahumado, bacon vegetal, queso cheddar, champiñones, lechuga fresca y cebollino, junto a una mayonesa ahumada."
+                    "description": "Pan hawaiano relleno de tofu ahumado, bacon vegetal, queso cheddar, champiñones, lechuga fresca y cebollino, junto a una mayonesa ahumada.",
+                    "allergens": "C,O,M,E,P,T"
                 }
             ],
             "desserts": [
                 {
                     "name": "BROOKIE",
                     "price": "5€",
-                    "description": "Fusión de Brownie y una galleta de chispas de chocolate"
+                    "description": "Fusión de Brownie y una galleta de chispas de chocolate",
+                    "allergens": "C,P,R"
                 },
                 {
                     "name": "TORTAS TRES LECHES",
                     "price": "3.99€",
-                    "description": "Bizcocho humedo de vainilla, relleno de capas de leche condensada nata y leche evaporada, con un toque de canela"
+                    "description": "Bizcocho humedo de vainilla, relleno de capas de leche condensada nata y leche evaporada, con un toque de canela",
+                    "allergens": "C,M,P"
                 },
                 {
                     "name": "TIRAMISU",
                     "price": "3.49€",
-                    "description": "Bizcochos bañados en cafe y brandy, cubiertos por uria crema mascarpone y uria capa de cacao eri polvo."
+                    "description": "Bizcochos bañados en cafe y brandy, cubiertos por uria crema mascarpone y uria capa de cacao eri polvo.",
+                    "allergens": "C,M,P,R"
                 },
                 {
                     "name": "ROLLO DE CANELA",
                     "price": "4.5€",
-                    "description": "Rollo de masa dulce de canela con topping de Nutella"
+                    "description": "Rollo de masa dulce de canela con topping de Nutella",
+                    "allergens": "C,M,P"
                 },
                 {
                     "name": "GALLETA DE CHISPA DE CHOCOLATE",
-                    "price": "2.5€"
+                    "price": "2.5€",
+                    "allergens": "C,P,R"
                 }
             ],
             "drinks": {
                 "soft_drinks": [
                     {
                         "name": "Coca-cola",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Coca cola zero",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Fanta naranja",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Sprite",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Aquarius de limon",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Fuze tea de limon",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Agua",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Agua con gas",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     }
                 ],
                 "coffee_and_tea": [
                     {
                         "name": "Expresso",
-                        "price": "1.5€"
+                        "price": "1.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Americano",
-                        "price": "1.5€"
+                        "price": "1.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Cortado",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Cafe con leche",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Carajillo",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Te de jengibre",
-                        "price": "2€"
+                        "price": "2€",
+                        "allergens": ""
                     },
                     {
                         "name": "Te de frutos rojos",
-                        "price": "2€"
+                        "price": "2€",
+                        "allergens": ""
                     },
                     {
                         "name": "Te de menta",
-                        "price": "2€"
+                        "price": "2€",
+                        "allergens": ""
                     }
                 ],
                 "beers": [
                     {
                         "name": "Estrella de Galicia (LAGER)",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     },
                     {
                         "name": "1906 LAGER EXTRA",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     },
                     {
                         "name": "Estrella de Galicia (SIN ALCOHOL)",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     },
                     {
                         "name": "Estrella de Galicia (SIN GLUTEN)",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     },
                     {
                         "name": "1906 (SIN ACOHOL)",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     },
                     {
                         "name": "B-Lemon (CLARITA)",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     },
                     {
                         "name": "Corona",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     }
                 ]
             },
@@ -270,31 +323,36 @@
                     "name": "VERDERA",
                     "type": "Tinto Garnacha y Carineña",
                     "description": "Fresco y afrutado",
-                    "price": "copa 3€ \/ botella 13€"
+                    "price": "copa 3€ / botella 13€",
+                    "allergens": ""
                 },
                 {
                     "name": "LOMAS DEL MARQUES",
                     "type": "Tinto Tempranillo",
                     "description": "Complejo, frutos tostados",
-                    "price": "copa 4€ \/ botella 19€"
+                    "price": "copa 4€ / botella 19€",
+                    "allergens": ""
                 },
                 {
                     "name": "MARQUES DE RISCAL",
                     "type": "Tinto Reserva Tempranillo y Graciano",
                     "description": "Intenso y frutos maduros",
-                    "price": "botella 24 €"
+                    "price": "botella 24 €",
+                    "allergens": ""
                 },
                 {
                     "name": "VALL MAJOR",
                     "type": "Blanco Garnacha Blanca",
                     "description": "Afrutado y fresco",
-                    "price": "copa 3€ \/ botella 13€"
+                    "price": "copa 3€ / botella 13€",
+                    "allergens": ""
                 },
                 {
                     "name": "CASTELL D'OR",
                     "type": "Cava Brut",
                     "description": "Intenso y cítrico",
-                    "price": "copa 4€ \/ botella 14€"
+                    "price": "copa 4€ / botella 14€",
+                    "allergens": ""
                 }
             ]
         },
@@ -305,37 +363,44 @@
                     {
                         "name": "A LA GALLEGA",
                         "price": "13.49€",
-                        "description": "Olio d'oliva, paprika La Vera con la giusta quantità di sale"
+                        "description": "Olio d'oliva, paprika La Vera con la giusta quantità di sale",
+                        "allergens": "E"
                     },
                     {
                         "name": "TRADICIONAL",
                         "price": "13.49€",
-                        "description": "Peperoni a cubetti, cipolla rossa, ananas, coriandolo fresco e una vivace vinaigrette al limone e agli agrumi."
+                        "description": "Peperoni a cubetti, cipolla rossa, ananas, coriandolo fresco e una vivace vinaigrette al limone e agli agrumi.",
+                        "allergens": "E"
                     },
                     {
                         "name": "ASIÁTICA",
-                        "price": "13.9€ \/ 13.99€",
-                        "description": "Salsa teriyaki fatta in casa, semi di sesamo e la freschezza dell'erba cipollina"
+                        "price": "13.9€ / 13.99€",
+                        "description": "Salsa teriyaki fatta in casa, semi di sesamo e la freschezza dell'erba cipollina",
+                        "allergens": "O,E,T"
                     },
                     {
                         "name": "ARGENTINA",
                         "price": "13.99€",
-                        "description": "Salsa chimichurri su una copertura di provolone fuso."
+                        "description": "Salsa chimichurri su una copertura di provolone fuso.",
+                        "allergens": "M,E"
                     },
                     {
                         "name": "ITALIANA",
                         "price": "13.99€",
-                        "description": "Pomodorini secchi su salsa al pesto di basilico"
+                        "description": "Pomodorini secchi su salsa al pesto di basilico",
+                        "allergens": "M,E,R"
                     },
                     {
                         "name": "AMERICANA",
                         "price": "13.49€",
-                        "description": "riduzione di salsa BBQ e il tocco tostato dei semi di sesamo"
+                        "description": "riduzione di salsa BBQ e il tocco tostato dei semi di sesamo",
+                        "allergens": "E,T"
                     },
                     {
                         "name": "DE TEMPORADA",
                         "price": "14€",
-                        "description": "chiedi informazioni"
+                        "description": "chiedi informazioni",
+                        "allergens": ""
                     }
                 ]
             },
@@ -343,223 +408,269 @@
                 {
                     "name": "ENSALADA CON PORKETA",
                     "price": "12.90€",
-                    "description": "Lattughe selezionate accompagnate da pancetta affumicata a dadini, funghi, pomodorini, ananas e una vinaigrette a base di lime, miele e senape"
+                    "description": "Lattughe selezionate accompagnate da pancetta affumicata a dadini, funghi, pomodorini, ananas e una vinaigrette a base di lime, miele e senape",
+                    "allergens": "E"
                 },
                 {
                     "name": "CESAR CON POLLO",
                     "price": "12.90€",
-                    "description": "Mix di lattuga fresca, pezzi di pollo affumicato e impanato, crostini di pane, parmigiano e la nostra versione della vinaigrette Cesare"
+                    "description": "Mix di lattuga fresca, pezzi di pollo affumicato e impanato, crostini di pane, parmigiano e la nostra versione della vinaigrette Cesare",
+                    "allergens": "C,O,M"
                 },
                 {
                     "name": "ENSALADA VEGETARIANA",
                     "price": "12.90€",
-                    "description": "Varietà di foglie verdi, olive nere, pomodorini, sedano, cipolla rossa, formaggio camembert e vinaigrette mediterranea"
+                    "description": "Varietà di foglie verdi, olive nere, pomodorini, sedano, cipolla rossa, formaggio camembert e vinaigrette mediterranea",
+                    "allergens": "E"
                 }
             ],
             "to_share": [
                 {
                     "name": "CROQUETAS",
                     "price": "7.90€",
-                    "description": "sfere croccanti di pasta di manioca con pezzetti di pancetta affumicata"
+                    "description": "sfere croccanti di pasta di manioca con pezzetti di pancetta affumicata",
+                    "allergens": "E,P,K"
                 },
                 {
                     "name": "NUGGETS",
                     "price": "7.50€",
-                    "description": "pezzi di pancetta o pollo impanati, serviti con una delle nostre salse."
+                    "description": "pezzi di pancetta o pollo impanati, serviti con una delle nostre salse.",
+                    "allergens": "O,P"
                 },
                 {
                     "name": "PATATAS FRITAS A LA PORKETA",
                     "price": "8.99€",
-                    "description": "pancetta affumicata a dadini, servita con il nostro Maionese al lime"
+                    "description": "pancetta affumicata a dadini, servita con il nostro Maionese al lime",
+                    "allergens": "E,P"
                 },
                 {
                     "name": "CEVICHE DE TORREZNO",
                     "price": "7.99€",
-                    "description": "pancetta di maiale fritta a dadini con una salsa di peperoni, cipolla rossa ananas e coriandolo, marinata in una vinaigrette al limone e agli agrumi"
+                    "description": "pancetta di maiale fritta a dadini con una salsa di peperoni, cipolla rossa ananas e coriandolo, marinata in una vinaigrette al limone e agli agrumi",
+                    "allergens": ""
                 },
                 {
                     "name": "TEQUEÑOS",
                     "price": "7.50€",
-                    "description": "Barrette croccanti di pasta di grano, fritte al momento e ripiene di formaggio fuso"
+                    "description": "Barrette croccanti di pasta di grano, fritte al momento e ripiene di formaggio fuso",
+                    "allergens": "C,M,P"
                 },
                 {
                     "name": "Dúo de Mini Burgers",
                     "price": "8.99€",
-                    "description": "Coppia di mini hamburger con pancetta o pollo Impanato con formaggio cheddar e salsa di pomodoro"
+                    "description": "Coppia di mini hamburger con pancetta o pollo Impanato con formaggio cheddar e salsa di pomodoro",
+                    "allergens": "O,P"
                 }
             ],
             "sandwiches": [
                 {
                     "name": "BURRITO",
                     "price": "12.90€",
-                    "description": "Tortilla di grano ripiena di peperoni, cipolla rossa, ananas, lattuga e coriandolo fresco, guarnita con yucca croccante e servita su maionese all'avocado."
+                    "description": "Tortilla di grano ripiena di peperoni, cipolla rossa, ananas, lattuga e coriandolo fresco, guarnita con yucca croccante e servita su maionese all'avocado.",
+                    "allergens": "C,M,E,P"
                 },
                 {
                     "name": "QUESADILLA",
                     "price": "8.50€",
-                    "description": "Tortilla di grano con formaggio fuso due volte e maionese all'avocado."
+                    "description": "Tortilla di grano con formaggio fuso due volte e maionese all'avocado.",
+                    "allergens": "C,M"
                 },
                 {
                     "name": "QUESADILLA RELLENA",
                     "price": "10.50€",
-                    "description": "Pancetta di maiale affumicata con formaggio di capra, cipolle caramellate all'aceto balsamico, lattuga tenera, croccanti chips di yucca e maionese agrodolce"
+                    "description": "Pancetta di maiale affumicata con formaggio di capra, cipolle caramellate all'aceto balsamico, lattuga tenera, croccanti chips di yucca e maionese agrodolce",
+                    "allergens": "C,M,E,P"
                 },
                 {
                     "name": "SANDWICH DE TERNERA",
                     "price": "13.99€",
-                    "description": "Pane hawaiano ripieno di tagli di manzo affumicati con formaggio cheddar, lattuga, cipolla rossa e maionese al lime"
+                    "description": "Pane hawaiano ripieno di tagli di manzo affumicati con formaggio cheddar, lattuga, cipolla rossa e maionese al lime",
+                    "allergens": "C,M,E,P"
                 },
                 {
                     "name": "SANDWICH DE PULLED PORK",
                     "price": "13.90€",
-                    "description": "Maiale sfilacciato e affumicato lentamente, servito con salsa barbecue, formaggio cheddar e bilanciato dalla dolcezza del nostro pane hawaiano e dal sapore aspro della rapa e del cavolo sottaceto"
+                    "description": "Maiale sfilacciato e affumicato lentamente, servito con salsa barbecue, formaggio cheddar e bilanciato dalla dolcezza del nostro pane hawaiano e dal sapore aspro della rapa e del cavolo sottaceto",
+                    "allergens": "C,M,P"
                 }
             ],
             "burgers": [
                 {
                     "name": "HAMBURGUESA CRUJIENTE DE PORKETA",
                     "price": "12.90€",
-                    "description": "Pancetta di maiale affumicata e impanata con formaggio cheddar e funghi, servita con insalata mista e maionese al lime."
+                    "description": "Pancetta di maiale affumicata e impanata con formaggio cheddar e funghi, servita con insalata mista e maionese al lime.",
+                    "allergens": "O,M,P"
                 },
                 {
                     "name": "HAMBURGUESA DE PORKETA",
                     "price": "13.90€",
-                    "description": "Pancetta affumicata, pollo croccante, manzo affumicato o proteine vegetariane"
+                    "description": "Pancetta affumicata, pollo croccante, manzo affumicato o proteine vegetariane",
+                    "allergens": "O,M,P"
                 },
                 {
                     "name": "HAMBURGUESA CRUJIENTE DE POLLO",
                     "price": "13€",
-                    "description": "Pollo affumicato e impanato, con formaggio cheddar, lattuga tenera, cetrioli sottaceto e maionese all'avocado"
+                    "description": "Pollo affumicato e impanato, con formaggio cheddar, lattuga tenera, cetrioli sottaceto e maionese all'avocado",
+                    "allergens": "O,M,E,P"
                 },
                 {
                     "name": "HAMBURGUESA VEGETARIANA",
                     "price": "13.99€",
-                    "description": "pane hawaiano ripieno di tofu affumicato, pancetta vegetale, formaggio cheddar, funghi, lattuga fresca ed erba cipollina, tutto condito con maionese affumicata."
+                    "description": "pane hawaiano ripieno di tofu affumicato, pancetta vegetale, formaggio cheddar, funghi, lattuga fresca ed erba cipollina, tutto condito con maionese affumicata.",
+                    "allergens": "C,O,M,E,P,T"
                 }
             ],
             "desserts": [
                 {
                     "name": "BROOKIE",
                     "price": "5€",
-                    "description": "una fusione tra un brownie e un biscotto con gocce di cioccolato"
+                    "description": "una fusione tra un brownie e un biscotto con gocce di cioccolato",
+                    "allergens": "C,P,R"
                 },
                 {
                     "name": "TORTAS TRES LECHES",
                     "price": "3.99€",
-                    "description": "soffice pan di Spagna alla vaniglia, farcito con strati di latte condensato, panna montata e latte evaporato, con un tocco di cannella"
+                    "description": "soffice pan di Spagna alla vaniglia, farcito con strati di latte condensato, panna montata e latte evaporato, con un tocco di cannella",
+                    "allergens": "C,M,P"
                 },
                 {
                     "name": "TIRAMISU",
                     "price": "3.49€",
-                    "description": "Pan di Spagna imbevuto di caffe e brandy, ricoperto di mascarpone e uno strato di cacao in polvere."
+                    "description": "Pan di Spagna imbevuto di caffe e brandy, ricoperto di mascarpone e uno strato di cacao in polvere.",
+                    "allergens": "C,M,P,R"
                 },
                 {
                     "name": "ROLLO DE CANELA",
                     "price": "4.5€",
-                    "description": "Rotolo di pasta dolce alla cannella con copertura alla Nutella"
+                    "description": "Rotolo di pasta dolce alla cannella con copertura alla Nutella",
+                    "allergens": "C,M,P"
                 },
                 {
                     "name": "BISCOTTO CON GOCCE DE CIOCCOLATO",
-                    "price": "2.5€"
+                    "price": "2.5€",
+                    "allergens": "C,P,R"
                 }
             ],
             "drinks": {
                 "soft_drinks": [
                     {
                         "name": "Coca-cola",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Coca cola zero",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Fanta aranciata",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Sprite",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Aquarius limone",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Fuze tea limone",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Acqua",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Acqua frizzante",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     }
                 ],
                 "coffee_and_tea": [
                     {
                         "name": "Expresso",
-                        "price": "1.5€"
+                        "price": "1.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Americano",
-                        "price": "1.5€"
+                        "price": "1.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Cortado",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Caffe con latte",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Carajillo",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Te allo zenzero",
-                        "price": "2€"
+                        "price": "2€",
+                        "allergens": ""
                     },
                     {
                         "name": "Te ai frutti ross",
-                        "price": "2€"
+                        "price": "2€",
+                        "allergens": ""
                     },
                     {
                         "name": "Te alla menta",
-                        "price": "2€"
+                        "price": "2€",
+                        "allergens": ""
                     }
                 ],
                 "beers": [
                     {
                         "name": "Estrella de Galicia (LAGER)",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     },
                     {
                         "name": "1906 LAGER EXTRA",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     },
                     {
                         "name": "Estrella de Galicia (ANALCOLICA)",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     },
                     {
                         "name": "Estrella de Galicia (SENZA GLUTINE)",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     },
                     {
                         "name": "1906 (ANALCOLICA)",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     },
                     {
                         "name": "B-Lemon (CLARITA)",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     },
                     {
                         "name": "Corona",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     }
                 ]
             },
@@ -568,31 +679,36 @@
                     "name": "VERDERA",
                     "type": "Rosso Garnacha e Carineña",
                     "description": "Fresco e fruttato",
-                    "price": "calice 3€ \/ bottiglia 13€"
+                    "price": "calice 3€ / bottiglia 13€",
+                    "allergens": ""
                 },
                 {
                     "name": "LOMAS DEL MARQUES",
                     "type": "Rosso Tempranillo",
                     "description": "Complesso, frutti tostati",
-                    "price": "calice 4€ \/ bottiglia 19€"
+                    "price": "calice 4€ / bottiglia 19€",
+                    "allergens": ""
                 },
                 {
                     "name": "MARQUES DE RISCAL",
                     "type": "Rosso Riserva Tempranillo e Graciano",
                     "description": "Intenso e frutti maturi",
-                    "price": "bottiglia 24 €"
+                    "price": "bottiglia 24 €",
+                    "allergens": ""
                 },
                 {
                     "name": "VALL MAJOR",
                     "type": "Bianco Garnacha Blanca",
                     "description": "Fruttato e fresco",
-                    "price": "calice 3€ \/ bottiglia 13€"
+                    "price": "calice 3€ / bottiglia 13€",
+                    "allergens": ""
                 },
                 {
                     "name": "CASTELL D'OR",
                     "type": "Cava Brut",
                     "description": "Intenso e agrumato",
-                    "price": "calice 4€ \/ bottiglia 14€"
+                    "price": "calice 4€ / bottiglia 14€",
+                    "allergens": ""
                 }
             ]
         },
@@ -603,37 +719,44 @@
                     {
                         "name": "A LA GALLEGA",
                         "price": "13.49€",
-                        "description": "Olive oil base, La Vera paprika with just the right amount of salt."
+                        "description": "Olive oil base, La Vera paprika with just the right amount of salt.",
+                        "allergens": "E"
                     },
                     {
                         "name": "TRADICIONAL",
                         "price": "13.49€",
-                        "description": "Diced peppers, red onion, pineapple, fresh cilantro and a vibrant citrus lemon vinaigrette"
+                        "description": "Diced peppers, red onion, pineapple, fresh cilantro and a vibrant citrus lemon vinaigrette",
+                        "allergens": "E"
                     },
                     {
                         "name": "ASIÁTICA",
-                        "price": "13.9€ \/ 13.99€",
-                        "description": "Homemade teriyaki sauce, sesame seeds, and the freshness of chives"
+                        "price": "13.9€ / 13.99€",
+                        "description": "Homemade teriyaki sauce, sesame seeds, and the freshness of chives",
+                        "allergens": "O,E,T"
                     },
                     {
                         "name": "ARGENTINA",
                         "price": "13.99€",
-                        "description": "Chimichurri sauce on a topping of melted provolone cheese"
+                        "description": "Chimichurri sauce on a topping of melted provolone cheese",
+                        "allergens": "M,E"
                     },
                     {
                         "name": "ITALIANA",
                         "price": "13.99€",
-                        "description": "Sundried-cherry tomatoes on a basil pesto sauce"
+                        "description": "Sundried-cherry tomatoes on a basil pesto sauce",
+                        "allergens": "M,E,R"
                     },
                     {
                         "name": "AMERICANA",
                         "price": "13.49€",
-                        "description": "BBQ sauce reduction and the toasted touch of sesame seeds"
+                        "description": "BBQ sauce reduction and the toasted touch of sesame seeds",
+                        "allergens": "E,T"
                     },
                     {
                         "name": "DE TEMPORADA",
                         "price": "13.99€",
-                        "description": "Ask about me."
+                        "description": "Ask about me.",
+                        "allergens": ""
                     }
                 ]
             },
@@ -641,223 +764,269 @@
                 {
                     "name": "ENSALADA CON PORKETA",
                     "price": "12.90€",
-                    "description": "Selected lettuces accompanied by diced smoked bacon, mushrooms, cherry tomatoes, pineapple and a vinaigrette made with lime, honey and mustard."
+                    "description": "Selected lettuces accompanied by diced smoked bacon, mushrooms, cherry tomatoes, pineapple and a vinaigrette made with lime, honey and mustard.",
+                    "allergens": "E"
                 },
                 {
                     "name": "CESAR CON POLLO",
                     "price": "12.90€",
-                    "description": "Mix of fresh lettuces, pieces of smoked and breaded chicken, bread croutons, parmesan cheese and our version of Caesar vinaigrette"
+                    "description": "Mix of fresh lettuces, pieces of smoked and breaded chicken, bread croutons, parmesan cheese and our version of Caesar vinaigrette",
+                    "allergens": "C,O,M"
                 },
                 {
                     "name": "ENSALADA VEGETARIANA",
                     "price": "12.90€",
-                    "description": "Variety of green leaves, black olives, cherry tomatoes, celery, red onion, camembert cheese and a Mediterranean vinaigrette"
+                    "description": "Variety of green leaves, black olives, cherry tomatoes, celery, red onion, camembert cheese and a Mediterranean vinaigrette",
+                    "allergens": "E"
                 }
             ],
             "to_share": [
                 {
                     "name": "CROQUETAS",
                     "price": "7.90€",
-                    "description": "Crispy spheres of cassava dough with pieces of smoked bacon"
+                    "description": "Crispy spheres of cassava dough with pieces of smoked bacon",
+                    "allergens": "E,P,K"
                 },
                 {
                     "name": "NUGGETS",
                     "price": "7.50€",
-                    "description": "Breaded pieces of bacon or chicken served with one of our sauces"
+                    "description": "Breaded pieces of bacon or chicken served with one of our sauces",
+                    "allergens": "O,P"
                 },
                 {
                     "name": "PATATAS FRITAS A LA PORKETA",
                     "price": "8.99€",
-                    "description": "Diced smoked bacon, served with our Lime mayonnaise"
+                    "description": "Diced smoked bacon, served with our Lime mayonnaise",
+                    "allergens": "E,P"
                 },
                 {
                     "name": "CEVICHE DE TORREZNO",
                     "price": "7.99€",
-                    "description": "Diced fried pork belly with a relish of peppers, red onion, pineapple, and cilantro marinated in a citrus lemon vinaigrette"
+                    "description": "Diced fried pork belly with a relish of peppers, red onion, pineapple, and cilantro marinated in a citrus lemon vinaigrette",
+                    "allergens": ""
                 },
                 {
                     "name": "TEQUEÑOS",
                     "price": "7.50€",
-                    "description": "Crispy wheat dough sticks, freshly fried and filled with melted cheese."
+                    "description": "Crispy wheat dough sticks, freshly fried and filled with melted cheese.",
+                    "allergens": "C,M,P"
                 },
                 {
                     "name": "Dúo de Mini Burgers",
                     "price": "8.99€",
-                    "description": "Pair of mini burgers with bacon or chicken Breaded with cheddar cheese and tomato sauce"
+                    "description": "Pair of mini burgers with bacon or chicken Breaded with cheddar cheese and tomato sauce",
+                    "allergens": "O,P"
                 }
             ],
             "sandwiches": [
                 {
                     "name": "BURRITO",
                     "price": "12.90€",
-                    "description": "Wheat tortilla filled with bell peppers, red onion, pineapple, lettuce, and fresh cilantro, topped with crispy yucca and served on avocado mayonnaise"
+                    "description": "Wheat tortilla filled with bell peppers, red onion, pineapple, lettuce, and fresh cilantro, topped with crispy yucca and served on avocado mayonnaise",
+                    "allergens": "C,M,E,P"
                 },
                 {
                     "name": "QUESADILLA",
                     "price": "8.50€",
-                    "description": "Wheat tortilla with double melted cheese and avocado mayonnaise"
+                    "description": "Wheat tortilla with double melted cheese and avocado mayonnaise",
+                    "allergens": "C,M"
                 },
                 {
                     "name": "QUESADILLA RELLENA",
                     "price": "10.50€",
-                    "description": "Smoked pork belly with goat cheese, balsamic caramelized onions, tender lettuce, crispy yucca chips, and a sweet and sour mayonnaise."
+                    "description": "Smoked pork belly with goat cheese, balsamic caramelized onions, tender lettuce, crispy yucca chips, and a sweet and sour mayonnaise.",
+                    "allergens": "C,M,E,P"
                 },
                 {
                     "name": "SANDWICH DE TERNERA",
                     "price": "13.99€",
-                    "description": "Hawaiian bread filled with smoked beef cuts with cheddar cheese, lettuce, red onion and a lime mayonnaise"
+                    "description": "Hawaiian bread filled with smoked beef cuts with cheddar cheese, lettuce, red onion and a lime mayonnaise",
+                    "allergens": "C,M,E,P"
                 },
                 {
                     "name": "SANDWICH DE PULLED PORK",
                     "price": "13.90€",
-                    "description": "Slow-smoked and pulled pork, served with BBQ sauce, cheddar cheese and balanced by the sweetness of our Hawaiian bread and the tang of pickled turnip and cabbage"
+                    "description": "Slow-smoked and pulled pork, served with BBQ sauce, cheddar cheese and balanced by the sweetness of our Hawaiian bread and the tang of pickled turnip and cabbage",
+                    "allergens": "C,M,P"
                 }
             ],
             "burgers": [
                 {
                     "name": "HAMBURGUESA CRUJIENTE DE PORKETA",
                     "price": "12.90€",
-                    "description": "Smoked and breaded pork belly with cheddar cheese and mushrooms, served with mixed greens and lime mayonnaise"
+                    "description": "Smoked and breaded pork belly with cheddar cheese and mushrooms, served with mixed greens and lime mayonnaise",
+                    "allergens": "O,M,P"
                 },
                 {
                     "name": "HAMBURGUESA DE PORKETA",
                     "price": "13.90€",
-                    "description": "Smoked pork belly, crispy chicken, smoked beef, or vegetarian protein"
+                    "description": "Smoked pork belly, crispy chicken, smoked beef, or vegetarian protein",
+                    "allergens": "O,M,P"
                 },
                 {
                     "name": "HAMBURGUESA CRUJIENTE DE POLLO",
                     "price": "13€",
-                    "description": "Smoked and breaded chicken, with cheddar cheese, tender lettuces, pickled cucumbers, along with an avocado mayonnaise"
+                    "description": "Smoked and breaded chicken, with cheddar cheese, tender lettuces, pickled cucumbers, along with an avocado mayonnaise",
+                    "allergens": "O,M,E,P"
                 },
                 {
                     "name": "HAMBURGUESA VEGETARIANA",
                     "price": "13.99€",
-                    "description": "Hawaiian bread filled with smoked tofu, vegetable bacon, cheddar cheese, mushrooms, fresh lettuce and chives, along with a smoked mayonnaise"
+                    "description": "Hawaiian bread filled with smoked tofu, vegetable bacon, cheddar cheese, mushrooms, fresh lettuce and chives, along with a smoked mayonnaise",
+                    "allergens": "C,O,M,E,P,T"
                 }
             ],
             "desserts": [
                 {
                     "name": "BROOKIE",
                     "price": "5€",
-                    "description": "A fusion of brownie and a chocolate chip cookie"
+                    "description": "A fusion of brownie and a chocolate chip cookie",
+                    "allergens": "C,P,R"
                 },
                 {
                     "name": "TORTAS TRES LECHES",
                     "price": "3.99€",
-                    "description": "Moist vanilla sponge cake, filled with layers of condensed milk, whipping cream and evaporated milk, with a touch of cinnamon"
+                    "description": "Moist vanilla sponge cake, filled with layers of condensed milk, whipping cream and evaporated milk, with a touch of cinnamon",
+                    "allergens": "C,M,P"
                 },
                 {
                     "name": "TIRAMISU",
                     "price": "3.49€",
-                    "description": "Sponge cakes soaked in coffee and sherry brandy, covered with mascarpone cheese and a layer of cocoa powder."
+                    "description": "Sponge cakes soaked in coffee and sherry brandy, covered with mascarpone cheese and a layer of cocoa powder.",
+                    "allergens": "C,M,P,R"
                 },
                 {
                     "name": "ROLLO DE CANELA",
                     "price": "4.5€",
-                    "description": "Sweet cinnamon dough roll with Nutella topping."
+                    "description": "Sweet cinnamon dough roll with Nutella topping.",
+                    "allergens": "C,M,P"
                 },
                 {
                     "name": "CHOCOLATE CHIP COOKIE",
-                    "price": "2.5€"
+                    "price": "2.5€",
+                    "allergens": "C,P,R"
                 }
             ],
             "drinks": {
                 "soft_drinks": [
                     {
                         "name": "Coca-cola",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Coca cola zero",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Orange fanta",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Sprite",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Lemon Aquarius",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Lemon Fuze tea",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Watter",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Sparkling watter",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     }
                 ],
                 "coffee_and_tea": [
                     {
                         "name": "Expresso",
-                        "price": "1.5€"
+                        "price": "1.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Americano",
-                        "price": "1.5€"
+                        "price": "1.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Cortado",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Coffee with milk",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Carajillo",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Ginger tea",
-                        "price": "2€"
+                        "price": "2€",
+                        "allergens": ""
                     },
                     {
                         "name": "Red fruit tea",
-                        "price": "2€"
+                        "price": "2€",
+                        "allergens": ""
                     },
                     {
                         "name": "Mint tea",
-                        "price": "2€"
+                        "price": "2€",
+                        "allergens": ""
                     }
                 ],
                 "beers": [
                     {
                         "name": "Estrella de Galicia (LAGER)",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     },
                     {
                         "name": "1906 LAGER EXTRA",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     },
                     {
                         "name": "Estrella de Galicia NON-ALCOHOLIC",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     },
                     {
                         "name": "Estrella de Galicia GLUTEN FREE",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     },
                     {
                         "name": "1906 NON-ACOHOLIC",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     },
                     {
                         "name": "B-Lemon (CLARITA)",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     },
                     {
                         "name": "Corona",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     }
                 ]
             },
@@ -866,31 +1035,36 @@
                     "name": "VERDERA",
                     "type": "Red Garnacha and Carineña",
                     "description": "Fresh and fruity",
-                    "price": "glass 3€ \/ bottle 13€"
+                    "price": "glass 3€ / bottle 13€",
+                    "allergens": ""
                 },
                 {
                     "name": "LOMAS DEL MARQUES",
                     "type": "Red Tempranillo",
                     "description": "Complex, toasted fruits",
-                    "price": "glass 4€ \/ bottle 19€"
+                    "price": "glass 4€ / bottle 19€",
+                    "allergens": ""
                 },
                 {
                     "name": "MARQUES DE RISCAL",
                     "type": "Red Reserve Tempranillo and Graciano",
                     "description": "Intense and ripe fruits",
-                    "price": "bottle 24 €"
+                    "price": "bottle 24 €",
+                    "allergens": ""
                 },
                 {
                     "name": "VALL MAJOR",
                     "type": "White Garnacha Blanca",
                     "description": "Fruity and fresh",
-                    "price": "glass 3€ \/ bottle 13€"
+                    "price": "glass 3€ / bottle 13€",
+                    "allergens": ""
                 },
                 {
                     "name": "CASTELL D'OR",
                     "type": "Cava Brut",
                     "description": "Intense and citrusy",
-                    "price": "glass 4€ \/ bottle 14€"
+                    "price": "glass 4€ / bottle 14€",
+                    "allergens": ""
                 }
             ]
         },
@@ -901,37 +1075,44 @@
                     {
                         "name": "A LA GALLEGA",
                         "price": "13.49€",
-                        "description": "Oli d'oliva, pebre vermell de la Vera amb el punt just de sal"
+                        "description": "Oli d'oliva, pebre vermell de la Vera amb el punt just de sal",
+                        "allergens": "E"
                     },
                     {
                         "name": "TRADICIONAL",
                         "price": "13.49€",
-                        "description": "Picada de pebrots, ceba vermella, pinya, coriandre fresc i una vibrant vinagreta cítrica de llimona."
+                        "description": "Picada de pebrots, ceba vermella, pinya, coriandre fresc i una vibrant vinagreta cítrica de llimona.",
+                        "allergens": "E"
                     },
                     {
                         "name": "ASIÁTICA",
-                        "price": "13.9€ \/ 13.99€",
-                        "description": "Salsa teriyaki artesanal, llavors de sèsam i la frescor del cibulet"
+                        "price": "13.9€ / 13.99€",
+                        "description": "Salsa teriyaki artesanal, llavors de sèsam i la frescor del cibulet",
+                        "allergens": "O,E,T"
                     },
                     {
                         "name": "ARGENTINA",
                         "price": "13.99€",
-                        "description": "Salsa ximixurri sobre una cobertura de formatge provolone fos"
+                        "description": "Salsa ximixurri sobre una cobertura de formatge provolone fos",
+                        "allergens": "M,E"
                     },
                     {
                         "name": "ITALIANA",
                         "price": "13.99€",
-                        "description": "Tomàquets cherry deshidratats sobre una salsa pesto d'alfàbrega"
+                        "description": "Tomàquets cherry deshidratats sobre una salsa pesto d'alfàbrega",
+                        "allergens": "M,E,R"
                     },
                     {
                         "name": "AMERICANA",
                         "price": "13.49€",
-                        "description": "Reducció de salsa BBQ i el toc torrat"
+                        "description": "Reducció de salsa BBQ i el toc torrat",
+                        "allergens": "E,T"
                     },
                     {
                         "name": "DE TEMPORADA",
                         "price": "14€",
-                        "description": "Pregunta per mi"
+                        "description": "Pregunta per mi",
+                        "allergens": ""
                     }
                 ]
             },
@@ -939,223 +1120,269 @@
                 {
                     "name": "AMANIDA AMB PORKETA",
                     "price": "12.90€",
-                    "description": "Enciams seleccionats acompanyats de daus de cansalada fumada, xampinyons, tomàquets cherry, pinya i una vinagreta a base de llima, mel i mostassa."
+                    "description": "Enciams seleccionats acompanyats de daus de cansalada fumada, xampinyons, tomàquets cherry, pinya i una vinagreta a base de llima, mel i mostassa.",
+                    "allergens": "E"
                 },
                 {
                     "name": "CÈSAR AMB POLLASTRE",
                     "price": "12.90€",
-                    "description": "Mix d'enciams frescos, trossos de pollastre fumat i arrebossat, crostons de pa, formatge parmesà i la nostra versió de la vinagreta Cèsar"
+                    "description": "Mix d'enciams frescos, trossos de pollastre fumat i arrebossat, crostons de pa, formatge parmesà i la nostra versió de la vinagreta Cèsar",
+                    "allergens": "C,O,M"
                 },
                 {
                     "name": "AMANIDA VEGETARIANA",
                     "price": "12.90€",
-                    "description": "Varietat de fulles verdes, olives negres, tomàquets cherry, api, ceba morada, formatge camembert i una vinagreta mediterrània"
+                    "description": "Varietat de fulles verdes, olives negres, tomàquets cherry, api, ceba morada, formatge camembert i una vinagreta mediterrània",
+                    "allergens": "E"
                 }
             ],
             "to_share": [
                 {
                     "name": "CROQUETES",
                     "price": "7.90€",
-                    "description": "Esferes cruixents de massa de iuca amb trossos de cansalada fumada"
+                    "description": "Esferes cruixents de massa de iuca amb trossos de cansalada fumada",
+                    "allergens": "E,P,K"
                 },
                 {
                     "name": "NUGGETS",
                     "price": "7.50€",
-                    "description": "Trossos de cansalada o pollastre arrebossats"
+                    "description": "Trossos de cansalada o pollastre arrebossats",
+                    "allergens": "O,P"
                 },
                 {
                     "name": "PATATES FREGIDES A LA PORKETA",
                     "price": "8.99€",
-                    "description": "Daus de cansalada fumada, servits amb la nostra maionesa de llima."
+                    "description": "Daus de cansalada fumada, servits amb la nostra maionesa de llima.",
+                    "allergens": "E,P"
                 },
                 {
                     "name": "CEVICHE DE TORREZNO",
                     "price": "7.99€",
-                    "description": "Daus de cansalada fregida amb una picada de pebrots, ceba vermella, pinya, coriandre, marinats en una vinagreta cítrica de llimona"
+                    "description": "Daus de cansalada fregida amb una picada de pebrots, ceba vermella, pinya, coriandre, marinats en una vinagreta cítrica de llimona",
+                    "allergens": ""
                 },
                 {
                     "name": "TEQUEÑOS",
                     "price": "7.50€",
-                    "description": "Cruixents barretes de massa de blat fregides al moment i farcides de formatge fos."
+                    "description": "Cruixents barretes de massa de blat fregides al moment i farcides de formatge fos.",
+                    "allergens": "C,M,P"
                 },
                 {
                     "name": "Duo de Mini Burgers",
                     "price": "8.99€",
-                    "description": "Parella de mini hamburgueses de cansalada o pollastre arrebossats amb formatge cheddar i salsa de tomàquet"
+                    "description": "Parella de mini hamburgueses de cansalada o pollastre arrebossats amb formatge cheddar i salsa de tomàquet",
+                    "allergens": "O,P"
                 }
             ],
             "sandwiches": [
                 {
                     "name": "BURRITO",
                     "price": "12.90€",
-                    "description": "Tortilla de blat farcida de pebrots, ceba morada, pinya, enciam i coriandre fresc, cruixents de iuca servida sobre una maionesa d'alvocat."
+                    "description": "Tortilla de blat farcida de pebrots, ceba morada, pinya, enciam i coriandre fresc, cruixents de iuca servida sobre una maionesa d'alvocat.",
+                    "allergens": "C,M,E,P"
                 },
                 {
                     "name": "QUESADILLA",
                     "price": "8.50€",
-                    "description": "Tortilla de blat amb doble formatge fos i una maionesa d'alvocat."
+                    "description": "Tortilla de blat amb doble formatge fos i una maionesa d'alvocat.",
+                    "allergens": "C,M"
                 },
                 {
                     "name": "QUESADILLA FARCIDA",
                     "price": "10.50€",
-                    "description": "Cansalada fumada amb formatge de cabra, ceba caramel·litzada al vinagre balsàmic, enciams tendres, cruixents de iuca i una maionesa agredolça"
+                    "description": "Cansalada fumada amb formatge de cabra, ceba caramel·litzada al vinagre balsàmic, enciams tendres, cruixents de iuca i una maionesa agredolça",
+                    "allergens": "C,M,E,P"
                 },
                 {
                     "name": "ENTREPÀ DE VEDELLA",
                     "price": "13.99€",
-                    "description": "Pa hawaià farcit de talls de vedella fumada amb formatge cheddar, enciam, cogombre, ceba morada i una maionesa de llima"
+                    "description": "Pa hawaià farcit de talls de vedella fumada amb formatge cheddar, enciam, cogombre, ceba morada i una maionesa de llima",
+                    "allergens": "C,M,E,P"
                 },
                 {
                     "name": "ENTREPÀ DE PULLED PORK",
                     "price": "13.90€",
-                    "description": "Porc fumat a foc lent i esfilagarsat, servit amb salsa BBQ, formatge cheddar i equilibrat per la dolçor del nostre pa hawaià i l'acidesa de la col i del nap confitat"
+                    "description": "Porc fumat a foc lent i esfilagarsat, servit amb salsa BBQ, formatge cheddar i equilibrat per la dolçor del nostre pa hawaià i l'acidesa de la col i del nap confitat",
+                    "allergens": "C,M,P"
                 }
             ],
             "burgers": [
                 {
                     "name": "HAMBURGUESA CRUIXENT DE PORKETA",
                     "price": "12.90€",
-                    "description": "Cansalada fumada i arrebossada, amb formatge cheddar i xampinyons, juntament amb un mix d'enciam i una maionesa de llima."
+                    "description": "Cansalada fumada i arrebossada, amb formatge cheddar i xampinyons, juntament amb un mix d'enciam i una maionesa de llima.",
+                    "allergens": "O,M,P"
                 },
                 {
                     "name": "HAMBURGUESA DE PORKETA",
                     "price": "13.90€",
-                    "description": "Cansalada fumada, pollastre cruixent, vedella fumada o proteïna vegetariana"
+                    "description": "Cansalada fumada, pollastre cruixent, vedella fumada o proteïna vegetariana",
+                    "allergens": "O,M,P"
                 },
                 {
                     "name": "HAMBURGUESA CRUIXENT DE POLLASTRE",
                     "price": "13€",
-                    "description": "Pollastre fumat i arrebossat, amb formatge cheddar, enciams tendres, cogombres confitats, juntament amb una maionesa d'alvocat"
+                    "description": "Pollastre fumat i arrebossat, amb formatge cheddar, enciams tendres, cogombres confitats, juntament amb una maionesa d'alvocat",
+                    "allergens": "O,M,E,P"
                 },
                 {
                     "name": "HAMBURGUESA VEGETARIANA",
                     "price": "13.99€",
-                    "description": "Pa hawaià farcit de tofu fumat, bacó vegetal, formatge cheddar, xampinyons, enciam fresc i cibulet, juntament amb una maionesa fumada."
+                    "description": "Pa hawaià farcit de tofu fumat, bacó vegetal, formatge cheddar, xampinyons, enciam fresc i cibulet, juntament amb una maionesa fumada.",
+                    "allergens": "C,O,M,E,P,T"
                 }
             ],
             "desserts": [
                 {
                     "name": "BROOKIE",
                     "price": "5€",
-                    "description": "Fusió de Brownie i una galeta de xips de xocolata"
+                    "description": "Fusió de Brownie i una galeta de xips de xocolata",
+                    "allergens": "C,P,R"
                 },
                 {
                     "name": "PASTÍS TRES LLETS",
                     "price": "3.99€",
-                    "description": "Pa de pessic humit de vainilla, farcit de capes de llet condensada, nata i llet evaporada, amb un toc de canyella"
+                    "description": "Pa de pessic humit de vainilla, farcit de capes de llet condensada, nata i llet evaporada, amb un toc de canyella",
+                    "allergens": "C,M,P"
                 },
                 {
                     "name": "TIRAMISU",
                     "price": "3.49€",
-                    "description": "Bescuits banyats en cafè i brandi, coberts per una crema mascarpone i una capa de cacau en pols."
+                    "description": "Bescuits banyats en cafè i brandi, coberts per una crema mascarpone i una capa de cacau en pols.",
+                    "allergens": "C,M,P,R"
                 },
                 {
                     "name": "ROTLLO DE CANYELLA",
                     "price": "4.5€",
-                    "description": "Rotllo de massa dolça de canyella amb topping de Nutella"
+                    "description": "Rotllo de massa dolça de canyella amb topping de Nutella",
+                    "allergens": "C,M,P"
                 },
                 {
                     "name": "GALETA DE XIPS DE XOCOLATA",
-                    "price": "2.5€"
+                    "price": "2.5€",
+                    "allergens": "C,P,R"
                 }
             ],
             "drinks": {
                 "soft_drinks": [
                     {
                         "name": "Coca-cola",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Coca cola zero",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Fanta taronja",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Sprite",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Aquarius de llimona",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Fuze tea de llimona",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Aigua",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Aigua amb gas",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     }
                 ],
                 "coffee_and_tea": [
                     {
                         "name": "Expresso",
-                        "price": "1.5€"
+                        "price": "1.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Americà",
-                        "price": "1.5€"
+                        "price": "1.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Tallat",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Cafè amb llet",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Cigaló",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Te de gingebre",
-                        "price": "2€"
+                        "price": "2€",
+                        "allergens": ""
                     },
                     {
                         "name": "Te de fruits vermells",
-                        "price": "2€"
+                        "price": "2€",
+                        "allergens": ""
                     },
                     {
                         "name": "Te de menta",
-                        "price": "2€"
+                        "price": "2€",
+                        "allergens": ""
                     }
                 ],
                 "beers": [
                     {
                         "name": "Estrella de Galicia (LAGER)",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     },
                     {
                         "name": "1906 LAGER EXTRA",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     },
                     {
                         "name": "Estrella de Galicia (SENSE ALCOHOL)",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     },
                     {
                         "name": "Estrella de Galicia (SENSE GLUTEN)",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     },
                     {
                         "name": "1906 (SENSE ALCOHOL)",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     },
                     {
                         "name": "B-Lemon (CLARITA)",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     },
                     {
                         "name": "Corona",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     }
                 ]
             },
@@ -1164,31 +1391,36 @@
                     "name": "VERDERA",
                     "type": "Negre Garnatxa i Carinyena",
                     "description": "Fresc i afruitat",
-                    "price": "copa 3€ \/ ampolla 13€"
+                    "price": "copa 3€ / ampolla 13€",
+                    "allergens": ""
                 },
                 {
                     "name": "LOMAS DEL MARQUES",
                     "type": "Negre Ull de Llebre",
                     "description": "Complex, fruits torrats",
-                    "price": "copa 4€ \/ ampolla 19€"
+                    "price": "copa 4€ / ampolla 19€",
+                    "allergens": ""
                 },
                 {
                     "name": "MARQUES DE RISCAL",
                     "type": "Negre Reserva Tempranillo i Graciano",
                     "description": "Intens i fruits madurs",
-                    "price": "ampolla 24 €"
+                    "price": "ampolla 24 €",
+                    "allergens": ""
                 },
                 {
                     "name": "VALL MAJOR",
                     "type": "Blanc Garnatxa Blanca",
                     "description": "Afruitat i fresc",
-                    "price": "copa 3€ \/ ampolla 13€"
+                    "price": "copa 3€ / ampolla 13€",
+                    "allergens": ""
                 },
                 {
                     "name": "CASTELL D'OR",
                     "type": "Cava Brut",
                     "description": "Intens i cítric",
-                    "price": "copa 4€ \/ ampolla 14€"
+                    "price": "copa 4€ / ampolla 14€",
+                    "allergens": ""
                 }
             ]
         },
@@ -1199,37 +1431,44 @@
                     {
                         "name": "A LA GALLEGA",
                         "price": "13.49€",
-                        "description": "Huile d'olive, paprika de la Vera avec une touche de sel"
+                        "description": "Huile d'olive, paprika de la Vera avec une touche de sel",
+                        "allergens": "E"
                     },
                     {
                         "name": "TRADICIONAL",
                         "price": "13.49€",
-                        "description": "Hachis de poivrons, oignon rouge, ananas, coriandre fraîche et une vinaigrette aux agrumes et citron."
+                        "description": "Hachis de poivrons, oignon rouge, ananas, coriandre fraîche et une vinaigrette aux agrumes et citron.",
+                        "allergens": "E"
                     },
                     {
                         "name": "ASIÁTICA",
-                        "price": "13.9€ \/ 13.99€",
-                        "description": "Sauce teriyaki artisanale, graines de sésame et la fraîcheur de la ciboulette"
+                        "price": "13.9€ / 13.99€",
+                        "description": "Sauce teriyaki artisanale, graines de sésame et la fraîcheur de la ciboulette",
+                        "allergens": "O,E,T"
                     },
                     {
                         "name": "ARGENTINA",
                         "price": "13.99€",
-                        "description": "Sauce chimichurri sur une couverture de fromage provolone fondu"
+                        "description": "Sauce chimichurri sur une couverture de fromage provolone fondu",
+                        "allergens": "M,E"
                     },
                     {
                         "name": "ITALIANA",
                         "price": "13.99€",
-                        "description": "Tomates cerises séchées sur une sauce pesto au basilic"
+                        "description": "Tomates cerises séchées sur une sauce pesto au basilic",
+                        "allergens": "M,E,R"
                     },
                     {
                         "name": "AMERICANA",
                         "price": "13.49€",
-                        "description": "Réduction de sauce BBQ et une touche grillée"
+                        "description": "Réduction de sauce BBQ et une touche grillée",
+                        "allergens": "E,T"
                     },
                     {
                         "name": "DE TEMPORADA",
                         "price": "14€",
-                        "description": "Demandez-moi"
+                        "description": "Demandez-moi",
+                        "allergens": ""
                     }
                 ]
             },
@@ -1237,223 +1476,269 @@
                 {
                     "name": "SALADE AVEC PORKETA",
                     "price": "12.90€",
-                    "description": "Laitues sélectionnées accompagnées de dés de poitrine de porc fumée, champignons, tomates cerises, ananas et une vinaigrette à base de citron vert, miel et moutarde."
+                    "description": "Laitues sélectionnées accompagnées de dés de poitrine de porc fumée, champignons, tomates cerises, ananas et une vinaigrette à base de citron vert, miel et moutarde.",
+                    "allergens": "E"
                 },
                 {
                     "name": "CÉSAR AU POULET",
                     "price": "12.90€",
-                    "description": "Mélange de jeunes pousses, morceaux de poulet fumé et pané, croûtons de pain, fromage parmesan et notre version de la vinaigrette César"
+                    "description": "Mélange de jeunes pousses, morceaux de poulet fumé et pané, croûtons de pain, fromage parmesan et notre version de la vinaigrette César",
+                    "allergens": "C,O,M"
                 },
                 {
                     "name": "SALADE VÉGÉTARIENNE",
                     "price": "12.90€",
-                    "description": "Variété de feuilles vertes, olives noires, tomates cerises, céleri, oignon rouge, fromage camembert et une vinaigrette méditerranéenne"
+                    "description": "Variété de feuilles vertes, olives noires, tomates cerises, céleri, oignon rouge, fromage camembert et une vinaigrette méditerranéenne",
+                    "allergens": "E"
                 }
             ],
             "to_share": [
                 {
                     "name": "CROQUETTES",
                     "price": "7.90€",
-                    "description": "Sphères croustillantes de pâte de manioc avec des morceaux de poitrine de porc fumée"
+                    "description": "Sphères croustillantes de pâte de manioc avec des morceaux de poitrine de porc fumée",
+                    "allergens": "E,P,K"
                 },
                 {
                     "name": "NUGGETS",
                     "price": "7.50€",
-                    "description": "Morceaux de poitrine de porc ou de poulet panés"
+                    "description": "Morceaux de poitrine de porc ou de poulet panés",
+                    "allergens": "O,P"
                 },
                 {
                     "name": "FRITES À LA PORKETA",
                     "price": "8.99€",
-                    "description": "Dés de poitrine de porc fumée, servis avec notre mayonnaise au citron vert."
+                    "description": "Dés de poitrine de porc fumée, servis avec notre mayonnaise au citron vert.",
+                    "allergens": "E,P"
                 },
                 {
                     "name": "CEVICHE DE TORREZNO",
                     "price": "7.99€",
-                    "description": "Dés de poitrine de porc frite avec un hachis de poivrons, oignon rouge, ananas, coriandre, marinés dans une vinaigrette aux agrumes et citron"
+                    "description": "Dés de poitrine de porc frite avec un hachis de poivrons, oignon rouge, ananas, coriandre, marinés dans une vinaigrette aux agrumes et citron",
+                    "allergens": ""
                 },
                 {
                     "name": "TEQUEÑOS",
                     "price": "7.50€",
-                    "description": "Bâtonnets croustillants de pâte de blé frits à la minute et fourrés de fromage fondu."
+                    "description": "Bâtonnets croustillants de pâte de blé frits à la minute et fourrés de fromage fondu.",
+                    "allergens": "C,M,P"
                 },
                 {
                     "name": "Duo de Mini Burgers",
                     "price": "8.99€",
-                    "description": "Paire de mini hamburgers de poitrine de porc ou poulet pané avec fromage cheddar et sauce tomate"
+                    "description": "Paire de mini hamburgers de poitrine de porc ou poulet pané avec fromage cheddar et sauce tomate",
+                    "allergens": "O,P"
                 }
             ],
             "sandwiches": [
                 {
                     "name": "BURRITO",
                     "price": "12.90€",
-                    "description": "Galette de blé farcie de poivrons, oignon rouge, ananas, laitue et coriandre fraîche, chips de manioc servie sur une mayonnaise à l'avocat."
+                    "description": "Galette de blé farcie de poivrons, oignon rouge, ananas, laitue et coriandre fraîche, chips de manioc servie sur une mayonnaise à l'avocat.",
+                    "allergens": "C,M,E,P"
                 },
                 {
                     "name": "QUESADILLA",
                     "price": "8.50€",
-                    "description": "Galette de blé avec double fromage fondu et une mayonnaise à l'avocat."
+                    "description": "Galette de blé avec double fromage fondu et une mayonnaise à l'avocat.",
+                    "allergens": "C,M"
                 },
                 {
                     "name": "QUESADILLA FOURRÉE",
                     "price": "10.50€",
-                    "description": "Poitrine de porc fumée avec fromage de chèvre, oignon caramélisé au vinaigre balsamique, jeunes pousses, chips de manioc et une mayonnaise aigre-douce"
+                    "description": "Poitrine de porc fumée avec fromage de chèvre, oignon caramélisé au vinaigre balsamique, jeunes pousses, chips de manioc et une mayonnaise aigre-douce",
+                    "allergens": "C,M,E,P"
                 },
                 {
                     "name": "SANDWICH DE BOEUF",
                     "price": "13.99€",
-                    "description": "Pain hawaïen farci de tranches de boeuf fumé avec fromage cheddar, laitue, concombre, oignon rouge et une mayonnaise au citron vert"
+                    "description": "Pain hawaïen farci de tranches de boeuf fumé avec fromage cheddar, laitue, concombre, oignon rouge et une mayonnaise au citron vert",
+                    "allergens": "C,M,E,P"
                 },
                 {
                     "name": "SANDWICH DE PULLED PORK",
                     "price": "13.90€",
-                    "description": "Porc fumé à feu doux et effiloché, servi avec sauce BBQ, fromage cheddar et équilibré par la douceur de notre pain hawaïen et l'acidité du cornichon de chou et navet"
+                    "description": "Porc fumé à feu doux et effiloché, servi avec sauce BBQ, fromage cheddar et équilibré par la douceur de notre pain hawaïen et l'acidité du cornichon de chou et navet",
+                    "allergens": "C,M,P"
                 }
             ],
             "burgers": [
                 {
                     "name": "HAMBURGER CROUSTILLANT DE PORKETA",
                     "price": "12.90€",
-                    "description": "Poitrine de porc fumée et panée, avec fromage cheddar et champignons, accompagnés d'un mélange de laitues et d'une mayonnaise au citron vert."
+                    "description": "Poitrine de porc fumée et panée, avec fromage cheddar et champignons, accompagnés d'un mélange de laitues et d'une mayonnaise au citron vert.",
+                    "allergens": "O,M,P"
                 },
                 {
                     "name": "HAMBURGER DE PORKETA",
                     "price": "13.90€",
-                    "description": "Poitrine de porc fumée, poulet croustillant, boeuf fumé ou protéine végétarienne"
+                    "description": "Poitrine de porc fumée, poulet croustillant, boeuf fumé ou protéine végétarienne",
+                    "allergens": "O,M,P"
                 },
                 {
                     "name": "HAMBURGER CROUSTILLANT DE POULET",
                     "price": "13€",
-                    "description": "Poulet fumé et pané, avec fromage cheddar, jeunes pousses, concombres confits, accompagnés d'une mayonnaise à l'avocat"
+                    "description": "Poulet fumé et pané, avec fromage cheddar, jeunes pousses, concombres confits, accompagnés d'une mayonnaise à l'avocat",
+                    "allergens": "O,M,E,P"
                 },
                 {
                     "name": "HAMBURGER VÉGÉTARIEN",
                     "price": "13.99€",
-                    "description": "Pain hawaïen farci de tofu fumé, bacon végétal, fromage cheddar, champignons, laitue fraîche et ciboulette, accompagnés d'une mayonnaise fumée."
+                    "description": "Pain hawaïen farci de tofu fumé, bacon végétal, fromage cheddar, champignons, laitue fraîche et ciboulette, accompagnés d'une mayonnaise fumée.",
+                    "allergens": "C,O,M,E,P,T"
                 }
             ],
             "desserts": [
                 {
                     "name": "BROOKIE",
                     "price": "5€",
-                    "description": "Fusion de Brownie et un cookie aux pépites de chocolat"
+                    "description": "Fusion de Brownie et un cookie aux pépites de chocolat",
+                    "allergens": "C,P,R"
                 },
                 {
                     "name": "GÂTEAU TRES LECHES",
                     "price": "3.99€",
-                    "description": "Génoise humide à la vanille, fourrée de couches de lait concentré, crème et lait concentré non sucré, avec une touche de cannelle"
+                    "description": "Génoise humide à la vanille, fourrée de couches de lait concentré, crème et lait concentré non sucré, avec une touche de cannelle",
+                    "allergens": "C,M,P"
                 },
                 {
                     "name": "TIRAMISU",
                     "price": "3.49€",
-                    "description": "Biscuits trempés dans du café et du brandy, recouverts d'une crème au mascarpone et d'une couche de cacao en poudre."
+                    "description": "Biscuits trempés dans du café et du brandy, recouverts d'une crème au mascarpone et d'une couche de cacao en poudre.",
+                    "allergens": "C,M,P,R"
                 },
                 {
                     "name": "ROULÉ À LA CANNELLE",
                     "price": "4.5€",
-                    "description": "Roulé de pâte sucrée à la cannelle avec topping Nutella"
+                    "description": "Roulé de pâte sucrée à la cannelle avec topping Nutella",
+                    "allergens": "C,M,P"
                 },
                 {
                     "name": "COOKIE AUX PÉPITES DE CHOCOLAT",
-                    "price": "2.5€"
+                    "price": "2.5€",
+                    "allergens": "C,P,R"
                 }
             ],
             "drinks": {
                 "soft_drinks": [
                     {
                         "name": "Coca-cola",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Coca cola zero",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Fanta orange",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Sprite",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Aquarius au citron",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Fuze tea au citron",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Eau",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Eau pétillante",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     }
                 ],
                 "coffee_and_tea": [
                     {
                         "name": "Expresso",
-                        "price": "1.5€"
+                        "price": "1.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Américain",
-                        "price": "1.5€"
+                        "price": "1.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Cortado",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Café au lait",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Carajillo",
-                        "price": "2.5€"
+                        "price": "2.5€",
+                        "allergens": ""
                     },
                     {
                         "name": "Thé au gingembre",
-                        "price": "2€"
+                        "price": "2€",
+                        "allergens": ""
                     },
                     {
                         "name": "Thé aux fruits rouges",
-                        "price": "2€"
+                        "price": "2€",
+                        "allergens": ""
                     },
                     {
                         "name": "Thé à la menthe",
-                        "price": "2€"
+                        "price": "2€",
+                        "allergens": ""
                     }
                 ],
                 "beers": [
                     {
                         "name": "Estrella de Galicia (LAGER)",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     },
                     {
                         "name": "1906 LAGER EXTRA",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     },
                     {
                         "name": "Estrella de Galicia (SANS ALCOOL)",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     },
                     {
                         "name": "Estrella de Galicia (SANS GLUTEN)",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     },
                     {
                         "name": "1906 (SANS ALCOOL)",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     },
                     {
                         "name": "B-Lemon (PANACHÉ)",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     },
                     {
                         "name": "Corona",
-                        "price": "3€"
+                        "price": "3€",
+                        "allergens": ""
                     }
                 ]
             },
@@ -1462,31 +1747,36 @@
                     "name": "VERDERA",
                     "type": "Vin rouge Garnatxa et Carinyena",
                     "description": "Frais et fruité",
-                    "price": "verre 3€ \/ bouteille 13€"
+                    "price": "verre 3€ / bouteille 13€",
+                    "allergens": ""
                 },
                 {
                     "name": "LOMAS DEL MARQUES",
                     "type": "Vin rouge Tempranillo",
                     "description": "Complexe, fruits torréfiés",
-                    "price": "verre 4€ \/ bouteille 19€"
+                    "price": "verre 4€ / bouteille 19€",
+                    "allergens": ""
                 },
                 {
                     "name": "MARQUES DE RISCAL",
                     "type": "Vin rouge Reserva Tempranillo et Graciano",
                     "description": "Intense et fruits mûrs",
-                    "price": "bouteille 24 €"
+                    "price": "bouteille 24 €",
+                    "allergens": ""
                 },
                 {
                     "name": "VALL MAJOR",
                     "type": "Vin blanc Garnatxa Blanca",
                     "description": "Fruité et frais",
-                    "price": "verre 3€ \/ bouteille 13€"
+                    "price": "verre 3€ / bouteille 13€",
+                    "allergens": ""
                 },
                 {
                     "name": "CASTELL D'OR",
                     "type": "Cava Brut",
                     "description": "Intense et citronné",
-                    "price": "verre 4€ \/ bouteille 14€"
+                    "price": "verre 4€ / bouteille 14€",
+                    "allergens": ""
                 }
             ]
         }

@@ -1,0 +1,11 @@
+{
+    "allergens": {
+        "C": "Gluten",
+        "O": "Soja",
+        "M": "Leche",
+        "E": "Mostaza",
+        "P": "Huevo",
+        "R": "Frutos de cascara",
+        "T": "Sesamo"
+    }
+}

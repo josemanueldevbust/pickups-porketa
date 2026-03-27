@@ -12,7 +12,10 @@ if (!class_exists('WP_List_Table')) {
 
 
 class ProductList extends \WP_List_Table {
-    public function __construct() {
+    private $manual_items;
+
+    public function __construct($items = []) {
+        $this->manual_items = $items;
         parent::__construct([
             'singular' => 'item',
             'plural'   => 'items',
@@ -27,19 +30,13 @@ class ProductList extends \WP_List_Table {
             'Category' => 'Category',
             'Location' => 'Location',
             'Price' => 'Price',
+            'Order' => 'Order',
             'image'  => 'Image',
         ];
     }
 
     public function prepare_items() {
-       // echo "Preparing items...";
-        try{
-            $products = Data::fetch_items(Product::class);
-        }catch(\Exception $e){
-            echo "Error fetching products: " . $e->getMessage();
-            return;
-        }
-        //$products = Data::fetch_items(Product::class);
+        $products = $this->manual_items;
        $uploads = wp_upload_dir();
 
         $getLocation = function($item){
@@ -62,6 +59,7 @@ class ProductList extends \WP_List_Table {
                 'name'  => '<a href="'. esc_url( admin_url('admin.php?page=edit-product-form&ID=' . $product->getID()) ) . '">' . esc_html( $product->getName_es() ?: 'Untitled' ) . '</a>',
                 'Category' => $product->getCategory() . ($product->getSubcategory() ? ' - ' . $product->getSubcategory() : ''),
                 'Price' => $product->getPrice(),
+                'Order' => $product->getProduct_order() ?: 0,
                 
                 'image' => '<img src="' . $url . '" alt="' . $product->getName_es() . '" width="50" />',
                 'Location' => $product->getLocation()
@@ -94,6 +92,18 @@ class ProductList extends \WP_List_Table {
                 wp_delete_post($id, true);
             }
             echo '<div class="notice notice-success is-dismissible"><p>Selected products deleted successfully!</p></div>';
+        }
+
+        if (isset($_POST['action']) && $_POST['action'] === 'save_category_settings') {
+            $cat_meta = $_POST['cat_meta'] ?? [];
+            update_option('pickups_category_meta', $cat_meta);
+            echo '<div class="notice notice-success is-dismissible"><p>Category settings saved successfully!</p></div>';
+        }
+
+        if (isset($_POST['action']) && $_POST['action'] === 'save_allergen_settings') {
+            $allergen_meta = $_POST['allergen_meta'] ?? [];
+            update_option('pickups_allergen_meta', $allergen_meta);
+            echo '<div class="notice notice-success is-dismissible"><p>Allergen settings saved successfully!</p></div>';
         }
 
         if (isset($_POST['action']) && $_POST['action'] === 'import_menu_data' && isset($_FILES['menu_json'])) {
@@ -138,6 +148,8 @@ class ProductList extends \WP_List_Table {
                                 $product->setName_it($item_it['name'] ?? '');
                                 $product->setDesc_it($item_it['description'] ?? '');
                                 $product->setType_it($item_it['type'] ?? '');
+                                $product->setAllergens($item_es['allergens'] ?? '');
+                                $product->setProduct_order($item_es['product_order'] ?? 0);
 
                                 Data::save_item($product);
                                 $count++;
@@ -167,6 +179,8 @@ class ProductList extends \WP_List_Table {
                                     $product->setDesc_en($item_en['description'] ?? '');
                                     $product->setName_it($item_it['name'] ?? '');
                                     $product->setDesc_it($item_it['description'] ?? '');
+                                    $product->setAllergens($item_es['allergens'] ?? '');
+                                    $product->setProduct_order($item_es['product_order'] ?? 0);
 
                                     Data::save_item($product);
                                     $count++;
@@ -204,6 +218,14 @@ class ProductList extends \WP_List_Table {
                                     if(method_exists($product, $descMethod)) $product->$descMethod($item['description'] ?? '');
                                     if(method_exists($product, $typeMethod)) $product->$typeMethod($item['type'] ?? '');
                                     
+                                    if (isset($item['allergens'])) {
+                                        $product->setAllergens($item['allergens']);
+                                    }
+                                    
+                                    if (isset($item['product_order'])) {
+                                        $product->setProduct_order($item['product_order']);
+                                    }
+                                    
                                     // Price and Image are kept as is to prevent overwriting base data
                                     Data::save_item($product);
                                     $count++;
@@ -227,6 +249,14 @@ class ProductList extends \WP_List_Table {
                                         if(method_exists($product, $nameMethod)) $product->$nameMethod($item['name'] ?? '');
                                         if(method_exists($product, $descMethod)) $product->$descMethod($item['description'] ?? '');
                                         if(method_exists($product, $typeMethod)) $product->$typeMethod($item['type'] ?? '');
+
+                                        if (isset($item['allergens'])) {
+                                            $product->setAllergens($item['allergens']);
+                                        }
+
+                                        if (isset($item['product_order'])) {
+                                            $product->setProduct_order($item['product_order']);
+                                        }
 
                                         Data::save_item($product);
                                         $count++;
@@ -280,15 +310,200 @@ class ProductList extends \WP_List_Table {
     <button id="delete-selected" onclick="" class="button button-danger">Delete Selected</button>
 </div>
 HTML;
-        try{
-            $instance = new self();
-            $instance->prepare_items(); 
+        try {
+            $all_products = Data::fetch_items(Product::class) ?: [];
+            
+            // Define categories and labels
+            $categories = [
+                'specialty' => 'Especialidades / Specialty',
+                'to_share' => 'Para Compartir / To Share',
+                'salads' => 'Ensaladas / Salads',
+                'sandwiches' => 'Sandwiches',
+                'burgers' => 'Burgers',
+                'desserts' => 'Postres / Desserts',
+                'drinks' => 'Bebidas / Drinks',
+                'wine_list' => 'Vinos / Wine List'
+            ];
+
+            // Group products
+            $grouped = [];
+            foreach ($all_products as $p) {
+                if (!$p) continue;
+                $grouped[$p->getCategory()][] = $p;
+            }
+
             echo $controls;
-            $instance->display();
+
+            // Category Management UI
+            wp_enqueue_media();
+            $cat_meta = get_option('pickups_category_meta', []);
+            echo '<div class="wrap" style="margin-top: 20px; padding: 15px; background: #fff; border: 1px solid #ccd0d4; box-shadow: 0 1px 1px rgba(0,0,0,.04);">';
+            echo '<h3>Category Settings (Order & Images)</h3>';
+            echo '<form method="post">';
+            echo '<input type="hidden" name="action" value="save_category_settings" />';
+            echo '<table class="widefat fixed" style="margin-bottom: 10px;">';
+            echo '<thead><tr><th>Category</th><th>Order</th><th>Image URL</th><th>Action</th></tr></thead>';
+            echo '<tbody>';
+            foreach ($categories as $catKey => $catLabel) {
+                $order = $cat_meta[$catKey]['order'] ?? 0;
+                $image = $cat_meta[$catKey]['image'] ?? '';
+                $descriptions = $cat_meta[$catKey]['description'] ?? [];
+                
+                echo '<tr style="background: #f9f9f9;">';
+                echo '<td><strong>' . esc_html($catLabel) . '</strong><br/><small>' . esc_html($catKey) . '</small></td>';
+                echo '<td><input type="number" name="cat_meta[' . esc_attr($catKey) . '][order]" value="' . esc_attr($order) . '" style="width: 60px;" /></td>';
+                echo '<td><input type="text" id="cat_image_' . esc_attr($catKey) . '" name="cat_meta[' . esc_attr($catKey) . '][image]" value="' . esc_attr($image) . '" class="regular-text" placeholder="https://..." /></td>';
+                echo '<td><button type="button" class="button category-upload-button" data-target="cat_image_' . esc_attr($catKey) . '">Upload Image</button></td>';
+                echo '</tr>';
+
+                echo '<tr>';
+                echo '<td colspan="4" style="padding: 10px 15px 20px 15px; border-bottom: 2px solid #eee;">';
+                echo '<div style="display: flex; flex-wrap: wrap; gap: 10px;">';
+                foreach (['spanish' => 'Spanish', 'english' => 'English', 'ca' => 'Catalan', 'italian' => 'Italian', 'french' => 'French'] as $lKey => $lName) {
+                    $desc = $descriptions[$lKey] ?? '';
+                    echo '<div style="flex: 1; min-width: 180px;">';
+                    echo '<label style="display: block; font-size: 11px; font-weight: bold; margin-bottom: 2px;">' . $lName . ' Description</label>';
+                    echo '<textarea name="cat_meta[' . esc_attr($catKey) . '][description][' . $lKey . ']" style="width: 100%;" rows="2">' . esc_textarea($desc) . '</textarea>';
+                    echo '</div>';
+                }
+                echo '</div>';
+                echo '</td>';
+                echo '</tr>';
+            }
+            echo '</tbody></table>';
+
+            echo "
+            <script>
+            jQuery(document).ready(function($){
+                $('.category-upload-button').click(function(e) {
+                    e.preventDefault();
+                    var button = $(this);
+                    var targetId = button.data('target');
+                    var custom_uploader = wp.media({
+                        title: 'Select Category Image',
+                        button: {
+                            text: 'Use this image'
+                        },
+                        multiple: false
+                    }).on('select', function() {
+                        var attachment = custom_uploader.state().get('selection').first().toJSON();
+                        $('#' + targetId).val(attachment.url);
+                    }).open();
+                });
+            });
+            </script>
+            ";
+
+            echo '<button type="submit" class="button button-primary">Save Category Settings</button>';
+            echo '</form></div>';
+
+            // Allergen Management UI
+            $allergen_meta = get_option('pickups_allergen_meta', []);
+            if (empty($allergen_meta)) {
+                $allergen_defaults = [
+                    'C' => [
+                        'spanish' => 'Gluten',
+                        'english' => 'Gluten',
+                        'ca'      => 'Gluten',
+                        'italian' => 'Glutine',
+                        'french'  => 'Gluten'
+                    ],
+                    'O' => [
+                        'spanish' => 'Soja',
+                        'english' => 'Soy',
+                        'ca'      => 'Soja',
+                        'italian' => 'Soia',
+                        'french'  => 'Soja'
+                    ],
+                    'M' => [
+                        'spanish' => 'Leche',
+                        'english' => 'Milk',
+                        'ca'      => 'Llet',
+                        'italian' => 'Latte',
+                        'french'  => 'Lait'
+                    ],
+                    'E' => [
+                        'spanish' => 'Mostaza',
+                        'english' => 'Mustard',
+                        'ca'      => 'Mostassa',
+                        'italian' => 'Senape',
+                        'french'  => 'Moutarde'
+                    ],
+                    'P' => [
+                        'spanish' => 'Huevo',
+                        'english' => 'Egg',
+                        'ca'      => 'Ou',
+                        'italian' => 'Uovo',
+                        'french'  => 'Œuf'
+                    ],
+                    'R' => [
+                        'spanish' => 'Frutos de cascara',
+                        'english' => 'Nuts',
+                        'ca'      => 'Fruit de closca',
+                        'italian' => 'Frutta a guscio',
+                        'french'  => 'Fruits à coque'
+                    ],
+                    'T' => [
+                        'spanish' => 'Sesamo',
+                        'english' => 'Sesame',
+                        'ca'      => 'Sèsam',
+                        'italian' => 'Sesamo',
+                        'french'  => 'Sésame'
+                    ]
+                ];
+                $allergen_meta = $allergen_defaults;
+            }
+
+            echo '<div class="wrap" style="margin-top: 20px; padding: 15px; background: #fff; border: 1px solid #ccd0d4; box-shadow: 0 1px 1px rgba(0,0,0,.04);">';
+            echo '<h3>Allergen Translations</h3>';
+            echo '<form method="post">';
+            echo '<input type="hidden" name="action" value="save_allergen_settings" />';
+            echo '<table class="widefat fixed" style="margin-bottom: 10px;">';
+            echo '<thead><tr><th style="width: 50px;">Code</th><th>Spanish</th><th>English</th><th>Italian</th><th>Catalan</th><th>French</th></tr></thead>';
+            echo '<tbody>';
+            foreach ($allergen_meta as $code => $langs) {
+                echo '<tr>';
+                echo '<td><strong>' . esc_html($code) . '</strong></td>';
+                foreach (['spanish', 'english', 'italian', 'ca', 'french'] as $lang) {
+                    $val = $langs[$lang] ?? '';
+                    echo '<td><input type="text" name="allergen_meta[' . esc_attr($code) . '][' . esc_attr($lang) . ']" value="' . esc_attr($val) . '" style="width: 100%;" /></td>';
+                }
+                echo '</tr>';
+            }
+            echo '</tbody></table>';
+            echo '<button type="submit" class="button button-primary">Save Allergen Settings</button>';
+            echo '</form></div>';
+
+            // Sort categories by stored order
+            uasort($categories, function($a_label, $b_label) use ($categories, $cat_meta) {
+                $a_key = array_search($a_label, $categories);
+                $b_key = array_search($b_label, $categories);
+                $a_order = (int)($cat_meta[$a_key]['order'] ?? 0);
+                $b_order = (int)($cat_meta[$b_key]['order'] ?? 0);
+                return $a_order <=> $b_order;
+            });
+
+            foreach ($categories as $catKey => $catLabel) {
+                if (empty($grouped[$catKey])) continue;
+
+                // Sort by product_order
+                usort($grouped[$catKey], function($a, $b) {
+                    $orderA = (int)$a->getProduct_order();
+                    $orderB = (int)$b->getProduct_order();
+                    return $orderA <=> $orderB;
+                });
+
+                echo '<h2 style="margin-top: 40px; padding: 10px; background: #23282d; color: #fff; border-radius: 4px;">' . esc_html($catLabel) . '</h2>';
+                
+                $instance = new self($grouped[$catKey]);
+                $instance->prepare_items(); 
+                $instance->display();
+            }
+
             echo '</form>';
             echo '</div>';
-        }catch(\Exception $e){
-            echo 'Error rendering product list: ' . $e->getMessage() . " trace " . $e->getTrace();
+        } catch (\Exception $e) {
+            echo 'Error rendering product list: ' . $e->getMessage();
         }
   
 

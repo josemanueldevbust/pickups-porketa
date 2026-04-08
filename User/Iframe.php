@@ -11,11 +11,18 @@ class Iframe {
      * @param string $style Custom CSS for the iframe element.
      * @param bool $reload Whether to reload the iframe each time it is opened.
      * @param bool $blur Whether to show a blur backdrop effect.
+     * @param string $lang Language to set in localStorage.
      */
-    public static function render($url, $top = '80px', $text = 'Menu', $style = '', $reload = false, $blur = false) {
+    public static function render($url, $top = '80px', $text = 'Menu', $style = '', $reload = false, $blur = false, $lang = '') {
         $uniqueId = 'iframe_' . substr(md5($url), 0, 8);
         $reloadAttr = $reload ? 'true' : 'false';
         ?>
+        <?php if (!empty($lang)): ?>
+        <script>
+            localStorage.setItem('lang', <?= json_encode($lang) ?>);
+            localStorage.setItem('pickups_lang', <?= json_encode($lang) ?>);
+        </script>
+        <?php endif; ?>
         <style>
             .iframe-backdrop-<?= $uniqueId ?> {
                 position: fixed;
@@ -87,6 +94,10 @@ class Iframe {
                 const backdrop = document.getElementById('backdrop_<?= $uniqueId ?>');
                 const iframe = document.getElementById('iframe_<?= $uniqueId ?>');
                 
+                // Move elements to body to guarantee they are over everything
+                if (backdrop && backdrop.parentElement !== document.body) document.body.appendChild(backdrop);
+                if (container && container.parentElement !== document.body) document.body.appendChild(container);
+
                 if (<?= $reloadAttr ?>) {
                     iframe.src = iframe.src;
                 }
@@ -109,6 +120,13 @@ class Iframe {
                 }
                 document.body.style.overflow = ''; // Restore scrolling
             }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                const container = document.getElementById('container_<?= $uniqueId ?>');
+                const backdrop = document.getElementById('backdrop_<?= $uniqueId ?>');
+                if (backdrop && backdrop.parentElement !== document.body) document.body.appendChild(backdrop);
+                if (container && container.parentElement !== document.body) document.body.appendChild(container);
+            });
         </script>
 
         <button style="color: black; background: white; padding: .5rem 1.5rem; margin: 1rem; min-width: 8rem; border-radius: 31px; min-height: 2.75rem !important; font-weight: bold; cursor: pointer; border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" 

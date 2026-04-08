@@ -121,7 +121,8 @@ function render_iframeurl($atts){
         'text' => 'Open',
         'style' => '',
         'reload' => false,
-        'blur' => false
+        'blur' => false,
+        'lang' => ''
     ], $atts);
 
     $atts['reload'] = filter_var($atts['reload'], FILTER_VALIDATE_BOOLEAN);
@@ -129,7 +130,7 @@ function render_iframeurl($atts){
 
     // Buffer the output
     ob_start();
-    \Pickups\User\Iframe::render($atts['url'], $atts['top'], $atts['text'], $atts['style'], $atts['reload'], $atts['blur']);
+    \Pickups\User\Iframe::render($atts['url'], $atts['top'], $atts['text'], $atts['style'], $atts['reload'], $atts['blur'], $atts['lang']);
     return ob_get_clean();
 }
 add_shortcode( 'render_pickup', 'render_pickup' );
@@ -280,7 +281,26 @@ function process_orders($request) {
     // ), 200);
 }
 
+add_action('init', function() {
+    $request_uri = $_SERVER['REQUEST_URI'];
+    $path = trim(parse_url($request_uri, PHP_URL_PATH), '/');
+    
+    // Handle cases where WordPress might be in a subdirectory
+    $site_path = trim(parse_url(site_url(), PHP_URL_PATH), '/');
+    if (!empty($site_path) && strpos($path, $site_path) === 0) {
+        $path = trim(substr($path, strlen($site_path)), '/');
+    }
+
+    if ($path === 'reservation-completegracias-por-reservar-embudo') {
+        status_header(200);
+        include_once plugin_dir_path(__FILE__) . 'User/reservation-complete.php';
+        exit;
+    }
+});
+
+
 Pickups\Helpers\Asset::enqueue_all();
+
 Pickups\Helpers\Data::create_rest('order',[
     'post'=>function($data){
         return Pickups\Model\Order::process_order($data);

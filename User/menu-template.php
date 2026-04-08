@@ -441,7 +441,7 @@ usort($category_order, function($a, $b) use ($cat_meta) {
                             link.classList.remove('active-nav-link');
                             if (link.getAttribute('href') === '#' + id) {
                                 link.classList.add('active-nav-link');
-                                // If it's a desktop link, scroll it in the horizontal navbar
+                                // Scroll active link into view in the horizontal navbar (both desktop and mobile)
                                 if (link.offsetParent !== null && !link.closest('#mobile-drawer')) {
                                     link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
                                 }
@@ -457,32 +457,7 @@ usort($category_order, function($a, $b) use ($cat_meta) {
                 }
             });
 
-            // Mobile Drawer Toggle logic
-            const mobileDrawer = document.getElementById('mobile-drawer');
-            const drawerContent = document.getElementById('drawer-content');
-            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-            const closeDrawerBtn = document.getElementById('close-drawer-btn');
-
-            function toggleDrawer(open) {
-                if (open) {
-                    mobileDrawer.classList.remove('opacity-0', 'pointer-events-none');
-                    drawerContent.classList.remove('translate-x-full');
-                } else {
-                    mobileDrawer.classList.add('opacity-0', 'pointer-events-none');
-                    drawerContent.classList.add('translate-x-full');
-                }
-            }
-
-            if (mobileMenuBtn) mobileMenuBtn.onclick = () => toggleDrawer(true);
-            if (closeDrawerBtn) closeDrawerBtn.onclick = () => toggleDrawer(false);
-            if (mobileDrawer) mobileDrawer.onclick = (e) => { 
-                if (e.target === mobileDrawer) toggleDrawer(false); 
-            };
-
-            document.querySelectorAll('#mobile-drawer .nav-link').forEach(link => {
-                link.onclick = () => toggleDrawer(false);
-            });
-        }
+         }
 
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', initMenu);
@@ -520,12 +495,18 @@ usort($category_order, function($a, $b) use ($cat_meta) {
                         <span class="material-symbols-outlined text-xl">expand_more</span>
                     </div>
                 </div>
-                <!-- Hamburger Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-[#f3f3f3ff] p-1 flex items-center">
-                    <span class="material-symbols-outlined text-3xl">menu</span>
-                </button>
+                </div>
             </div>
         </nav>
+
+        <!-- Mobile Horizontal Category Slider -->
+        <div class="flex md:hidden overflow-x-auto whitespace-nowrap px-8 pb-4 gap-6 no-scrollbar font-headline font-bold text-sm tracking-tight border-t border-white/10 pt-4">
+            <?php foreach($category_order as $secKey): 
+                if (!isset($menu[$secKey]) && $secKey !== 'drinks' && $secKey !== 'wine_list') continue;
+            ?>
+                <a class="nav-link text-[#f3f3f3ff] whitespace-nowrap border-b-2 border-transparent pb-0.5" href="#<?= $secKey ?>" data-i18n-title-key="<?= $secKey ?>"><?= $sectionTitles[$langKey][$secKey] ?></a>
+            <?php endforeach; ?>
+        </div>
     </header>
 
     </div>
@@ -712,7 +693,7 @@ usort($category_order, function($a, $b) use ($cat_meta) {
         <div class="flex flex-col items-center justify-center gap-8 w-full px-8 max-w-7xl mx-auto">
             
             <p class="font-['Work_Sans'] text-xs uppercase tracking-widest text-on-surface-variant opacity-60">
-                © 2024 COME. El Ahumado Editorial.
+                © COMEPORKETA – 2026
             </p>
 
             <!-- Allergens Legend -->
@@ -730,24 +711,6 @@ usort($category_order, function($a, $b) use ($cat_meta) {
         </div>
     </footer>
 
-    <!-- Mobile Drawer Moved to end of body for better stacking -->
-    <div id="mobile-drawer" class="fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm transition-opacity duration-300 opacity-0 pointer-events-none md:hidden">
-        <div id="drawer-content" class="fixed right-0 top-0 h-full w-72 bg-[#E43B16] shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col p-8 z-[101]">
-            <div class="flex justify-between items-center mb-10">
-                <img src="/wp-content/plugins/pickups/logo.png" alt="COME Logo" class="h-8 object-contain invert" />
-                <button id="close-drawer-btn" class="text-white cursor-pointer hover:scale-110 active:scale-95 transition-transform">
-                    <span class="material-symbols-outlined text-4xl">close</span>
-                </button>
-            </div>
-            <div class="flex flex-col gap-6 font-headline font-bold text-xl tracking-tight overflow-y-auto max-h-[80vh] no-scrollbar">
-                <?php foreach($category_order as $secKey): 
-                    if (!isset($menu[$secKey]) && $secKey !== 'drinks' && $secKey !== 'wine_list') continue;
-                ?>
-                    <a class="nav-link text-[#f3f3f3ff] border-l-4 border-transparent pl-4" href="#<?= $secKey ?>" data-i18n-title-key="<?= $secKey ?>"><?= $sectionTitles[$langKey][$secKey] ?></a>
-                <?php endforeach; ?>
-            </div>
-        </div>
-    </div>
 
     <!-- Allergen Modal -->
     <div id="allergen-modal" class="fixed inset-0 z-[150] bg-black/60 backdrop-blur-md transition-opacity duration-300 opacity-0 pointer-events-none flex items-center justify-center p-6">

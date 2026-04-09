@@ -12,9 +12,11 @@ class Menu {
 
     
     public static function render($html=null, $defaultLang = 'spanish') {
+        $uid = uniqid();
 
         if (empty($html)) {
             ob_start();
+            // Pass $uid to the template
             require __DIR__ . "/menu-template.php";
             $menuHtml = ob_get_clean();
         } else {
@@ -27,42 +29,45 @@ class Menu {
     
         ?>
         <script>
-            const { menuHtml } = <?= json_encode($data) ?>;
-            window.menuHtml = menuHtml;
-            function openMenu(event) {
-                document.querySelector('.order-now-container').classList.add('show');
-                const ifr =  document.querySelector('#order-iframe');
-                ifr.style.display = ''
-                
-            }
+            (function() {
+                const { menuHtml } = <?= json_encode($data) ?>;
+                const menuHtml_<?= $uid ?> = menuHtml;
+                window.menuHtml_<?= $uid ?> = menuHtml;
 
-            function closeMenu(event){
-                document.querySelector('.order-now-container').classList.remove('show');
-                const ifr =  document.querySelector('#order-iframe');
-                ifr.style.display = 'none';
+                window.openMenu_<?= $uid ?> = function(event) {
+                    document.getElementById('order-now-container-<?= $uid ?>').classList.add('show');
+                    const ifr = document.getElementById('order-iframe-<?= $uid ?>');
+                    ifr.style.display = '';
+                };
 
-            }
-            document.addEventListener('DOMContentLoaded', function() {
-                const ifr =  document.querySelector('#order-iframe');
-                ifr.contentDocument.open();
-                ifr.contentDocument.write(menuHtml);
-                ifr.contentDocument.close();
-                
-                ifr.contentWindow.addEventListener('close-all', function(event) {
-                    closeMenu(event);
-                })
-            })
+                window.closeMenu_<?= $uid ?> = function(event) {
+                    document.getElementById('order-now-container-<?= $uid ?>').classList.remove('show');
+                    const ifr = document.getElementById('order-iframe-<?= $uid ?>');
+                    ifr.style.display = 'none';
+                };
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    const container = document.getElementById('order-now-container-<?= $uid ?>');
+                    if (container) document.body.appendChild(container);
+
+                    const ifr = document.getElementById('order-iframe-<?= $uid ?>');
+                    if (!ifr) return;
+                    
+                    ifr.contentDocument.open();
+                    ifr.contentDocument.write(menuHtml_<?= $uid ?>);
+                    ifr.contentDocument.close();
+                    
+                    ifr.contentWindow.addEventListener('close-all', function(event) {
+                        window.closeMenu_<?= $uid ?>(event);
+                    });
+                });
+            })();
         </script>
        
-        <button style="    color: black;  background: white;    padding: .25rem;    margin: 1rem;    min-width: 7rem;    border-radius: 31px; min-height: 2.5rem !important" onclick="openMenu(event)">Menu</button>
-        <div class="order-now-container">
-
-            <iframe id="order-iframe" style="display: none">
-
-
+        <button style="color: black; background: white; padding: .25rem; margin: 1rem; min-width: 7rem; border-radius: 31px; min-height: 2.5rem !important" onclick="openMenu_<?= $uid ?>(event)">Menu</button>
+        <div id="order-now-container-<?= $uid ?>" class="order-now-container">
+            <iframe id="order-iframe-<?= $uid ?>" class="order-iframe" style="display: none">
             </iframe>
-
-
         </div>
         
        

@@ -288,36 +288,36 @@ usort($category_order, function($a, $b) use ($cat_meta) {
     </script>
 </head>
 
-<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container pt-24 lg:pt-2">
     
-    <a href="#" id="back-to-side" onclick="backToSite(event)"
+    <a href="#" id="back-to-side" onclick="backToSite_<?= $uid ?>(event)"
         class="fixed top-8 mt-5 md:mt-0 z-50 right-8 z-[60] bg-[#e43b16] text-[#f6f6f6] w-12 h-12 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-300">
         <span class="material-symbols-outlined">close</span>
     </a>
     
     <!-- JSON DATA FOR CLIENT SIDE SWITCHING -->
     <script>
-        function backToSite(event) {
+        window.backToSite_<?= $uid ?> = function(event) {
             event.preventDefault();
             window.dispatchEvent(new Event('close-all'));
         }
 
-        const menuData = <?= $jsonData ?>;
-        const sectionTitles = <?= json_encode($sectionTitles) ?>;
-        const allergensLegend = <?= json_encode($allergensLegend) ?>;
-        const categoryMeta = <?= json_encode($cat_meta) ?>;
-        let currentLang = '<?= $langKey ?>';
+        const menuData_<?= $uid ?> = <?= $jsonData ?>;
+        const sectionTitles_<?= $uid ?> = <?= json_encode($sectionTitles) ?>;
+        const allergensLegend_<?= $uid ?> = <?= json_encode($allergensLegend) ?>;
+        const categoryMeta_<?= $uid ?> = <?= json_encode($cat_meta) ?>;
+        let currentLang_<?= $uid ?> = '<?= $langKey ?>';
         
-        function changeLanguage(langKey) {
-            currentLang = langKey;
-            const selectedMenu = menuData.menus[langKey];
+        window.changeLanguage_<?= $uid ?> = function(langKey) {
+            currentLang_<?= $uid ?> = langKey;
+            const selectedMenu = menuData_<?= $uid ?>.menus[langKey];
             if (!selectedMenu) return;
 
             // Update category descriptions
             document.querySelectorAll('.category-description').forEach(el => {
                 const catKey = el.getAttribute('data-i18n-cat-desc');
-                if (categoryMeta[catKey] && categoryMeta[catKey].description) {
-                    const desc = categoryMeta[catKey].description[langKey] || categoryMeta[catKey].description['spanish'] || '';
+                if (categoryMeta_<?= $uid ?>[catKey] && categoryMeta_<?= $uid ?>[catKey].description) {
+                    const desc = categoryMeta_<?= $uid ?>[catKey].description[langKey] || categoryMeta_<?= $uid ?>[catKey].description['spanish'] || '';
                     el.innerText = desc;
                 }
             });
@@ -326,8 +326,8 @@ usort($category_order, function($a, $b) use ($cat_meta) {
             const legendContainer = document.getElementById('allergens-legend-container');
             if (legendContainer) {
                 legendContainer.innerHTML = '';
-                for (const code in allergensLegend) {
-                    const name = allergensLegend[code][langKey] || allergensLegend[code]['spanish'] || '';
+                for (const code in allergensLegend_<?= $uid ?>) {
+                    const name = allergensLegend_<?= $uid ?>[code][langKey] || allergensLegend_<?= $uid ?>[code]['spanish'] || '';
                     const item = document.createElement('div');
                     item.className = 'flex items-center gap-1.5';
                     item.innerHTML = `<span class="bg-on-surface/10 px-1 rounded">${code}</span><span>${name}</span>`;
@@ -339,8 +339,8 @@ usort($category_order, function($a, $b) use ($cat_meta) {
             const modalList = document.getElementById('allergen-modal-list');
             if (modalList) {
                 modalList.innerHTML = '';
-                for (const code in allergensLegend) {
-                    const name = allergensLegend[code][langKey] || allergensLegend[code]['spanish'] || '';
+                for (const code in allergensLegend_<?= $uid ?>) {
+                    const name = allergensLegend_<?= $uid ?>[code][langKey] || allergensLegend_<?= $uid ?>[code]['spanish'] || '';
                     const item = document.createElement('div');
                     item.id = `modal-allergen-${code}`;
                     item.className = 'flex items-center gap-3 transition-all duration-300 opacity-40';
@@ -401,7 +401,7 @@ usort($category_order, function($a, $b) use ($cat_meta) {
                         span.innerText = `(${aVal})`;
                         span.onclick = (e) => {
                             e.stopPropagation();
-                            showAllergenModal(aVal);
+                            showAllergenModal_<?= $uid ?>(aVal);
                         };
                         el.appendChild(span);
                     }
@@ -410,20 +410,20 @@ usort($category_order, function($a, $b) use ($cat_meta) {
 
             document.querySelectorAll('[data-i18n-title-key]').forEach(el => {
                 const key = el.getAttribute('data-i18n-title-key');
-                if (sectionTitles[langKey] && sectionTitles[langKey][key]) {
-                    el.innerText = sectionTitles[langKey][key];
+                if (sectionTitles_<?= $uid ?>[langKey] && sectionTitles_<?= $uid ?>[langKey][key]) {
+                    el.innerText = sectionTitles_<?= $uid ?>[langKey][key];
                 }
             });
         }
         
         // Wrap everything in a function to be more robust
-        function initMenu() {
+        function initMenu_<?= $uid ?>() {
             const sections = document.querySelectorAll('section[id], div[id]');
             const navLinks = document.querySelectorAll('.nav-link');
 
             if (!sections.length || !navLinks.length) {
                 // Try again in a moment if not ready, especially for iframes
-                setTimeout(initMenu, 100);
+                setTimeout(initMenu_<?= $uid ?>, 100);
                 return;
             }
 
@@ -460,9 +460,9 @@ usort($category_order, function($a, $b) use ($cat_meta) {
          }
 
         if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initMenu);
+            document.addEventListener('DOMContentLoaded', initMenu_<?= $uid ?>);
         } else {
-            initMenu();
+            initMenu_<?= $uid ?>();
         }
     </script>
 
@@ -484,7 +484,7 @@ usort($category_order, function($a, $b) use ($cat_meta) {
 
             <div class="flex items-center gap-4 mr-14 md:mr-0">
                 <div class="relative inline-block">
-                    <select onchange="changeLanguage(this.value)" class="appearance-none bg-[#E43B16] text-white font-headline font-bold text-sm uppercase pl-4 pr-10 py-1.5 border-2 border-white focus:border-stone-300 rounded-full cursor-pointer focus:outline-none transition-all">
+                    <select onchange="changeLanguage_<?= $uid ?>(this.value)" class="appearance-none bg-[#E43B16] text-white font-headline font-bold text-sm uppercase pl-4 pr-10 py-1.5 border-2 border-white focus:border-stone-300 rounded-full cursor-pointer focus:outline-none transition-all">
                         <option value="spanish" <?= $langKey === 'spanish' ? 'selected' : '' ?>>ES</option>
                         <option value="ca" <?= $langKey === 'ca' ? 'selected' : '' ?>>CA</option>
                         <option value="french" <?= $langKey === 'french' ? 'selected' : '' ?>>FR</option>
@@ -563,7 +563,7 @@ usort($category_order, function($a, $b) use ($cat_meta) {
                                             <h3 class="font-headline font-bold text-xl uppercase tracking-tighter" data-i18n-path="specialty.types.<?= $index ?>.name" data-i18n-allergens-path="specialty.types.<?= $index ?>.allergens">
                                                 <?= htmlspecialchars($item['name'] ?? '') ?>
                                                 <?php if(!empty($item['allergens'])): ?>
-                                                    <span class="text-xs text-primary ml-1 italic font-normal uppercase cursor-pointer hover:underline underline-offset-2" onclick="showAllergenModal('<?= esc_attr($item['allergens']) ?>')">(<?= htmlspecialchars($item['allergens']) ?>)</span>
+                                                    <span class="text-xs text-primary ml-1 italic font-normal uppercase cursor-pointer hover:underline underline-offset-2" onclick="showAllergenModal_<?= $uid ?>('<?= esc_attr($item['allergens']) ?>')">(<?= htmlspecialchars($item['allergens']) ?>)</span>
                                                 <?php endif; ?>
                                             </h3>
                                             <span class="font-headline font-bold text-primary whitespace-nowrap ml-4" data-i18n-path="specialty.types.<?= $index ?>.price">
@@ -586,7 +586,7 @@ usort($category_order, function($a, $b) use ($cat_meta) {
                                         <span class="font-body font-bold uppercase tracking-tight group-hover:text-primary transition-colors" data-i18n-path="<?= $secKey ?>.<?= $i ?>.name" data-i18n-allergens-path="<?= $secKey ?>.<?= $i ?>.allergens">
                                             <?= htmlspecialchars($item['name'] ?? '') ?>
                                             <?php if(!empty($item['allergens'])): ?>
-                                                <span class="text-xs text-primary ml-1 italic font-normal uppercase cursor-pointer hover:underline underline-offset-2" onclick="showAllergenModal('<?= esc_attr($item['allergens']) ?>')">(<?= htmlspecialchars($item['allergens']) ?>)</span>
+                                                <span class="text-xs text-primary ml-1 italic font-normal uppercase cursor-pointer hover:underline underline-offset-2" onclick="showAllergenModal_<?= $uid ?>('<?= esc_attr($item['allergens']) ?>')">(<?= htmlspecialchars($item['allergens']) ?>)</span>
                                             <?php endif; ?>
                                         </span>
                                         <span class="flex-grow border-b border-dotted border-outline-variant mx-4"></span>
@@ -611,7 +611,7 @@ usort($category_order, function($a, $b) use ($cat_meta) {
                                         <h4 class="font-headline font-bold text-2xl uppercase tracking-tight" data-i18n-path="<?= $secKey ?>.<?= $i ?>.name" data-i18n-allergens-path="<?= $secKey ?>.<?= $i ?>.allergens">
                                             <?= htmlspecialchars($item['name'] ?? '') ?>
                                             <?php if(!empty($item['allergens'])): ?>
-                                                <span class="text-xs text-primary ml-1 italic font-normal uppercase cursor-pointer hover:underline underline-offset-2" onclick="showAllergenModal('<?= esc_attr($item['allergens']) ?>')">(<?= htmlspecialchars($item['allergens']) ?>)</span>
+                                                <span class="text-xs text-primary ml-1 italic font-normal uppercase cursor-pointer hover:underline underline-offset-2" onclick="showAllergenModal_<?= $uid ?>('<?= esc_attr($item['allergens']) ?>')">(<?= htmlspecialchars($item['allergens']) ?>)</span>
                                             <?php endif; ?>
                                         </h4>
                                         <span class="font-headline font-bold text-primary text-xl whitespace-nowrap ml-4" data-i18n-path="<?= $secKey ?>.<?= $i ?>.price">
@@ -640,7 +640,7 @@ usort($category_order, function($a, $b) use ($cat_meta) {
                                         <span class="font-body font-bold uppercase tracking-tight group-hover:text-tertiary transition-colors" data-i18n-path="drinks.<?= $subKey ?>.<?= $i ?>.name" data-i18n-allergens-path="drinks.<?= $subKey ?>.<?= $i ?>.allergens">
                                             <?= htmlspecialchars($item['name'] ?? '') ?>
                                             <?php if(!empty($item['allergens'])): ?>
-                                                <span class="text-xs text-primary ml-1 italic font-normal uppercase cursor-pointer hover:underline underline-offset-2" onclick="showAllergenModal('<?= esc_attr($item['allergens']) ?>')">(<?= htmlspecialchars($item['allergens']) ?>)</span>
+                                                <span class="text-xs text-primary ml-1 italic font-normal uppercase cursor-pointer hover:underline underline-offset-2" onclick="showAllergenModal_<?= $uid ?>('<?= esc_attr($item['allergens']) ?>')">(<?= htmlspecialchars($item['allergens']) ?>)</span>
                                             <?php endif; ?>
                                         </span>
                                         <span class="flex-grow border-b border-dotted border-outline-variant mx-4"></span>
@@ -663,7 +663,7 @@ usort($category_order, function($a, $b) use ($cat_meta) {
                                         <span class="font-body font-bold uppercase tracking-tight group-hover:text-tertiary transition-colors" data-i18n-path="wine_list.<?= $i ?>.name" data-i18n-allergens-path="wine_list.<?= $i ?>.allergens">
                                             <?= htmlspecialchars($item['name'] ?? '') ?>
                                             <?php if(!empty($item['allergens'])): ?>
-                                                <span class="text-xs text-primary ml-1 italic font-normal uppercase cursor-pointer hover:underline underline-offset-2" onclick="showAllergenModal('<?= esc_attr($item['allergens']) ?>')">(<?= htmlspecialchars($item['allergens']) ?>)</span>
+                                                <span class="text-xs text-primary ml-1 italic font-normal uppercase cursor-pointer hover:underline underline-offset-2" onclick="showAllergenModal_<?= $uid ?>('<?= esc_attr($item['allergens']) ?>')">(<?= htmlspecialchars($item['allergens']) ?>)</span>
                                             <?php endif; ?>
                                         </span>
                                         <span class="text-xs text-on-surface-variant font-label mt-1" data-i18n-path="wine_list.<?= $i ?>.type">
@@ -717,7 +717,7 @@ usort($category_order, function($a, $b) use ($cat_meta) {
         <div id="allergen-modal-content" class="bg-surface-container-low max-w-lg w-full rounded-2xl shadow-2xl overflow-hidden transform scale-95 transition-transform duration-300 flex flex-col">
             <div class="px-8 py-6 border-b border-outline-variant/20 flex justify-between items-center bg-surface-container">
                 <h3 class="font-headline font-bold text-xl uppercase tracking-widest text-primary">Alergenos / Allergens</h3>
-                <button onclick="closeAllergenModal()" class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+                <button onclick="closeAllergenModal_<?= $uid ?>()" class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
                     <span class="material-symbols-outlined text-3xl">close</span>
                 </button>
             </div>
@@ -732,13 +732,13 @@ usort($category_order, function($a, $b) use ($cat_meta) {
                 </div>
             </div>
             <div class="px-8 py-6 bg-surface-container border-t border-outline-variant/20 text-center">
-                <button onclick="closeAllergenModal()" class="bg-primary text-white px-8 py-2 rounded-full font-bold uppercase tracking-wider text-sm hover:scale-105 active:scale-95 transition-all">Entendido / Got it</button>
+                <button onclick="closeAllergenModal_<?= $uid ?>()" class="bg-primary text-white px-8 py-2 rounded-full font-bold uppercase tracking-wider text-sm hover:scale-105 active:scale-95 transition-all">Entendido / Got it</button>
             </div>
         </div>
     </div>
 
     <script>
-        function showAllergenModal(codesString) {
+        window.showAllergenModal_<?= $uid ?> = function(codesString) {
             const modal = document.getElementById('allergen-modal');
             const content = document.getElementById('allergen-modal-content');
             const codes = codesString.split(',').map(c => c.trim().toUpperCase());
@@ -763,7 +763,7 @@ usort($category_order, function($a, $b) use ($cat_meta) {
             content.classList.remove('scale-95');
         }
 
-        function closeAllergenModal() {
+        window.closeAllergenModal_<?= $uid ?> = function() {
             const modal = document.getElementById('allergen-modal');
             const content = document.getElementById('allergen-modal-content');
             modal.classList.add('opacity-0', 'pointer-events-none');
@@ -772,12 +772,12 @@ usort($category_order, function($a, $b) use ($cat_meta) {
 
         // Close on escape
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeAllergenModal();
+            if (e.key === 'Escape') window.closeAllergenModal_<?= $uid ?>();
         });
 
         // Close on outside click
         document.getElementById('allergen-modal').addEventListener('click', (e) => {
-            if (e.target.id === 'allergen-modal') closeAllergenModal();
+            if (e.target.id === 'allergen-modal') window.closeAllergenModal_<?= $uid ?>();
         });
     </script>
 </body>

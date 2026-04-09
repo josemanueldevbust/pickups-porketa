@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Work+Sans:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#757777",
+                        "on-error": "#ffefee",
+                        "inverse-on-surface": "#9c9d9d",
+                        "tertiary-fixed": "#ff9475",
+                        "on-secondary-fixed": "#403f3f",
+                        "secondary-fixed": "#e5e2e1",
+                        "tertiary": "#ab2d00",
+                        "outline-variant": "#acadad",
+                        "primary": "#b5161e",
+                        "on-primary-fixed": "#000000",
+                        "surface-container-low": "#f0f1f1",
+                        "on-primary-container": "#4f0004",
+                        "on-tertiary-fixed": "#340800",
+                        "surface-container-high": "#e1e3e3",
+                        "on-error-container": "#570008",
+                        "error-container": "#fb5151",
+                        "surface-container": "#e7e8e8",
+                        "on-tertiary-container": "#601500",
+                        "on-secondary-fixed-variant": "#5c5b5b",
+                        "primary-fixed-dim": "#ff5a53",
+                        "on-tertiary": "#ffefeb",
+                        "on-surface-variant": "#5a5c5c",
+                        "on-primary-fixed-variant": "#600007",
+                        "on-primary": "#ffefed",
+                        "primary-fixed": "#ff766d",
+                        "secondary-container": "#e5e2e1",
+                        "surface": "#f6f6f6",
+                        "tertiary-fixed-dim": "#ff7d57",
+                        "on-surface": "#2d2f2f",
+                        "surface-tint": "#b5161e",
+                        "secondary-fixed-dim": "#d6d4d3",
+                        "secondary-dim": "#504f4f",
+                        "secondary": "#5c5b5b",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-dim": "#a40113",
+                        "tertiary-container": "#ff9475",
+                        "surface-variant": "#dbdddd",
+                        "surface-container-highest": "#dbdddd",
+                        "on-tertiary-fixed-variant": "#6f1a00",
+                        "on-background": "#2d2f2f",
+                        "tertiary-dim": "#962700",
+                        "on-secondary": "#f5f2f1",
+                        "error": "#b31b25",
+                        "primary-container": "#ff766d",
+                        "surface-dim": "#d2d5d5",
+                        "on-secondary-container": "#525151",
+                        "background": "#f6f6f6",
+                        "error-dim": "#9f0519",
+                        "surface-bright": "#f6f6f6",
+                        "inverse-primary": "#ff544e",
+                        "inverse-surface": "#0c0f0f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Work Sans"],
+                        "label": ["Work Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+
+        .brush-font {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 900;
+        }
+
+        .editorial-shadow {
+            box-shadow: 0 40px 60px -15px rgba(45, 47, 47, 0.08);
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+    <!-- TopAppBar Navigation Shell (Suppressed for transactional focus per mandate, but keeping consistent branding) -->
+    <header class="bg-[#f6f6f6] dark:bg-[#2d2f2f] mb-12">
+        <div class="flex justify-between items-center w-full px-8 py-6 max-w-screen-2xl mx-auto">
+            <div class="flex items-center gap-4">
+                <span
+                    class="text-4xl font-black text-[#b5161e] dark:text-[#ff766d] tracking-tighter brush-font">COME</span>
+            </div>
+            <nav class="hidden md:flex gap-12 font-['Space_Grotesk'] font-bold tracking-tight uppercase">
+                <a class="text-[#2d2f2f] dark:text-[#dbdddd] hover:text-[#ab2d00] transition-colors duration-200"
+                    href="#">MENÚ</a>
+                <a class="text-[#b5161e] dark:text-[#ff766d] border-b-2 border-[#b5161e]" href="#">RESERVAS</a>
+                <a class="text-[#2d2f2f] dark:text-[#dbdddd] hover:text-[#ab2d00] transition-colors duration-200"
+                    href="#">CONTACTO</a>
+            </nav>
+
+        </div>
+    </header>
+    <main class="min-h-[716px] flex flex-col items-center justify-center px-4 relative overflow-hidden">
+        <!-- Background Artisanal Imagery -->
+        <div class="absolute inset-0 z-0 opacity-10 pointer-events-none">
+            <img alt="Background texture" class="w-full h-full object-cover grayscale"
+                data-alt="Close-up of artisan smoked brisket with glossy bark and intense wood fire smoke texture in a rustic kitchen"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSKI2ZC-N7Ty0zTwg5jPHSEUjOxFYRicZWykgF2PT_s60QCykMdcAyrE8KPqrUQfGxsYyAQMHdOIhfLn6kacLBEdb42iNO_9nICw6lnDWznMYhzmRU0iGA-WLFte8S1bybQXwog2FTuRKOoLMjjAbTwKYH5O5O_hQgyRgbVjfX33P83xdaRlBzxRvzFlz086UQrJigWbM4r52qRyjzdM9IauHWt1yXRNMAcURzGrl78eYM8rGEyBTvmOe2M_VjmqKSJEhy0JZ4s3w" />
+        </div>
+        <!-- Success Message Content -->
+        <div class="relative z-10 w-full max-w-4xl mx-auto flex flex-col items-center text-center">
+            <!-- Hand-Drawn Branding Overlay -->
+            <div class="absolute -top-16 -left-8 md:-left-16 opacity-10 select-none pointer-events-none">
+                <span
+                    class="text-[12rem] font-black text-primary tracking-tighter brush-font rotate-[-12deg] block">COME</span>
+            </div>
+            <!-- Confirmation Title -->
+            <h1
+                class="font-headline font-black text-5xl md:text-7xl text-primary uppercase tracking-tighter mb-4 leading-none">
+                ¡TU MESA ESTÁ LISTA!
+            </h1>
+            <p class="font-body text-on-surface-variant text-lg md:text-xl max-w-lg mb-12">
+                Ahumamos con paciencia para que tú solo te preocupes de disfrutar. Te esperamos en el templo de la
+                panceta.
+            </p>
+
+            <!-- CTA Actions -->
+            <div class="flex flex-col md:flex-row gap-6 w-full max-w-md">
+                <button
+                    class="flex-1 bg-primary text-on-primary font-headline font-bold py-6 px-8 transition-all hover:bg-primary-dim active:scale-95 uppercase tracking-tight">
+                    VOLVER AL INICIO
+                </button>
+                <button
+                    class="flex-1 bg-transparent border-2 border-outline-variant text-on-surface font-headline font-bold py-6 px-8 transition-all hover:bg-surface-container-high active:scale-95 uppercase tracking-tight">
+                    DESCARGAR PDF
+                </button>
+            </div>
+            <!-- Secondary Info -->
+            <div class="mt-12 flex flex-col items-center gap-4">
+                <div class="flex items-center gap-2 text-on-surface-variant">
+                    <span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+                    <span class="font-body text-sm uppercase tracking-widest">Carrer de la Marina 124, Barcelona</span>
+                </div>
+                <p class="text-xs text-on-surface-variant italic">Se mantendrá la reserva durante un máximo de 15
+                    minutos.</p>
+            </div>
+        </div>
+        <!-- Decorative Elements -->
+        <div
+            class="absolute bottom-0 right-0 w-64 h-64 md:w-96 md:h-96 opacity-20 pointer-events-none translate-x-20 translate-y-20">
+            <img alt="Atmosphere" class="w-full h-full object-cover"
+                data-alt="Atmospheric interior of a modern smokehouse with warm industrial lighting, wood finishes, and cozy leather seating"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSwF6W9jpDvfg--PvalJ_Mo1wLpxWCdtYVrKaqU8_-9kHooS5t8kM217YCv_2JPYZ3ExTA5fFFRMssYHXV1EhXHXp3-9MxTwRkEuIGg47I95EBDezqrcuvxsMUFc6iBPJgupY9rTmmbwreTHzY7Tok_jyGrbNtKFgeS3x7IoEjTeUPnkB1SGOcLyVMX9KmOJS4SMg1rhowIIvHhgv0d_nLRhszPgZC0ySHEMo1Ecnw1OzYN-yK4uRwni_-Yp64-s3zvkDtVDQPlkM" />
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-[#f6f6f6] dark:bg-[#2d2f2f] mt-24 pt-12 pb-16 border-t border-[#dbdddd]/30">
+        <div class="flex flex-col md:flex-row justify-between items-center w-full px-8 max-w-screen-2xl mx-auto gap-4">
+            <div class="text-lg font-bold text-[#2d2f2f] dark:text-[#f6f6f6] tracking-tighter brush-font">COME</div>
+            <div
+                class="font-['Work_Sans'] text-xs uppercase tracking-widest text-[#5a5c5c] dark:text-[#dbdddd] text-center">
+                © 2024 AHUMAMOS. LA PANCETA CATALANA. TODOS LOS DERECHOS RESERVADOS.
+            </div>
+            <div class="flex gap-6 font-['Work_Sans'] text-xs uppercase tracking-widest">
+                <a class="text-[#5a5c5c] dark:text-[#dbdddd] hover:text-[#b5161e] dark:hover:text-[#ff766d] transition-colors"
+                    href="#">INSTAGRAM</a>
+                <a class="text-[#5a5c5c] dark:text-[#dbdddd] hover:text-[#b5161e] dark:hover:text-[#ff766d] transition-colors"
+                    href="#">AVISO LEGAL</a>
+                <a class="text-[#5a5c5c] dark:text-[#dbdddd] hover:text-[#b5161e] dark:hover:text-[#ff766d] transition-colors"
+                    href="#">POLÍTICA DE PRIVACIDAD</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

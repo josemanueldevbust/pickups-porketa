@@ -27,6 +27,25 @@ class Menu {
             'menuHtml' => $menuHtml,
         ];
     
+        $seoContent = $menuHtml;
+        if (preg_match('/<body[^>]*>(.*?)<\/body>/is', $menuHtml, $matches)) {
+            $seoContent = $matches[1];
+        }
+        // Remove interactive/unnecessary elements for SEO version
+        $seoContent = preg_replace('/<(script|style|header|footer|nav)\b[^>]*>(.*?)<\/\1>/is', "", $seoContent);
+        // Specifically remove the back-to-side button and mobile drawer if they were missed
+        $seoContent = preg_replace('/<a[^>]*id=["\']back-to-side["\'][^>]*>(.*?)<\/a>/is', "", $seoContent);
+        $seoContent = preg_replace('/<div[^>]*id=["\']mobile-drawer["\'][^>]*>(.*?)<\/div>/is', "", $seoContent);
+        // Final sanitation: keep only content-related HTML tags
+        $seoContent = strip_tags($seoContent, '<h1><h2><h3><h4><h5><h6><p><ul><li><div><span><section><article><main><table><tr><td><th><thead><tbody><tfoot><img><br><hr>');
+        
+        // Remove all class and style attributes
+        $seoContent = preg_replace('/ (class|style)=["\'][^"\']*["\']/i', '', $seoContent);
+
+        // Remove orphaned closing tags at the beginning
+        $seoContent = preg_replace('/^(\s*<\/[^>]+>)+/i', '', trim($seoContent));
+
+        $h = $seoContent;
         ?>
         <script>
             (function() {
@@ -70,7 +89,12 @@ class Menu {
             </iframe>
         </div>
         
-       
+        <?php /* SEO Indexable Content */ ?>
+        <section class="seo-menu-content" style="display:none !important; position:fixed; top:-9999px; left:-9999px; width:0; height:0; overflow:hidden; opacity:0; pointer-events:none;" aria-hidden="true">
+            <?php
+                echo $h;
+            ?>
+        </section>
 
         <?php
         
